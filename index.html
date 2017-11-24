@@ -1399,14 +1399,15 @@
                     },
                     data: JSON.stringify({ query: msg, lang: "en", sessionId: "somerandomthing" }),
                     success: function(data) {
-                        console.log(JSON.stringify(data.result.fulfillment.speech, undefined, 2));
+                        //console.log(JSON.stringify(data.result.fulfillment.speech, undefined, 2));
+                      var output = JSON.stringify(data.result.fulfillment.speech , undefined, 2);
                         var str="";
         str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
         str += "          <span class=\"msg-avatar\">";
         str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
         str += "          <\/span>";
         str += "          <div class=\"cm-msg-text\">";
-        str += JSON.stringify(data.result.fulfillment.speech, undefined, 2);
+        str += output.slice(1, output.length -1);
         str += "          <\/div>";
         str += "        <\/div>";
                             $(".chat-logs").append(str);
