@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSIS 2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Computer Society India Symposium 2018">
+    <meta name="keywords" content="CSIS, conference, conference, event, IEEE, CSIS'18,CS,  Symposium, Bodhgaya">
+    <meta name="author" content="">
+
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    
+   <!-- ChatBot CSS Files
+    ================================================== -->
+
+    <style>
+        #center-text {          
+            display: flex;
+            flex: 1;
+            flex-direction:column; 
+            justify-content: center;
+            align-items: center;  
+            height:100%;
+            
+          }
+          #chat-circle {
+            position: fixed;
+            z-index: 9999; 
+            bottom: 50px;
+            right: 50px;
+            background: #eeb807;
+            
+            width: 80px;
+            height: 80px;  
+            border-radius: 50%;
+            color: white;
+            padding: 28px;
+            cursor: pointer;
+            box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          }
+          
+          .btn#my-btn {
+               background: white;
+              padding-top: 13px;
+              padding-bottom: 12px;
+              border-radius: 45px;
+              padding-right: 40px;
+              padding-left: 40px;
+              color: #5865C3;
+          }
+          #chat-overlay {
+              background: rgba(255,255,255,0.1);
+              position: absolute;
+              z-index: 9999;               
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: none;
+          }
+          
+          
+          .chat-box {
+            display:none;
+            background: #efefef;
+            position:fixed;
+            z-index: 9999; 
+            
+            right:30px;
+            bottom:50px;  
+            width:350px;
+            max-width: 85vw;
+            max-height:100vh;
+            border-radius:5px;  
+            box-shadow: 0px 2px 40px 2px #70706f; 
+            /*box-shadow: 0px 5px 5px 9px #ccc; */
+          }
+          .chat-box-toggle {
+            float:right;
+            margin-right:15px;
+            cursor:pointer;
+          }
+          .chat-box-header {
+            background: rgb(212, 150, 14);
+            height:50px;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px; 
+            color:white;
+            text-align:center;
+            font-size:20px;
+            padding-top:12px;
+          }
+          .chat-box-body {
+            position: relative;  
+            height:370px;  
+            height:auto;
+            border:1px solid #ccc;  
+            overflow: hidden;
+          }
+          .chat-box-body:after {
+            content: "";
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAgOCkiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3g9IjE3NiIgY3k9IjEyIiByPSI0Ii8+PHBhdGggZD0iTTIwLjUuNWwyMyAxMW0tMjkgODRsLTMuNzkgMTAuMzc3TTI3LjAzNyAxMzEuNGw1Ljg5OCAyLjIwMy0zLjQ2IDUuOTQ3IDYuMDcyIDIuMzkyLTMuOTMzIDUuNzU4bTEyOC43MzMgMzUuMzdsLjY5My05LjMxNiAxMC4yOTIuMDUyLjQxNi05LjIyMiA5LjI3NC4zMzJNLjUgNDguNXM2LjEzMSA2LjQxMyA2Ljg0NyAxNC44MDVjLjcxNSA4LjM5My0yLjUyIDE0LjgwNi0yLjUyIDE0LjgwNk0xMjQuNTU1IDkwcy03LjQ0NCAwLTEzLjY3IDYuMTkyYy02LjIyNyA2LjE5Mi00LjgzOCAxMi4wMTItNC44MzggMTIuMDEybTIuMjQgNjguNjI2cy00LjAyNi05LjAyNS0xOC4xNDUtOS4wMjUtMTguMTQ1IDUuNy0xOC4xNDUgNS43IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTg1LjcxNiAzNi4xNDZsNS4yNDMtOS41MjFoMTEuMDkzbDUuNDE2IDkuNTIxLTUuNDEgOS4xODVIOTAuOTUzbC01LjIzNy05LjE4NXptNjMuOTA5IDE1LjQ3OWgxMC43NXYxMC43NWgtMTAuNzV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjcxLjUiIGN5PSI3LjUiIHI9IjEuNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjE3MC41IiBjeT0iOTUuNSIgcj0iMS41Ii8+PGNpcmNsZSBmaWxsPSIjMDAwIiBjeD0iODEuNSIgY3k9IjEzNC41IiByPSIxLjUiLz48Y2lyY2xlIGZpbGw9IiMwMDAiIGN4PSIxMy41IiBjeT0iMjMuNSIgcj0iMS41Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTkzIDcxaDN2M2gtM3ptMzMgODRoM3YzaC0zem0tODUgMThoM3YzaC0zeiIvPjxwYXRoIGQ9Ik0zOS4zODQgNTEuMTIybDUuNzU4LTQuNDU0IDYuNDUzIDQuMjA1LTIuMjk0IDcuMzYzaC03Ljc5bC0yLjEyNy03LjExNHpNMTMwLjE5NSA0LjAzbDEzLjgzIDUuMDYyLTEwLjA5IDcuMDQ4LTMuNzQtMTIuMTF6bS04MyA5NWwxNC44MyA1LjQyOS0xMC44MiA3LjU1Ny00LjAxLTEyLjk4N3pNNS4yMTMgMTYxLjQ5NWwxMS4zMjggMjAuODk3TDIuMjY1IDE4MGwyLjk0OC0xOC41MDV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxwYXRoIGQ9Ik0xNDkuMDUgMTI3LjQ2OHMtLjUxIDIuMTgzLjk5NSAzLjM2NmMxLjU2IDEuMjI2IDguNjQyLTEuODk1IDMuOTY3LTcuNzg1LTIuMzY3LTIuNDc3LTYuNS0zLjIyNi05LjMzIDAtNS4yMDggNS45MzYgMCAxNy41MSAxMS42MSAxMy43MyAxMi40NTgtNi4yNTcgNS42MzMtMjEuNjU2LTUuMDczLTIyLjY1NC02LjYwMi0uNjA2LTE0LjA0MyAxLjc1Ni0xNi4xNTcgMTAuMjY4LTEuNzE4IDYuOTIgMS41ODQgMTcuMzg3IDEyLjQ1IDIwLjQ3NiAxMC44NjYgMy4wOSAxOS4zMzEtNC4zMSAxOS4zMzEtNC4zMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=');
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height:100%;
+            position: absolute;
+            z-index: -1;   
+          }
+          #chat-input {
+            background: #f4f7f9;
+            width:100%; 
+            position:relative;
+            height:47px;  
+            padding-top:10px;
+            padding-right:50px;
+            padding-bottom:10px;
+            padding-left:15px;
+            border:none;
+            resize:none;
+            outline:none;
+            border:1px solid #ccc;
+            color:#888;
+            border-top:none;
+            border-bottom-right-radius:5px;
+            border-bottom-left-radius:5px;
+            overflow:hidden;  
+          }
+          .chat-input > form {
+              margin-bottom: 0;
+          }
+          #chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #ccc;
+          }
+          #chat-input::-moz-placeholder { /* Firefox 19+ */
+            color: #ccc;
+          }
+          #chat-input:-ms-input-placeholder { /* IE 10+ */
+            color: #ccc;
+          }
+          #chat-input:-moz-placeholder { /* Firefox 18- */
+            color: #ccc;
+          }
+          .chat-submit {  
+            position:absolute;
+            bottom:3px;
+            right:10px;
+            background: transparent;
+            box-shadow:none;
+            border:none;
+            border-radius:50%;
+            color:rgb(209, 159, 20);
+            width:35px;
+            height:35px;  
+          }
+          .chat-logs {
+            padding:15px; 
+            height:370px;
+            overflow-y:scroll;
+          }
+          
+          .chat-logs::-webkit-scrollbar-track
+          {
+              -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+              background-color: #F5F5F5;
+          }
+          
+          .chat-logs::-webkit-scrollbar
+          {
+              width: 5px;  
+              background-color: #F5F5F5;
+          }
+          
+          .chat-logs::-webkit-scrollbar-thumb
+          {
+              background-color: rgb(201, 139, 5);
+          }
+          
+          
+          
+          @media only screen and (max-width: 500px) {
+             .chat-logs {
+                  height:40vh;
+              }
+          }
+          
+          .chat-msg.user > .msg-avatar img {
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            float:left;
+            width:15%;
+          }
+          .chat-msg.self > .msg-avatar img {
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            float:right;
+            width:15%;
+          }
+          .cm-msg-text {
+            background:white;
+            padding:10px 15px 10px 15px;  
+            color:#666;
+            max-width:75%;
+            float:left;
+            margin-left:10px; 
+            position:relative;
+            margin-bottom:20px;
+            border-radius:30px;
+          }
+          .chat-msg {
+            clear:both;    
+          }
+          .chat-msg.self > .cm-msg-text {  
+            float:right;
+            margin-right:10px;
+            background: #5A5EB9;
+            color:white;
+          }
+          .cm-msg-button>ul>li {
+            list-style:none;
+            float:left;
+            width:50%;
+          }
+          .cm-msg-button {
+              clear: both;
+              margin-bottom: 70px;
+          }
+    </style>
+
+
+    <!-- background -->
+    <link rel="stylesheet" href="css/bg.css" type="text/css">
+
+    <!-- color -->
+    <link rel="stylesheet" href="css/color.css" type="text/css">
+</head>
+
+<body id="homepage">
+
+   
+    
+    
+          
+    <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+		    <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
+	</div>
+  
+  <div class="chat-box">
+    <div class="chat-box-header">
+      CSIS Chatbot
+      <span class="chat-box-toggle"><i class="fa fa-times"></i></span>
+    </div>
+    <div class="chat-box-body">
+      <div class="chat-box-overlay">   
+      </div>
+      <div class="chat-logs">
+       
+      </div><!--chat-log -->
+    </div>
+    <div class="chat-input">      
+      <form>
+        <input type="text" id="chat-input" placeholder="Send a message..."/>
+      <button type="submit" class="chat-submit" id="chat-submit"><i class="fa fa-paper-plane-o"></i></button>
+      </form>      
+    </div>
+  </div>
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header>
+            <div class="info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Sambhodhi Retreat, Bodhgaya</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>March 16-18 2018
+                                PM
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                            <a href="index.html">
+                                <img class="logo" src="images/logo-light.png" style="height:90px ; width:auto" alt="">
+                                <img class="logo-2" src="images/logo-light.png" style="height:70px ;  width:auto" alt="">
+                            </a>
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
+
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Speakers</a></li>                                
+                                <li><a href="#">Venue</a></li>
+                                <li><a href="#">Schedule</a></li>
+                                <li><a href="#">Sponsors</a></li>
+                                <li><a href="#">Registration</a></li>
+                                <li><a href="#">Info</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <!-- mainmenu close -->
+
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+            <div id="top"></div>
+
+            <!-- section begin -->
+            <section id="section-intro-9" class="full-height no-top no-bottom text-light" data-stellar-background-ratio=".2">
+                <div class="overlay-bg t50">
+
+                    <div class="center-y fadeScroll text-center relative" data-scroll-speed="4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="spacer-double"></div>
+                                    <div class="spacer-double"></div>
+                                    <h1 class="ultra-big">CSIS<span class="id-color">'18</span></h1>
+                                    <div class="spacer-single"></div>
+                                    <div class="subtitle s2"><span><i class="fa fa-calendar-o id-color"></i>March 16th to 18th</span><span><i class="fa fa-map-marker id-color"></i>Sambodhi Retreat, Bodhgaya</span></div>
+                                    <div class="spacer-single"></div>
+                                    <div class="spacer-single"></div>
+                                    <a href="#" class="btn btn-custom">Register Now</a>&nbsp;
+                                    <div class="spacer-double"></div>
+                                    <div id="defaultCountdown" class="countdown-s1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-intro-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center wow fadeInUp">
+                            <h2>About CSIS</h2>
+                            <p class="lead">Computer Society India Symposium</p>
+                            <div class="spacer-single"></div>
+                        </div>
+
+                        <div class="col-md-4 text-center wow fadeInUp">
+                            <i class="fa fa-bookmark id-color mb20 size40"></i>
+                            <h3>Data1</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>
+
+                        <div class="col-md-4 text-center wow fadeInUp">
+                            <i class="fa fa-cogs id-color mb20 size40"></i>
+                            <h3>Data2</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            
+                        </div>
+
+                        <div class="col-md-4 text-center wow fadeInUp">
+                            <i class="fa fa-info-circle id-color mb20 size40"></i>
+                            <h3>Data3</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+
+            <!-- section service begin -->
+            <section id="section-side-1" class="side-bg right no-padding text-light" data-bgcolor="#243f6a">
+                <div class="image-container col-md-6 col-md-offset-6 pull-right">
+                    <div class="background-image"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="inner-padding">
+                            <div class="col-md-5 wow fadeInLeft" data-wow-delay=".5s">
+                                <h2>Sambodhi Retreat</h2>
+                                <p class="lead">CSIS Venue</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+                                <div class="spacer-single"></div>
+                                <a href="www.sambodhiretreat.org/" class="btn-line">Visit WebSite</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section service close -->
+
+
+            <!-- section service begin -->
+            <section id="section-side-2" class="side-bg no-padding text-light" data-bgcolor="#b14141">
+                <div class="image-container col-md-6 pull-left">
+                    <div class="background-image"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="inner-padding">
+                            <div class="col-md-5 col-md-offset-7 wow fadeInRight" data-wow-delay=".5s">
+                                <h2>The Bodhgaya Experience<span class="id-color">.</span></h2>
+                                <p class="lead">Bodhgaya details</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+                                <div class="spacer-single"></div>
+                                <a href="#" class="btn-line">View Tourism Page</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section service close -->
+
+            <section id="section-speakers">
+                <div class="container relative">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2><span class="id-color">Event</span> Speakers</h2>
+                            <p class="lead">Lorem Ipsum</p>
+                            <div class="spacer-single"></div>
+                        </div>
+
+                        <div class="col-md-4 ">
+                            <div class="profile_pic text-center">
+                                <figure class="picframe mb30">
+                                    <a class="image-popup" href="images/team/speakers/1.jpg">
+                                        <span class="overlay-v">
+                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <img src="images/team/speakers/1.jpg" class="img-responsive" alt="">
+                                </figure>
+
+                                <h3>Test person</h3>
+                                <span class="subtitle">Speaker</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb30">
+                            <div class="profile_pic text-center">
+                                <figure class="picframe mb30">
+                                    <a class="image-popup" href="images/team/speakers/2.jpg">
+                                        <span class="overlay-v">
+                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            </span>
+                                    </a>
+                                    <img src="images/team/speakers/2.jpg" class="img-responsive" alt="">
+                                </figure>
+
+                                <h3>Test person</h3>
+                                <span class="subtitle">Speaker</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb30">
+                            <div class="profile_pic text-center">
+                                <figure class="picframe mb30">
+                                    <a class="image-popup" href="images/team/speakers/3.jpg">
+                                        <span class="overlay-v">
+                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            </span>
+                                    </a>
+                                    <img src="images/team/speakers/3.jpg" class="img-responsive" alt="">
+                                </figure>
+
+                                <h3>Test person</h3>
+                                <span class="subtitle">Speaker</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb30">
+                            <div class="profile_pic text-center">
+                                <figure class="picframe mb30">
+                                    <a class="image-popup" href="images/team/speakers/4.jpg">
+                                        <span class="overlay-v">
+                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            </span>
+                                    </a>
+                                    <img src="images/team/speakers/4.jpg" class="img-responsive" alt="">
+                                </figure>
+
+                                <h3>Test person</h3>
+                                <span class="subtitle">Speaker</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb30">
+                            <div class="profile_pic text-center">
+                                <figure class="picframe mb30">
+                                    <a class="image-popup" href="images/team/speakers/5.jpg">
+                                        <span class="overlay-v">
+                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            </span>
+                                    </a>
+                                    <img src="images/team/speakers/5.jpg" class="img-responsive" alt="">
+                                </figure>
+
+                                <h3>Test person</h3>
+                                <span class="subtitle">Speaker</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb30">
+                            <div class="profile_pic text-center">
+                                <figure class="picframe mb30">
+                                    <a class="image-popup" href="images/team/speakers/6.jpg">
+                                        <span class="overlay-v">
+                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            </span>
+                                    </a>
+                                    <img src="images/team/speakers/6.jpg" class="img-responsive" alt="">
+                                </figure>
+
+                                <h3>Test person</h3>
+                                <span class="subtitle">Speaker</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb30">
+                            <div class="profile_pic text-center">
+                                <figure class="picframe mb30">
+                                    <a class="image-popup" href="images/team/speakers/7.jpg">
+                                        <span class="overlay-v">
+                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            </span>
+                                    </a>
+                                    <img src="images/team/speakers/7.jpg" class="img-responsive" alt="">
+                                </figure>
+
+                                <h3>Test person</h3>
+                                <span class="subtitle">Speaker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+
+
+            <!-- section begin -->
+            <section id="section-fun-facts-2" class="no-top no-bottom text-light" data-stellar-background-ratio=".2">
+                <div class="overlay-bg pt80 pb80">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-3 wow fadeIn" data-wow-delay="0">
+                                <div class="de_count">
+                                    <i class="icon_id-2 id-color" data-animation="fadeInDown" data-delay="0"></i>
+                                    <h3 class="timer" data-to="250" data-speed="2500">0</h3>
+                                    <span>Participants</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
+                                <div class="de_count">
+                                    <i class="icon_easel  id-color" data-animation="fadeInDown" data-delay="200"></i>
+                                    <h3 class="timer" data-to="3" data-speed="2500">0</h3>
+                                    <span>Tracks</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
+                                <div class="de_count">
+                                    <i class="icon_headphones  id-color" data-animation="fadeInDown" data-delay="400"></i>
+                                    <h3 class="timer" data-to="20" data-speed="2500">0</h3>
+                                    <span>Speakers</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
+                                <div class="de_count">
+                                    <i class="icon_globe id-color" data-animation="fadeInDown" data-delay="600"></i>
+                                    <h3 class="timer" data-to="15" data-speed="2500">0</h3>
+                                    <span>Sessions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+ <!-- section begin -->
+ <section id="section-testimonial-no-bg" data-stellar-background-ratio=".2">
+    <div class="container relative">
+        <div class="row">
+            <div class="col-md-12 text-center wow fadeInUp">
+                <h2>Testimonials about Previous Versions</h2>
+                <div class="spacer-single"></div>
+            </div>
+
+
+            <div id="testimonial-carousel" class="de_carousel wow fadeInUp">
+
+                <div class="col-md-6 item">
+                    <div class="de_testi opt-3">
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <div class="de_testi_by">
+                                Test, Test
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="col-md-6 item">
+                    <div class="de_testi opt-3">
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <div class="de_testi_by">
+                                Test, Test
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="col-md-6 item">
+                    <div class="de_testi opt-3">
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <div class="de_testi_by">
+                                Test, Test
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="col-md-6 item">
+                    <div class="de_testi opt-3">
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <div class="de_testi_by">
+                                Test, Test
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section close -->
+
+<section id="section-tickets" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
+    <div class="overlay-bg pt80 pb80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2><span class="id-color">Register</span>Now</h2>
+                    <p class="lead">Join the biggest event by IEEE CS SAC of the year</p>
+                    <div class="spacer-single"></div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="item pricing">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="pricing-s1 mb30">
+                                        <div class="top">
+                                            <h2>Type 1</h2>
+                                            <p class="price"><span class="currency">₹</span> <b>1000</b> <span class="month">/Per Person</span></p>
+                                        </div>
+                                        <div class="bottom">
+                                            <ul>
+                                                <li><i class="icon_check"></i>Facility 1</li>
+                                                <li><i class="icon_check"></i>Facility 2</li>
+                                            </ul>
+                                            <a href="" class="btn btn-custom">Register Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="pricing-s1 featured mb30">
+                                        <div class="top">
+                                            <h2>Type 2</h2>
+                                            <p class="price"><span class="currency">₹</span> <b>2000</b> <span class="month">/Per Person</span></p>
+                                        </div>
+                                        <div class="bottom">
+                                            <ul>
+                                                <li><i class="icon_check"></i>Facility 1</li>
+                                                <li><i class="icon_check"></i>Facility 2</li>
+                                            </ul>
+                                            <a href="" class="btn btn-custom">Register Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="pricing-s1 mb30">
+                                        <div class="top">
+                                            <h2>Type 3</h2>
+                                            <p class="price"><span class="currency">₹</span> <b>3000</b> <span class="month">/Per Person</span></p>
+                                        </div>
+                                        <div class="bottom">
+                                            <ul>
+                                                <li><i class="icon_check"></i>Facility 1</li>
+                                                <li><i class="icon_check"></i>Facility 2</li>
+                                            </ul>
+                                            <a href="" class="btn btn-custom">Register Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </div>
+        <!-- content close -->
+
+        <section id="section-schedules" aria-label="section-services-tab" data-bgcolor="#f5f5f5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2><span class="id-color">Event</span> Schedules</h2>
+                        <p class="lead">Do not miss it and be sure to attend</p>
+                        <div class="spacer-single"></div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="de_tab tab_style_4 text-center">
+                            <ul class="de_nav">
+                                <li class="active" data-link="#section-services-tab">
+                                    <h3>Day <span>01</span></h3>
+                                    <h4>16 March, 2018</h4>
+                                </li>
+                                <li data-link="#section-services-tab">
+                                    <h3>Day <span>02</span></h3>
+                                    <h4>17 March, 2018</h4>
+                                </li>
+                                <li data-link="#section-services-tab">
+                                    <h3>Day <span>03</span></h3>
+                                    <h4>18 March, 2018</h4>
+                                </li>
+                                
+                            </ul>
+
+                            <div class="de_tab_content text-left">
+
+                                <div id="tab1" class="tab_single_content">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">08:00 - 10:00 AM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/1.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">12:00 - 14:00 PM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/2.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">16:00 - 18:00 PM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/3.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">20:00 - 22:00 PM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/4.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab2" class="tab_single_content">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">08:00 - 12:00 AM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/5.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">12:00 - 14:00 PM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/6.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">16:00 - 18:00 PM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/7.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">20:00 - 22:00 PM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/1.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab3" class="tab_single_content">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">08:00 - 12:00 AM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/2.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">12:00 - 14:00 PM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/3.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">16:00 - 18:00 PM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/4.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="schedule-listing">
+                                                <div class="schedule-item">
+                                                    <div class="sc-time">20:00 - 22:00 AM</div>
+                                                    <div class="sc-pic">
+                                                        <img src="images/team/5.jpg" class="img-circle" alt="">
+                                                    </div>
+                                                    <div class="sc-name">
+                                                        <h4>Test Person</h4>
+                                                        <span>Speaker</span>
+                                                    </div>
+                                                    <div class="sc-info">
+                                                        <h3>Lorem Ipsum</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container text-center text-light">
+            <div class="row" style="height : 10px ; width: 100%">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+
+        <section id="section-sponsors">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2><span class="id-color">Event</span> Sponsors</h2>
+                        <p class="lead">Check who make this event possible</p>
+                        <div class="spacer-single"></div>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                        <h3>Gold Sponsors</h3>
+                        <div class="spacer-single"></div>
+                        <img src="images/logo/1.png" alt="" class="grey-hover">
+                        <img src="images/logo/2.png" alt="" class="grey-hover">
+                        <img src="images/logo/3.png" alt="" class="grey-hover">
+
+                        <div class="spacer-double"></div>
+
+                        <h3>Silver Sponsors</h3>
+                        <div class="spacer-single"></div>
+                        <img src="images/logo/a1.png" alt="" class="grey-hover">
+                        <img src="images/logo/a2.png" alt="" class="grey-hover">
+                        <img src="images/logo/a3.png" alt="" class="grey-hover">
+                        <img src="images/logo/a4.png" alt="" class="grey-hover">
+                        <img src="images/logo/a5.png" alt="" class="grey-hover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container text-center text-light">
+            <div class="row" style="height : 10px ; width: 100%">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+
+        <section id="section-speakers">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2><span class="id-color">Our Amazing</span> Team</h2>
+                        <p class="lead">Lorem Ipsum</p>
+                        <div class="spacer-single"></div>
+                    </div>
+
+                    <div class="col-md-4 ">
+                        <div class="profile_pic text-center">
+                            <figure class="picframe mb30">
+                                <a class="image-popup" href="images/team/1.jpg">
+                                    <span class="overlay-v">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>
+                                    </span>
+                                </a>
+                                <img src="images/team/1.jpg" class="img-responsive" alt="">
+                            </figure>
+
+                            <h3>Test Person</h3>
+                            <span class="subtitle">Founder & CEO</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb30">
+                        <div class="profile_pic text-center">
+                            <figure class="picframe mb30">
+                                <a class="image-popup" href="images/team/2.jpg">
+                                    <span class="overlay-v">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>                                    </span>
+                                </a>
+                                <img src="images/team/2.jpg" class="img-responsive" alt="">
+                            </figure>
+
+                            <h3>Test Person</h3>
+                            <span class="subtitle">Founder & CEO</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb30">
+                        <div class="profile_pic text-center">
+                            <figure class="picframe mb30">
+                                <a class="image-popup" href="images/team/3.jpg">
+                                    <span class="overlay-v">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>                                    </span>
+                                </a>
+                                <img src="images/team/3.jpg" class="img-responsive" alt="">
+                            </figure>
+
+                            <h3>Test Person</h3>
+                            <span class="subtitle">Founder & CEO</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb30">
+                        <div class="profile_pic text-center">
+                            <figure class="picframe mb30">
+                                <a class="image-popup" href="images/team/4.jpg">
+                                    <span class="overlay-v">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>                                    </span>
+                                </a>
+                                <img src="images/team/4.jpg" class="img-responsive" alt="">
+                            </figure>
+
+                            <h3>Test Person</h3>
+                            <span class="subtitle">Founder & CEO</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb30">
+                        <div class="profile_pic text-center">
+                            <figure class="picframe mb30">
+                                <a class="image-popup" href="images/team/5.jpg">
+                                    <span class="overlay-v">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>                                    </span>
+                                </a>
+                                <img src="images/team/5.jpg" class="img-responsive" alt="">
+                            </figure>
+
+                            <h3>Test Person</h3>
+                            <span class="subtitle">Founder & CEO</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb30">
+                        <div class="profile_pic text-center">
+                            <figure class="picframe mb30">
+                                <a class="image-popup" href="images/team/6.jpg">
+                                    <span class="overlay-v">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>                                    </span>
+                                </a>
+                                <img src="images/team/6.jpg" class="img-responsive" alt="">
+                            </figure>
+
+                            <h3>Test Person</h3>
+                            <span class="subtitle">Founder & CEO</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb30">
+                        <div class="profile_pic text-center">
+                            <figure class="picframe mb30">
+                                <a class="image-popup" href="images/team/7.jpg">
+                                    <span class="overlay-v">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>                                    </span>
+                                </a>
+                                <img src="images/team/7.jpg" class="img-responsive" alt="">
+                            </figure>
+                            
+                            <h3>Test Person</h3>
+                            <span class="subtitle">Founder & CEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container text-center text-light">
+            <div class="row" style="height : 10px ; width: 100%">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+
+        <section id="section-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2><span class="id-color">Venue</span> Information</h2>
+                        <p class="lead">How to Reach Sambodhi</p>
+                        <div class="spacer-single"></div>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <i class="fa fa-subway id-color fa-3x"></i>
+                        
+                        <h3>Train</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <i class=" id-color fa  fa-fighter-jet fa-3x   "></i>
+                        <h3>Flight</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <i class="fa  fa-building id-color fa-3x"></i>
+                        <h3>Nearest Town</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- section begin -->
+        <section id="section-map" class="no-top no-bottom" aria-label="map-container">
+            <div id="map"></div>
+        </section>
+        <!-- section close -->
+
+        <!-- section begin -->
+        <section id="section-quick-contact" class="bordertop">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="wm-1"></div>
+                        <i class="icon_mobile id-color size40 mb20"></i>
+                        <h5>Call Us</h5>
+                        <h4>Number Here</h4>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="wm-1"></div>
+                        <i class="icon_house_alt id-color size40 mb20"></i>
+                        <h5>Address</h5>
+                        <h4>Adress here</h4>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="wm-1"></div>
+                        <i class="icon_mail_alt id-color size40 mb20"></i>
+                        <h5>Email Us</h5>
+                        <h4>Email Here</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer begin -->
+        <footer>
+            <div class="container text-center text-light">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="social-icons big">
+                            <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subfooter">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            &copy; Copyright 2017-18 - Designed and Maintained by IEEE CS SAC Web Team
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+
+        <a href="#" id="back-to-top"></a>
+        <div id="preloader">
+            <div class="preloader1"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="js/map.js"></script>
+    <script src="js/designesia.js"></script>
+
+    <script>
+        $(function() {
+      var INDEX = 0; 
+      $("#chat-submit").click(function(e) {
+        e.preventDefault();
+        var msg = $("#chat-input").val(); 
+        if(msg.trim() == ''){
+          return false;
+        }
+        generate_message(msg, 'self');
+        var buttons = [
+            {
+              name: 'Existing User',
+              value: 'existing'
+            },
+            {
+              name: 'New User',
+              value: 'new'
+            }
+          ];
+        setTimeout(function() {      
+          generate_message(msg, 'user');  
+        }, 1000)
+        
+      })
+    
+      var accessToken = "2a850bb4347449b5a957f68fc22879aa";
+            var baseUrl = "https://api.api.ai/v1/";
+      
+    function send() {
+                
+            }
+    
+      function generate_message(msg, type) {
+        INDEX++;
+        
+        if(type == "self"){    
+            var str="";
+        str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+        str += "          <span class=\"msg-avatar\">";
+        str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+        str += "          <\/span>";
+        str += "          <div class=\"cm-msg-text\">";
+        str += msg;
+        str += "          <\/div>";
+        str += "        <\/div>";
+                            $(".chat-logs").append(str);
+        $("#cm-msg-"+INDEX).hide().fadeIn(300);
+         $("#chat-input").val(''); 
+    
+    }
+        else{
+                $.ajax({
+                    type: "POST",
+                    url: baseUrl + "query?v=20150910",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    headers: {
+                        "Authorization": "Bearer " + accessToken
+                    },
+                    data: JSON.stringify({ query: msg, lang: "en", sessionId: "somerandomthing" }),
+                    success: function(data) {
+                        console.log(JSON.stringify(data.result.fulfillment.speech, undefined, 2));
+                        var str="";
+        str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+        str += "          <span class=\"msg-avatar\">";
+        str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+        str += "          <\/span>";
+        str += "          <div class=\"cm-msg-text\">";
+        str += JSON.stringify(data.result.fulfillment.speech, undefined, 2);
+        str += "          <\/div>";
+        str += "        <\/div>";
+                            $(".chat-logs").append(str);
+        $("#cm-msg-"+INDEX).hide().fadeIn(300);
+            $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+    
+                    }
+    
+                });
+        }
+    
+      }  
+      
+      function generate_button_message(msg, buttons){    
+        /* Buttons should be object array 
+          [
+            {
+              name: 'Existing User',
+              value: 'existing'
+            },
+            {
+              name: 'New User',
+              value: 'new'
+            }
+          ]
+        */
+        INDEX++;
+        var btn_obj = buttons.map(function(button) {
+           return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+        }).join('');
+        var str="";
+        str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+        str += "          <span class=\"msg-avatar\">";
+        str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+        str += "          <\/span>";
+        str += "          <div class=\"cm-msg-text\">";
+        str += msg;
+        str += "          <\/div>";
+        str += "          <div class=\"cm-msg-button\">";
+        str += "            <ul>";   
+        str += btn_obj;
+        str += "            <\/ul>";
+        str += "          <\/div>";
+        str += "        <\/div>";
+        $(".chat-logs").append(str);
+        $("#cm-msg-"+INDEX).hide().fadeIn(300);   
+        $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+        $("#chat-input").attr("disabled", true);
+      }
+      
+      $(document).delegate(".chat-btn", "click", function() {
+        var value = $(this).attr("chat-value");
+        var name = $(this).html();
+        $("#chat-input").attr("disabled", false);
+        generate_message(name, 'self');
+      })
+      
+      $("#chat-circle").click(function() {    
+        $("#chat-circle").toggle('scale');
+        $(".chat-box").toggle('scale');
+      })
+      
+      $(".chat-box-toggle").click(function() {
+        $("#chat-circle").toggle('scale');
+        $(".chat-box").toggle('scale');
+      })
+      
+    })
+        </script>
+
+
+</body>
+
+
+
+
+</html>
