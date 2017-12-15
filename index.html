@@ -861,10 +861,15 @@
               </div>
             </div>
           </div>
+          <style>
+
+            sponbut:hover:before {visibility : false ; content:"Reply!"}
+                
+          </style>
           <div class="row">
             <div class="col-md-12 text-center">
 
-              <a class="btn btn-custom" href="https://drive.google.com/open?id=1_u9uMjGbzmR3obfWG6E0ZZPnvj6jTs1H" style="margin-top : 80px">Download Sponsorship Brochure</a>
+              <a class="btn btn-custom sponbut" href="https://drive.google.com/open?id=1_u9uMjGbzmR3obfWG6E0ZZPnvj6jTs1H" style="margin-top : 80px">Download Sponsorship Brochure</a>
 
             </div>
           </div>
@@ -1752,13 +1757,12 @@
             $('dl').on("click", "dt", function () { //prvents a listener from being attached to multiple dd elements, which would hinder performance
                 $(this).next()
                     .slideDown()
-                    .switchClass(" ", "bold", 300, "fold")
                     .siblings('dd')
                         .slideUp(200)
-                        switchClass("faqa", " ", 300, "fold")
+                        .removeClass("bold")
               
                 $(this)
-                  .switchClass(" ", "faqa", 300, "easeInOutQuad") 
+                  .switchClass(" ", "faqa", 300, "fold") 
                   .siblings('dt').removeClass('faqa')
               
             });
