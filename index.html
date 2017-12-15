@@ -1674,6 +1674,30 @@
   <script src="js/designesia.js"></script>
 
   <script>
+
+        $(function() {
+            var form = $('#ajax-contact');
+        
+            var formMessages = $('#form-messages');
+        
+
+            $(form).submit(function(event) {
+            event.preventDefault();
+            var formData = $(form).serialize();
+            $.ajax({
+                type: 'POST',
+                url: $(form).attr('action'),
+                data: formData
+            }).done(function(response) {
+                    $("#message").val("Message Sucessfully sent");
+            })
+            $("#message").val("Message Sucessfully sent");
+            $("#email").val("");
+            $("#name").val("");
+            
+            });
+        });
+
         (function () {
             
             $('dd').filter(':nth-child(n+4)').hide(); //select every dd after the 4th child of dl
@@ -1681,10 +1705,10 @@
             $('dl').on("click", "dt", function () { //prvents a listener from being attached to multiple dd elements, which would hinder performance
                 $(this).next()
                     .slideDown()
-                    .switchClass(" ", "bold", 300, "easeInOutQuad")
+                    .switchClass(" ", "bold", 300, "fold")
                     .siblings('dd')
                         .slideUp(200)
-                        .removeClass("faqa");
+                        switchClass("faqa", " ", 300, "fold")
               
                 $(this)
                   .switchClass(" ", "faqa", 300, "easeInOutQuad") 
