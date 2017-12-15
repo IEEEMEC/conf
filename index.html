@@ -863,13 +863,12 @@
           </div>
           <style>
 
-            sponbut:hover:before {visibility : false ; content:"Reply!"}
                 
           </style>
           <div class="row">
             <div class="col-md-12 text-center">
 
-              <a class="btn btn-custom sponbut" href="https://drive.google.com/open?id=1_u9uMjGbzmR3obfWG6E0ZZPnvj6jTs1H" style="margin-top : 80px">Download Sponsorship Brochure</a>
+              <a class="btn btn-custom" id="hoverbut" href="https://drive.google.com/open?id=1_u9uMjGbzmR3obfWG6E0ZZPnvj6jTs1H" style="margin-top : 80px">Download Sponsorship Brochure</a>
 
             </div>
           </div>
@@ -1726,6 +1725,15 @@
   <script src="js/designesia.js"></script>
 
   <script>
+
+    	$(document).ready(function(e) {
+            $('#hoverbut').hover(function(){
+                    $main_text=$(this).text();
+                    $(this).text("Support Us and Be Our Sponsor!").fadeIn();
+                },function(){
+                    $(this).text($main_text);
+                    });
+        });
 
         $(function() {
             var form = $('#ajax-contact');
