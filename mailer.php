@@ -12,6 +12,7 @@
         }
 
         $recipient = "itzsrishti.smile@gmail.com";
+
         $recipient_2 = "shaneapen@gmail.com";
 
         $subject = "New query from $name";
