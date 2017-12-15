@@ -2,684 +2,727 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>CSIS 2018</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Computer Society India Symposium 2018">
-    <meta name="keywords" content="CSIS, conference, conference, event, IEEE, CSIS'18,CS,  Symposium, Bodhgaya">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <title>CSIS 2018</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Computer Society India Symposium 2018">
+  <meta name="keywords" content="CSIS, conference, conference, event, IEEE, CSIS'18,CS,  Symposium, Bodhgaya">
+  <meta name="author" content="">
 
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<![endif]-->
 
-    <!-- CSS Files
+  <!-- CSS Files
     ================================================== -->
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/animate.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-    
-   <!-- ChatBot CSS Files
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/animate.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+
+  <!-- ChatBot CSS Files
     ================================================== -->
 
-    <style>
-        #center-text {          
-            display: flex;
-            flex: 1;
-            flex-direction:column; 
-            justify-content: center;
-            align-items: center;  
-            height:100%;
-            
-          }
-          #chat-circle {
-            position: fixed;
-            z-index: 9999; 
-            bottom: 50px;
-            right: 50px;
-            background: #eeb807;
-            
-            width: 80px;
-            height: 80px;  
-            border-radius: 50%;
-            color: white;
-            padding: 28px;
-            cursor: pointer;
-            box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          }
-          
-          .btn#my-btn {
-               background: white;
-              padding-top: 13px;
-              padding-bottom: 12px;
-              border-radius: 45px;
-              padding-right: 40px;
-              padding-left: 40px;
-              color: #5865C3;
-          }
-          #chat-overlay {
-              background: rgba(255,255,255,0.1);
-              position: absolute;
-              z-index: 9999;               
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              display: none;
-          }
-          
-          
-          .chat-box {
-            display:none;
-            background: #efefef;
-            position:fixed;
-            z-index: 9999; 
-            
-            right:30px;
-            bottom:50px;  
-            width:350px;
-            max-width: 85vw;
-            max-height:100vh;
-            border-radius:5px;  
-            box-shadow: 0px 2px 40px 2px #70706f; 
-            /*box-shadow: 0px 5px 5px 9px #ccc; */
-          }
-          .chat-box-toggle {
-            float:right;
-            margin-right:15px;
-            cursor:pointer;
-          }
-          .chat-box-header {
-            background: rgb(212, 150, 14);
-            height:50px;
-            border-top-left-radius:5px;
-            border-top-right-radius:5px; 
-            color:white;
-            text-align:center;
-            font-size:20px;
-            padding-top:12px;
-          }
-          .chat-box-body {
-            position: relative;  
-            height:370px;  
-            height:auto;
-            border:1px solid #ccc;  
-            overflow: hidden;
-          }
-          .chat-box-body:after {
-            content: "";
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAgOCkiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3g9IjE3NiIgY3k9IjEyIiByPSI0Ii8+PHBhdGggZD0iTTIwLjUuNWwyMyAxMW0tMjkgODRsLTMuNzkgMTAuMzc3TTI3LjAzNyAxMzEuNGw1Ljg5OCAyLjIwMy0zLjQ2IDUuOTQ3IDYuMDcyIDIuMzkyLTMuOTMzIDUuNzU4bTEyOC43MzMgMzUuMzdsLjY5My05LjMxNiAxMC4yOTIuMDUyLjQxNi05LjIyMiA5LjI3NC4zMzJNLjUgNDguNXM2LjEzMSA2LjQxMyA2Ljg0NyAxNC44MDVjLjcxNSA4LjM5My0yLjUyIDE0LjgwNi0yLjUyIDE0LjgwNk0xMjQuNTU1IDkwcy03LjQ0NCAwLTEzLjY3IDYuMTkyYy02LjIyNyA2LjE5Mi00LjgzOCAxMi4wMTItNC44MzggMTIuMDEybTIuMjQgNjguNjI2cy00LjAyNi05LjAyNS0xOC4xNDUtOS4wMjUtMTguMTQ1IDUuNy0xOC4xNDUgNS43IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTg1LjcxNiAzNi4xNDZsNS4yNDMtOS41MjFoMTEuMDkzbDUuNDE2IDkuNTIxLTUuNDEgOS4xODVIOTAuOTUzbC01LjIzNy05LjE4NXptNjMuOTA5IDE1LjQ3OWgxMC43NXYxMC43NWgtMTAuNzV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjcxLjUiIGN5PSI3LjUiIHI9IjEuNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjE3MC41IiBjeT0iOTUuNSIgcj0iMS41Ii8+PGNpcmNsZSBmaWxsPSIjMDAwIiBjeD0iODEuNSIgY3k9IjEzNC41IiByPSIxLjUiLz48Y2lyY2xlIGZpbGw9IiMwMDAiIGN4PSIxMy41IiBjeT0iMjMuNSIgcj0iMS41Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTkzIDcxaDN2M2gtM3ptMzMgODRoM3YzaC0zem0tODUgMThoM3YzaC0zeiIvPjxwYXRoIGQ9Ik0zOS4zODQgNTEuMTIybDUuNzU4LTQuNDU0IDYuNDUzIDQuMjA1LTIuMjk0IDcuMzYzaC03Ljc5bC0yLjEyNy03LjExNHpNMTMwLjE5NSA0LjAzbDEzLjgzIDUuMDYyLTEwLjA5IDcuMDQ4LTMuNzQtMTIuMTF6bS04MyA5NWwxNC44MyA1LjQyOS0xMC44MiA3LjU1Ny00LjAxLTEyLjk4N3pNNS4yMTMgMTYxLjQ5NWwxMS4zMjggMjAuODk3TDIuMjY1IDE4MGwyLjk0OC0xOC41MDV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxwYXRoIGQ9Ik0xNDkuMDUgMTI3LjQ2OHMtLjUxIDIuMTgzLjk5NSAzLjM2NmMxLjU2IDEuMjI2IDguNjQyLTEuODk1IDMuOTY3LTcuNzg1LTIuMzY3LTIuNDc3LTYuNS0zLjIyNi05LjMzIDAtNS4yMDggNS45MzYgMCAxNy41MSAxMS42MSAxMy43MyAxMi40NTgtNi4yNTcgNS42MzMtMjEuNjU2LTUuMDczLTIyLjY1NC02LjYwMi0uNjA2LTE0LjA0MyAxLjc1Ni0xNi4xNTcgMTAuMjY4LTEuNzE4IDYuOTIgMS41ODQgMTcuMzg3IDEyLjQ1IDIwLjQ3NiAxMC44NjYgMy4wOSAxOS4zMzEtNC4zMSAxOS4zMzEtNC4zMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=');
-            opacity: 0.1;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            height:100%;
-            position: absolute;
-            z-index: -1;   
-          }
-          #chat-input {
-            background: #f4f7f9;
-            width:100%; 
-            position:relative;
-            height:47px;  
-            padding-top:10px;
-            padding-right:50px;
-            padding-bottom:10px;
-            padding-left:15px;
-            border:none;
-            resize:none;
-            outline:none;
-            border:1px solid #ccc;
-            color:#888;
-            border-top:none;
-            border-bottom-right-radius:5px;
-            border-bottom-left-radius:5px;
-            overflow:hidden;  
-          }
-          .chat-input > form {
-              margin-bottom: 0;
-          }
-          #chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-            color: #ccc;
-          }
-          #chat-input::-moz-placeholder { /* Firefox 19+ */
-            color: #ccc;
-          }
-          #chat-input:-ms-input-placeholder { /* IE 10+ */
-            color: #ccc;
-          }
-          #chat-input:-moz-placeholder { /* Firefox 18- */
-            color: #ccc;
-          }
-          .chat-submit {  
-            position:absolute;
-            bottom:3px;
-            right:10px;
-            background: transparent;
-            box-shadow:none;
-            border:none;
-            border-radius:50%;
-            color:rgb(209, 159, 20);
-            width:35px;
-            height:35px;  
-          }
-          .chat-logs {
-            padding:15px; 
-            height:370px;
-            overflow-y:scroll;
-          }
-          
-          .chat-logs::-webkit-scrollbar-track
-          {
-              -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-              background-color: #F5F5F5;
-          }
-          
-          .chat-logs::-webkit-scrollbar
-          {
-              width: 5px;  
-              background-color: #F5F5F5;
-          }
-          
-          .chat-logs::-webkit-scrollbar-thumb
-          {
-              background-color: rgb(201, 139, 5);
-          }
-          
-          
-          
-          @media only screen and (max-width: 500px) {
-             .chat-logs {
-                  height:40vh;
-              }
-          }
-          
-          .chat-msg.user > .msg-avatar img {
-            width:45px;
-            height:45px;
-            border-radius:50%;
-            float:left;
-            width:15%;
-          }
-          .chat-msg.self > .msg-avatar img {
-            width:45px;
-            height:45px;
-            border-radius:50%;
-            float:right;
-            width:15%;
-          }
-          .cm-msg-text {
-            background:white;
-            padding:10px 15px 10px 15px;  
-            color:#666;
-            max-width:75%;
-            float:left;
-            margin-left:10px; 
-            position:relative;
-            margin-bottom:20px;
-            border-radius:30px;
-          }
-          .chat-msg {
-            clear:both;    
-          }
-          .chat-msg.self > .cm-msg-text {  
-            float:right;
-            margin-right:10px;
-            background: #5A5EB9;
-            color:white;
-          }
-          .cm-msg-button>ul>li {
-            list-style:none;
-            float:left;
-            width:50%;
-          }
-          .cm-msg-button {
-              clear: both;
-              margin-bottom: 70px;
-          }
-    </style>
+  <style>
+    #center-text {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+    }
+
+    #chat-circle {
+      position: fixed;
+      z-index: 9999;
+      bottom: 50px;
+      right: 50px;
+      background: #eeb807;
+
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      color: white;
+      padding: 28px;
+      cursor: pointer;
+      box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .btn#my-btn {
+      background: white;
+      padding-top: 13px;
+      padding-bottom: 12px;
+      border-radius: 45px;
+      padding-right: 40px;
+      padding-left: 40px;
+      color: #5865C3;
+    }
+
+    #chat-overlay {
+      background: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
 
 
-    <!-- background -->
-    <link rel="stylesheet" href="css/bg.css" type="text/css">
+    .chat-box {
+      display: none;
+      background: #efefef;
+      position: fixed;
+      z-index: 9999;
 
-    <!-- color -->
-    <link rel="stylesheet" href="css/color.css" type="text/css">
+      right: 30px;
+      bottom: 50px;
+      width: 350px;
+      max-width: 85vw;
+      max-height: 100vh;
+      border-radius: 5px;
+      box-shadow: 0px 2px 40px 2px #70706f;
+      /*box-shadow: 0px 5px 5px 9px #ccc; */
+    }
+
+    .chat-box-toggle {
+      float: right;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    .chat-box-header {
+      background: rgb(212, 150, 14);
+      height: 50px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      padding-top: 12px;
+    }
+
+    .chat-box-body {
+      position: relative;
+      height: 370px;
+      height: auto;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+    .chat-box-body:after {
+      content: "";
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAgOCkiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3g9IjE3NiIgY3k9IjEyIiByPSI0Ii8+PHBhdGggZD0iTTIwLjUuNWwyMyAxMW0tMjkgODRsLTMuNzkgMTAuMzc3TTI3LjAzNyAxMzEuNGw1Ljg5OCAyLjIwMy0zLjQ2IDUuOTQ3IDYuMDcyIDIuMzkyLTMuOTMzIDUuNzU4bTEyOC43MzMgMzUuMzdsLjY5My05LjMxNiAxMC4yOTIuMDUyLjQxNi05LjIyMiA5LjI3NC4zMzJNLjUgNDguNXM2LjEzMSA2LjQxMyA2Ljg0NyAxNC44MDVjLjcxNSA4LjM5My0yLjUyIDE0LjgwNi0yLjUyIDE0LjgwNk0xMjQuNTU1IDkwcy03LjQ0NCAwLTEzLjY3IDYuMTkyYy02LjIyNyA2LjE5Mi00LjgzOCAxMi4wMTItNC44MzggMTIuMDEybTIuMjQgNjguNjI2cy00LjAyNi05LjAyNS0xOC4xNDUtOS4wMjUtMTguMTQ1IDUuNy0xOC4xNDUgNS43IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTg1LjcxNiAzNi4xNDZsNS4yNDMtOS41MjFoMTEuMDkzbDUuNDE2IDkuNTIxLTUuNDEgOS4xODVIOTAuOTUzbC01LjIzNy05LjE4NXptNjMuOTA5IDE1LjQ3OWgxMC43NXYxMC43NWgtMTAuNzV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjcxLjUiIGN5PSI3LjUiIHI9IjEuNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjE3MC41IiBjeT0iOTUuNSIgcj0iMS41Ii8+PGNpcmNsZSBmaWxsPSIjMDAwIiBjeD0iODEuNSIgY3k9IjEzNC41IiByPSIxLjUiLz48Y2lyY2xlIGZpbGw9IiMwMDAiIGN4PSIxMy41IiBjeT0iMjMuNSIgcj0iMS41Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTkzIDcxaDN2M2gtM3ptMzMgODRoM3YzaC0zem0tODUgMThoM3YzaC0zeiIvPjxwYXRoIGQ9Ik0zOS4zODQgNTEuMTIybDUuNzU4LTQuNDU0IDYuNDUzIDQuMjA1LTIuMjk0IDcuMzYzaC03Ljc5bC0yLjEyNy03LjExNHpNMTMwLjE5NSA0LjAzbDEzLjgzIDUuMDYyLTEwLjA5IDcuMDQ4LTMuNzQtMTIuMTF6bS04MyA5NWwxNC44MyA1LjQyOS0xMC44MiA3LjU1Ny00LjAxLTEyLjk4N3pNNS4yMTMgMTYxLjQ5NWwxMS4zMjggMjAuODk3TDIuMjY1IDE4MGwyLjk0OC0xOC41MDV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxwYXRoIGQ9Ik0xNDkuMDUgMTI3LjQ2OHMtLjUxIDIuMTgzLjk5NSAzLjM2NmMxLjU2IDEuMjI2IDguNjQyLTEuODk1IDMuOTY3LTcuNzg1LTIuMzY3LTIuNDc3LTYuNS0zLjIyNi05LjMzIDAtNS4yMDggNS45MzYgMCAxNy41MSAxMS42MSAxMy43MyAxMi40NTgtNi4yNTcgNS42MzMtMjEuNjU2LTUuMDczLTIyLjY1NC02LjYwMi0uNjA2LTE0LjA0MyAxLjc1Ni0xNi4xNTcgMTAuMjY4LTEuNzE4IDYuOTIgMS41ODQgMTcuMzg3IDEyLjQ1IDIwLjQ3NiAxMC44NjYgMy4wOSAxOS4zMzEtNC4zMSAxOS4zMzEtNC4zMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=');
+      opacity: 0.1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+
+    #chat-input {
+      background: #f4f7f9;
+      width: 100%;
+      position: relative;
+      height: 47px;
+      padding-top: 10px;
+      padding-right: 50px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      border: none;
+      resize: none;
+      outline: none;
+      border: 1px solid #ccc;
+      color: #888;
+      border-top: none;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      overflow: hidden;
+    }
+
+    .chat-input>form {
+      margin-bottom: 0;
+    }
+
+    #chat-input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #ccc;
+    }
+
+    #chat-input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #ccc;
+    }
+
+    #chat-input:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #ccc;
+    }
+
+    #chat-input:-moz-placeholder {
+      /* Firefox 18- */
+      color: #ccc;
+    }
+
+    .chat-submit {
+      position: absolute;
+      bottom: 3px;
+      right: 10px;
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      border-radius: 50%;
+      color: rgb(209, 159, 20);
+      width: 35px;
+      height: 35px;
+    }
+
+    .chat-logs {
+      padding: 15px;
+      height: 370px;
+      overflow-y: scroll;
+    }
+
+    .chat-logs::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+    }
+
+    .chat-logs::-webkit-scrollbar {
+      width: 5px;
+      background-color: #F5F5F5;
+    }
+
+    .chat-logs::-webkit-scrollbar-thumb {
+      background-color: rgb(201, 139, 5);
+    }
+
+
+
+    @media only screen and (max-width: 500px) {
+      .chat-logs {
+        height: 40vh;
+      }
+    }
+
+    .chat-msg.user>.msg-avatar img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      float: left;
+      width: 15%;
+    }
+
+    .chat-msg.self>.msg-avatar img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      float: right;
+      width: 15%;
+    }
+
+    .cm-msg-text {
+      background: white;
+      padding: 10px 15px 10px 15px;
+      color: #666;
+      max-width: 75%;
+      float: left;
+      margin-left: 10px;
+      position: relative;
+      margin-bottom: 20px;
+      border-radius: 30px;
+    }
+
+    .chat-msg {
+      clear: both;
+    }
+
+    .chat-msg.self>.cm-msg-text {
+      float: right;
+      margin-right: 10px;
+      background: #5A5EB9;
+      color: white;
+    }
+
+    .cm-msg-button>ul>li {
+      list-style: none;
+      float: left;
+      width: 50%;
+    }
+
+    .cm-msg-button {
+      clear: both;
+      margin-bottom: 70px;
+    }
+  </style>
+<style>
+  .form-control{
+    padding: 20px!important;
+    font-size: 16px!important;
+  }
+  .orange_btn{
+    color: white;
+    background: #efb808;
+    padding: 10px 40px;
+  }
+  .orange_btn:hover{
+        background-color: #f5bd09;color:white;
+  }
+</style>
+
+
+  <!-- background -->
+  <link rel="stylesheet" href="css/bg.css" type="text/css">
+
+  <!-- color -->
+  <link rel="stylesheet" href="css/color.css" type="text/css">
 </head>
 
 <body id="homepage">
 
-   
-    
-    
-          
-    <div id="chat-circle" class="btn btn-raised">
-        <div id="chat-overlay"></div>
-		    <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
-	</div>
-  
+
+
+
+
+  <div id="chat-circle" class="btn btn-raised">
+    <div id="chat-overlay"></div>
+    <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
+  </div>
+
   <div class="chat-box">
     <div class="chat-box-header">
       CSIS Chatbot
       <span class="chat-box-toggle"><i class="fa fa-times"></i></span>
     </div>
     <div class="chat-box-body">
-      <div class="chat-box-overlay">   
+      <div class="chat-box-overlay">
       </div>
       <div class="chat-logs">
-       
-      </div><!--chat-log -->
+
+      </div>
+      <!--chat-log -->
     </div>
-    <div class="chat-input">      
+    <div class="chat-input">
       <form>
-        <input type="text" id="chat-input" placeholder="Send a message..."/>
-      <button type="submit" class="chat-submit" id="chat-submit"><i class="fa fa-paper-plane-o"></i></button>
-      </form>      
+        <input type="text" id="chat-input" placeholder="Send a message..." />
+        <button type="submit" class="chat-submit" id="chat-submit"><i class="fa fa-paper-plane-o"></i></button>
+      </form>
     </div>
   </div>
 
-    <div id="wrapper">
+  <div id="wrapper">
 
-        <!-- header begin -->
-        <header>
-            <div class="info">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Sambhodhi Retreat, Bodhgaya</div>
-                            <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>March 16-18 2018
-                                PM
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+    <!-- header begin -->
+    <header>
+      <div class="info">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Sambhodhi Retreat, Bodhgaya</div>
+              <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>March 16-18 2018 PM
+              </div>
             </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- logo begin -->
-                        <div id="logo">
-                            <a href="#">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- logo begin -->
+            <div id="logo">
+              <a href="#">
                                 <img class="logo" src="images/logo-light.png" style="height:90px ; width:auto" alt="">
                                 <img class="logo-2 logomarg" src="images/logo-light.png" style="height:70px ;align-self:center;  width:auto " alt="">
                             </a>
-                        </div>
-                        <!-- logo close -->
-
-                        <!-- small button begin -->
-                        <span id="menu-btn"></span>
-                        <!-- small button close -->
-
-                        <!-- mainmenu begin -->
-                        <nav>
-                            <ul id="mainmenu">
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About Us</a></li>                                
-                                <li><a href="#venue">Venue</a></li>
-                                <li><a href="#speakers">Speakers</a></li>
-                                <li><a href="#registration">Registration</a></li>                                
-                                <!-- <li><a href="#schedule">Schedule</a></li> -->                                
-                                <li><a href="#sponsors">Sponsors</a></li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                    <!-- mainmenu close -->
-
-                </div>
             </div>
-        </header>
-        <!-- header close -->
+            <!-- logo close -->
 
-        <!-- content begin -->
-        <div id="content" class="no-bottom no-top">
-            <div id="top"></div>
+            <!-- small button begin -->
+            <span id="menu-btn"></span>
+            <!-- small button close -->
 
-            <!-- section begin -->
-            <section id="section-intro-9" class="full-height no-top no-bottom text-light" data-stellar-background-ratio=".2">
-                <div class="overlay-bg t50" id="home">
+            <!-- mainmenu begin -->
+            <nav>
+              <ul id="mainmenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#venue">Venue</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#registration">Registration</a></li>
+                <!-- <li><a href="#schedule">Schedule</a></li> -->
+                <li><a href="#sponsors">Sponsors</a></li>
+              </ul>
+            </nav>
 
-                    <div class="center-y fadeScroll text-center relative" data-scroll-speed="4">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="spacer-double"></div>
-                                    <div class="spacer-double"></div>
-                                    <h1 class="ultra-big">CSIS<span class="id-color">'18</span></h1>
-                                    <div class="spacer-single"></div>
-                                    <div class="subtitle s2"><span><i class="fa fa-calendar-o id-color"></i>March 16th to 18th</span><span><i class="fa fa-map-marker id-color"></i>Sambodhi Retreat, Bodhgaya</span></div>
-                                    <div class="spacer-single"></div>
-                                    <div class="spacer-single"></div>
-                                    <a href="#registration" class="btn btn-custom">Register Now</a>&nbsp;
-                                    <div class="spacer-double"></div>
-                                    <div id="defaultCountdown" class="countdown-s1"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <!-- mainmenu close -->
 
+        </div>
+      </div>
+    </header>
+    <!-- header close -->
 
+    <!-- content begin -->
+    <div id="content" class="no-bottom no-top">
+      <div id="top"></div>
+
+      <!-- section begin -->
+      <section id="section-intro-9" class="full-height no-top no-bottom text-light" data-stellar-background-ratio=".2">
+        <div class="overlay-bg t50" id="home">
+
+          <div class="center-y fadeScroll text-center relative" data-scroll-speed="4">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="spacer-double"></div>
+                  <div class="spacer-double"></div>
+                  <h1 class="ultra-big">CSIS<span class="id-color">'18</span></h1>
+                  <div class="spacer-single"></div>
+                  <div class="subtitle s2"><span><i class="fa fa-calendar-o id-color"></i>March 16th to 18th</span><span><i class="fa fa-map-marker id-color"></i>Sambodhi Retreat, Bodhgaya</span></div>
+                  <div class="spacer-single"></div>
+                  <div class="spacer-single"></div>
+                  <a href="#registration" class="btn btn-custom">Register Now</a>&nbsp;
+                  <div class="spacer-double"></div>
+                  <div id="defaultCountdown" class="countdown-s1"></div>
                 </div>
-            </section>
-            <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-intro-text">
-                <div class="container" id="about">
-                    <div class="row">
-                        <div class="col-md-12 text-center wow fadeInUp">
-                            <h2>About CSIS</h2>
-                            <p class="lead">The Computer Society India Symposium (CSIS) is one of the remarkable events of the IEEE Computer Society in India and is held annually with the venue being rotated among the various sections of India. The main scope of this symposium is to bring professionals, speakers, experts, and other academicians so that the participants can interact with and in the process learn. The symposium is generally a 3-day event and includes talks, workshops, and events on a wide array of domains such as technical, industrial, management, social development and much more. </p>
-                            <div class="spacer-single"></div>
-                        </div>
-
-                        <div class="col-md-4 text-center wow fadeInUp">
-                            <i class="fa fa-bookmark id-color fa-2x" style="padding-bottom: 15px"></i>
-                            <h3>Professional Development</h3>
-                            <p>where the participants get a chance to hone their professional and soft skills that is going to give them extra mileage in the process of building a successful career.
-                            </p>
-                        </div>
-
-                        <div class="col-md-4 text-center wow fadeInUp">
-                            <i class="fa fa-cogs id-color fa-2x " style="padding-bottom: 15px"></i>
-                            <h3>Developing the Society</h3>
-                            <p>since this event allows the exchange of ideas, knowledge and methods between the delegates and the participants of several IEEE Sections, so that they can collaborate to implement them for betterment of the society.
-                            </p>
-                            
-                        </div>
-
-                        <div class="col-md-4 text-center wow fadeInUp">
-                            <i class="fa fa-info-circle id-color fa-2x " style="padding-bottom: 15px"></i>
-                            <h3>Technological Innovation</h3>
-                            <p>Where the sessions and the talks by the leading professionals expose the participants to the latest technologies and innovations and inspire them to innovate too. 
-                                
-                            </p>
-                            
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
+              </div>
+            </div>
+          </div>
 
 
-            <!-- section service begin -->
-            <section id="section-side-1" class="side-bg right no-padding text-light" data-bgcolor="#243f6a">
-                <div class="image-container col-md-6 col-md-offset-6 pull-right">
-                    <div class="background-image"></div>
-                </div>
+        </div>
+      </section>
+      <!-- section close -->
 
-                <div class="container" id="venue">
-                    <div class="row">
-                        <div class="inner-padding">
-                            <div class="col-md-5 wow fadeInLeft" data-wow-delay=".5s">
-                                <h2>Sambodhi Retreat</h2>
-                                <p class="lead">CSIS Venue</p>
-                                <p>It’s a luxury ecotel resort where the visitors can open up to a whole new world of luxurious spiritualism and immerse in the enlightenment land of Lord Buddha. Exquisitely designed rooms, unmatched amenities, organic food, village trails, swimming pool, splash pool etc. are some of the unique features which makes the stay a memorable one. The early morning sunlight offers an unmatched view of the Mahabodhi temple overlooking river Falgu. The temple is just a few minutes’ walk from the resort through river Falgu and fifteen minutes from the Sujata Garh remains. Sambodhi Retreat is ideally located and approachable by train and the nearest station is 15 kms away, the Gaya junction. Nearest airport is 7 kms away, the Gaya International airport and Patna airport is 122 kms away.
-                                    </p>
-                                <div class="spacer-single"></div>
-                                <a href="http://www.sambodhiretreat.org/resort/default.aspx" class="btn-line">Visit Website</a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section service close -->
+      <!-- section begin -->
+      <section id="section-intro-text">
+        <div class="container" id="about">
+          <div class="row">
+            <div class="col-md-12 text-center wow fadeInUp">
+              <h2>About CSIS</h2>
+              <p class="lead">The Computer Society India Symposium (CSIS) is one of the remarkable events of the IEEE Computer Society in India and is held annually with the venue being rotated among the various sections of India. The main scope of this symposium is
+                to bring professionals, speakers, experts, and other academicians so that the participants can interact with and in the process learn. The symposium is generally a 3-day event and includes talks, workshops, and events on a wide array of
+                domains such as technical, industrial, management, social development and much more. </p>
+              <div class="spacer-single"></div>
+            </div>
+
+            <div class="col-md-4 text-center wow fadeInUp">
+              <i class="fa fa-bookmark id-color fa-2x" style="padding-bottom: 15px"></i>
+              <h3>Professional Development</h3>
+              <p>where the participants get a chance to hone their professional and soft skills that is going to give them extra mileage in the process of building a successful career.
+              </p>
+            </div>
+
+            <div class="col-md-4 text-center wow fadeInUp">
+              <i class="fa fa-cogs id-color fa-2x " style="padding-bottom: 15px"></i>
+              <h3>Developing the Society</h3>
+              <p>since this event allows the exchange of ideas, knowledge and methods between the delegates and the participants of several IEEE Sections, so that they can collaborate to implement them for betterment of the society.
+              </p>
+
+            </div>
+
+            <div class="col-md-4 text-center wow fadeInUp">
+              <i class="fa fa-info-circle id-color fa-2x " style="padding-bottom: 15px"></i>
+              <h3>Technological Innovation</h3>
+              <p>Where the sessions and the talks by the leading professionals expose the participants to the latest technologies and innovations and inspire them to innovate too.
+
+              </p>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- section close -->
 
 
-            <!-- section service begin -->
-            <section id="section-side-2" class="side-bg no-padding text-light" data-bgcolor="#b14141">
-                <div class="image-container col-md-6 pull-left">
-                    <div class="background-image"></div>
-                </div>
+      <!-- section service begin -->
+      <section id="section-side-1" class="side-bg right no-padding text-light" data-bgcolor="#243f6a">
+        <div class="image-container col-md-6 col-md-offset-6 pull-right">
+          <div class="background-image"></div>
+        </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="inner-padding">
-                            <div class="col-md-5 col-md-offset-7 wow fadeInRight" data-wow-delay=".5s">
-                                <h2>The Bodhgaya Experience<span class="id-color">.</span></h2>
-                                <p class="lead">Bodhgaya details</p>
-                                <p>Bodh Gaya, rightfully said the birthplace of Buddhism since under a tree here (now called Bodhi tree), Gautama Buddha, the founder of Buddhism, attained true knowledge is the most holy place for the Buddhists. Most of the Buddhist countries have their monasteries and temples in this town in Bihar making it a huge tourist attraction for people from all parts of the world so much so that it has been declared the world heritage site by the United Nations a few years back. Bodh Gaya is well-known for being a place where people come and experience real peace and serenity in spite of it being flooded with tourists throughout the year.</p>
-                                <div class="spacer-single"></div>
-                                <a href="http://whc.unesco.org/en/list/1056" class="btn-line">View Tourism Page</a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section service close -->
+        <div class="container" id="venue">
+          <div class="row">
+            <div class="inner-padding">
+              <div class="col-md-5 wow fadeInLeft" data-wow-delay=".5s">
+                <h2>Sambodhi Retreat</h2>
+                <p class="lead">CSIS Venue</p>
+                <p>It’s a luxury ecotel resort where the visitors can open up to a whole new world of luxurious spiritualism and immerse in the enlightenment land of Lord Buddha. Exquisitely designed rooms, unmatched amenities, organic food, village trails,
+                  swimming pool, splash pool etc. are some of the unique features which makes the stay a memorable one. The early morning sunlight offers an unmatched view of the Mahabodhi temple overlooking river Falgu. The temple is just a few minutes’
+                  walk from the resort through river Falgu and fifteen minutes from the Sujata Garh remains. Sambodhi Retreat is ideally located and approachable by train and the nearest station is 15 kms away, the Gaya junction. Nearest airport is 7
+                  kms away, the Gaya International airport and Patna airport is 122 kms away.
+                </p>
+                <div class="spacer-single"></div>
+                <a href="http://www.sambodhiretreat.org/resort/default.aspx" class="btn-line">Visit Website</a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section service close -->
 
-            <section id="section-speakers">
-                <div class="container relative" id="speakers">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h2><span class="id-color">Event</span> Speakers</h2>
-                            <div class="spacer-single"></div>
-                        </div>
 
-                        <div class="col-md-4 ">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/speakers/Mangeshda.jpg">
+      <!-- section service begin -->
+      <section id="section-side-2" class="side-bg no-padding text-light" data-bgcolor="#b14141">
+        <div class="image-container col-md-6 pull-left">
+          <div class="background-image"></div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="inner-padding">
+              <div class="col-md-5 col-md-offset-7 wow fadeInRight" data-wow-delay=".5s">
+                <h2>The Bodhgaya Experience<span class="id-color">.</span></h2>
+                <p class="lead">Bodhgaya details</p>
+                <p>Bodh Gaya, rightfully said the birthplace of Buddhism since under a tree here (now called Bodhi tree), Gautama Buddha, the founder of Buddhism, attained true knowledge is the most holy place for the Buddhists. Most of the Buddhist countries
+                  have their monasteries and temples in this town in Bihar making it a huge tourist attraction for people from all parts of the world so much so that it has been declared the world heritage site by the United Nations a few years back.
+                  Bodh Gaya is well-known for being a place where people come and experience real peace and serenity in spite of it being flooded with tourists throughout the year.</p>
+                <div class="spacer-single"></div>
+                <a href="http://whc.unesco.org/en/list/1056" class="btn-line">View Tourism Page</a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section service close -->
+
+      <section id="section-speakers">
+        <div class="container relative" id="speakers">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2><span class="id-color">Event</span> Speakers</h2>
+              <div class="spacer-single"></div>
+            </div>
+
+            <div class="col-md-4 ">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Mangeshda.jpg">
                                         <span class="overlay-v">
                                             <span style=" font-size-adjust: inherit">Sri Sri Mangeshda is a Karmayogi who has dedicated His life for mental, physical and spiritual well-being of the society through Kriya Yoga. His mission is to awaken and integrate people of all castes, creed and religions on the path of Humanity, by a strong bond of Unconditional Love.
                                                 </span>
                                         </span>
                                     </a>
-                                    <img src="images/team/speakers/Mangeshda.jpg" class="img-responsive" alt="">
-                                </figure>
+                  <img src="images/team/speakers/Mangeshda.jpg" class="img-responsive" alt="">
+                </figure>
 
-                                <h3>HH Sadguru Yogiraj Sri Sri Dr. Mangeshda
+                <h3>HH Sadguru Yogiraj Sri Sri Dr. Mangeshda
                                 </h3>
-                                <span class="subtitle">Public Figure
+                <span class="subtitle">Public Figure
                                                                     </span>
-                            </div>
-                        </div>
+              </div>
+            </div>
 
-                        <div class="col-md-4 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/speakers/Surabhi.jpg">
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Surabhi.jpg">
                                         <span class="overlay-v">
                                             <span>Ms. Surabhi gautam is an IAS officer and an Ex-IES officer with All India Rank 1. She has worked as a scientist in the Bhabha Atomic Research Centre. She had also topped the Indian Space and Research Organization exams with AIR 1.
                                                 </span>
                                     </a>
-                                    <img src="images/team/speakers/Surabhi.jpg" class="img-responsive" alt="">
-                                </figure>
+                  <img src="images/team/speakers/Surabhi.jpg" class="img-responsive" alt="">
+                </figure>
 
-                                <h3>Ms. Surabhi Gautam
+                <h3>Ms. Surabhi Gautam
                                     </h3>
-                                <span class="subtitle">IAS officer,Ex IES officer AIR 1,Ex BARC scientist,ISRO AIR 1. 
+                <span class="subtitle">IAS officer,Ex IES officer AIR 1,Ex BARC scientist,ISRO AIR 1.
                                     </span>
-                            </div>
-                        </div>
+              </div>
+            </div>
 
-                        <div class="col-md-4 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/speakers/sujith.jpg">
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/sujith.jpg">
                                         <span class="overlay-v">
                                             <span>Dr. Sujit Kumar Biswas is the Chair of the IEEE Kolkata Section that covers four major states of India : West Bengal, Odisha, Bihar and Jharkhand. He is a well known consultant in the field of Power Conversion for the last 25 years. He has received many esteemed awards including, 20th IETE Bimal Bose Award for Outstanding contribution in the area of Power Electronics.
                                                 </span>
                                     </a>
-                                    <img src="images/team/speakers/sujith.jpg" class="img-responsive" alt="">
-                                </figure>
+                  <img src="images/team/speakers/sujith.jpg" class="img-responsive" alt="">
+                </figure>
 
-                                <h3>Prof. Sujit K Biswas</h3>
-                                <span class="subtitle">Chairperson | IEEE Kolkata Section
+                <h3>Prof. Sujit K Biswas</h3>
+                <span class="subtitle">Chairperson | IEEE Kolkata Section
                                     </span>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="col-md-4 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/speakers/Sarmistha.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Sarmistha.jpg">
                                         <span class="overlay-v">
-                                            <span>Dr. Sarmistha Neogy is Reader in Dept. of Computer Science & Engineering at Jadavpur University, Kolkata, India. She has published papers in international journals and international/national conferences. She has co-authored 2 books, including a book on Operating Systems. Dr. Neogy has delivered invited talks and lectures in Conferences and Workshops in India. 
+                                            <span>Dr. Sarmistha Neogy is Reader in Dept. of Computer Science & Engineering at Jadavpur University, Kolkata, India. She has published papers in international journals and international/national conferences. She has co-authored 2 books, including a book on Operating Systems. Dr. Neogy has delivered invited talks and lectures in Conferences and Workshops in India.
                                                 </span>
                                     </a>
-                                    <img src="images/team/speakers/Sarmistha.jpg" class="img-responsive" alt="">
-                                </figure>
+                  <img src="images/team/speakers/Sarmistha.jpg" class="img-responsive" alt="">
+                </figure>
 
-                                <h3>Prof. Sarmistha Neogy</h3>
-                                <span class="subtitle">Chairperson | IEEE CS Chapter Kolkata Section
+                <h3>Prof. Sarmistha Neogy</h3>
+                <span class="subtitle">Chairperson | IEEE CS Chapter Kolkata Section
                                     </span>
-                            </div>
-                        </div>
+              </div>
+            </div>
 
-                        <div class="col-md-4 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/speakers/Shekhar.jpg">
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Shekhar.jpg">
                                         <span class="overlay-v">
                                             <span>Dr. Shekhar Verma is the Chair of the IEEE Computer Society Professional Chapter of the Uttar Pradesh section. Currently serving in Indian Institute of Information Technology (IIIT), Allahabad, he is absolutely adored by his students and is given quite respectable positions in the prestigious institute. </span>
                                     </a>
-                                    <img src="images/team/speakers/Shekhar.jpg" class="img-responsive" alt="">
-                                </figure>
+                  <img src="images/team/speakers/Shekhar.jpg" class="img-responsive" alt="">
+                </figure>
 
-                                <h3>Prof. Shekhar Verma
+                <h3>Prof. Shekhar Verma
                                     </h3>
-                                <span class="subtitle">Chairperson | IEEE CS Chapter Uttar Pradesh Section. 
+                <span class="subtitle">Chairperson | IEEE CS Chapter Uttar Pradesh Section.
                                     </span>
-                            </div>
-                        </div>
+              </div>
+            </div>
 
-                        <div class="col-md-4 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/speakers/Senthil.jpg">
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Senthil.jpg">
                                         <span class="overlay-v">
                                             <span>Mr. Senthil Kumar has received top ten most innovative entrepreneur award from honourable IT minister of Telangana KT Rama Rao at Global Entrepreneurship Summit 2017. He has been honoured as the top 5 Technology Explorers in India by Nasscom. He has also worked as a senior software engineer in developing the new smartphone platform called Tizen at Samsung India Software Operation.
                                                 </span>
                                     </a>
-                                    <img src="images/team/speakers/Senthil.jpg" class="img-responsive" alt="">
-                                </figure>
+                  <img src="images/team/speakers/Senthil.jpg" class="img-responsive" alt="">
+                </figure>
 
-                                <h3>Mr. Senthil Kumar
+                <h3>Mr. Senthil Kumar
                                     </h3>
-                                <span class="subtitle">Ex-Samsung , Ex-Qualcomm Engineer
+                <span class="subtitle">Ex-Samsung , Ex-Qualcomm Engineer
                                     </span>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="col-md-4 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/speakers/Garima.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Garima.jpg">
                                         <span class="overlay-v">
                                             <span>An MBA graduate from IIM Lucknow, Garima hails from the town of Selra in Bihar. Presently, she is the founder of Dejawoo School of Innovation, a school aimed not only to impart education but also to develop personalities and culture of innovation and freedom of thought.The school has impacted lives of many people. She is an inspiration  for many to follow their passion and test their limit.</span>
                                     </a>
-                                    <img src="images/team/speakers/Garima.jpg" class="img-responsive" alt="">
-                                </figure>
+                  <img src="images/team/speakers/Garima.jpg" class="img-responsive" alt="">
+                </figure>
 
-                                <h3>Mrs. Garima Vishal
+                <h3>Mrs. Garima Vishal
                                     </h3>
-                                <span class="subtitle">Alumni | IIM Lucknow, Director | Dejawoo School of Innovation
+                <span class="subtitle">Alumni | IIM Lucknow, Director | Dejawoo School of Innovation
                                     </span>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb30">
-                                <div class="profile_pic text-center">
-                                    <figure class="picframe mb30">
-                                        <a class="image-popup" href="images/team/speakers/Vishnu.jpg">
+              </div>
+            </div>
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Vishnu.jpg">
                                             <span class="overlay-v">
                                                 <span>Mr. Vishnu Ks completed the prestigious Google Summer of Code 2017. And he is also representing IIIT-Allahabad and India in its first batch of Github Campus Experts. He is Google code-in organization head this year and outreach mentor. Presently, he is working as full stack developer in Zulip. </span>
                                         </a>
-                                        <img src="images/team/speakers/Vishnu.jpg" class="img-responsive" alt="">
-                                    </figure>
-    
-                                    <h3>Mr. Vishnu Ks
-                                            
+                  <img src="images/team/speakers/Vishnu.jpg" class="img-responsive" alt="">
+                </figure>
+
+                <h3>Mr. Vishnu Ks
+
                                         </h3>
-                                    <span class="subtitle">Google Code In | Organisation Head , 
-                                            Full Stack Developer | Zulip 
+                <span class="subtitle">Google Code In | Organisation Head ,
+                                            Full Stack Developer | Zulip
                                             </span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb30">
-                                <div class="profile_pic text-center">
-                                    <figure class="picframe mb30">
-                                        <a class="image-popup" href="images/team/speakers/Somak.jpg">
+              </div>
+            </div>
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Somak.jpg">
                                             <span class="overlay-v">
                                                 <span>
 
                                                     Content to be added
                                                 </span>
                                         </a>
-                                        <img src="images/team/speakers/Somak.jpg" class="img-responsive" alt="">
-                                    </figure>
-    
-                                    <h3>Dr. Somak Bhattacharya
-                                            
+                  <img src="images/team/speakers/Somak.jpg" class="img-responsive" alt="">
+                </figure>
+
+                <h3>Dr. Somak Bhattacharya
+
                                         </h3>
-                                    <span class="subtitle">Radio Scientist
+                <span class="subtitle">Radio Scientist
                                             </span>
-                                </div>
-                            </div>
-                    <!-- END ROW -->  </div>
+              </div>
+            </div>
+            <!-- END ROW -->
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- section begin -->
+      <section id="section-fun-facts-2" class="no-top no-bottom text-light" data-stellar-background-ratio=".2">
+        <div class="overlay-bg pt80 pb80">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-md-3 wow fadeIn" data-wow-delay="0">
+                <div class="de_count">
+                  <i class="icon_id-2 id-color" data-animation="fadeInDown" data-delay="0"></i>
+                  <h3 class="timer" data-to="250" data-speed="2500">0</h3>
+                  <span>Participants</span>
                 </div>
-            </section>
+              </div>
 
-           
-
-
-            <!-- section begin -->
-            <section id="section-fun-facts-2" class="no-top no-bottom text-light" data-stellar-background-ratio=".2">
-                <div class="overlay-bg pt80 pb80">
-                    <div class="container">
-
-                        <div class="row">
-                            <div class="col-md-3 wow fadeIn" data-wow-delay="0">
-                                <div class="de_count">
-                                    <i class="icon_id-2 id-color" data-animation="fadeInDown" data-delay="0"></i>
-                                    <h3 class="timer" data-to="250" data-speed="2500">0</h3>
-                                    <span>Participants</span>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
-                                <div class="de_count">
-                                    <i class="icon_easel  id-color" data-animation="fadeInDown" data-delay="200"></i>
-                                    <h3 class="timer" data-to="3" data-speed="2500">0</h3>
-                                    <span>Tracks</span>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
-                                <div class="de_count">
-                                    <i class="icon_headphones  id-color" data-animation="fadeInDown" data-delay="400"></i>
-                                    <h3 class="timer" data-to="20" data-speed="2500">0</h3>
-                                    <span>Speakers</span>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
-                                <div class="de_count">
-                                    <i class="icon_globe id-color" data-animation="fadeInDown" data-delay="600"></i>
-                                    <h3 class="timer" data-to="15" data-speed="2500">0</h3>
-                                    <span>Sessions</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
+                <div class="de_count">
+                  <i class="icon_easel  id-color" data-animation="fadeInDown" data-delay="200"></i>
+                  <h3 class="timer" data-to="3" data-speed="2500">0</h3>
+                  <span>Tracks</span>
                 </div>
-            </section>
-            <!-- section close -->
+              </div>
 
- <!-- section begin -->
-<!-- testimonial comments starts here
+              <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
+                <div class="de_count">
+                  <i class="icon_headphones  id-color" data-animation="fadeInDown" data-delay="400"></i>
+                  <h3 class="timer" data-to="20" data-speed="2500">0</h3>
+                  <span>Speakers</span>
+                </div>
+              </div>
+
+              <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
+                <div class="de_count">
+                  <i class="icon_globe id-color" data-animation="fadeInDown" data-delay="600"></i>
+                  <h3 class="timer" data-to="15" data-speed="2500">0</h3>
+                  <span>Sessions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section close -->
+
+      <!-- section begin -->
+      <!-- testimonial comments starts here
  <section id="section-testimonial-no-bg" data-stellar-background-ratio=".2">
     <div class="container relative">
         <div class="row">
@@ -744,160 +787,160 @@
     </div>
 </section>
 -->
-<!-- section close -->
+      <!-- section close -->
 
-<!-- Sponsor section start -->
+      <!-- Sponsor section start -->
 
-<div class="container text-center text-light">
-    <div class="row" style="height : 10px ; width: 100%">
-        <div class="col-md-12">
+      <div class="container text-center text-light">
+        <div class="row" style="height : 10px ; width: 100%">
+          <div class="col-md-12">
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-<section id="section-sponsors">
-    <div class="container relative" id="sponsors">
-        <div class="row">
+      <section id="section-sponsors">
+        <div class="container relative" id="sponsors">
+          <div class="row">
             <div class="col-md-12 text-center">
-                <h2><span class="id-color">Event</span> Sponsors</h2>
-                <p class="lead">Check who make this event possible</p>
-                <div class="spacer-single"></div>
+              <h2><span class="id-color">Event</span> Sponsors</h2>
+              <p class="lead">Check who make this event possible</p>
+              <div class="spacer-single"></div>
             </div>
 
             <div class="col-md-12 text-center">
-                <h3>Title Sponsors</h3>
-                <div class="spacer-single"></div>
-                <div class = "row">
+              <h3>Title Sponsors</h3>
+              <div class="spacer-single"></div>
+              <div class="row">
                 <div class="col-md-12 mb30">
-                    
-                <img src="images/logo/logores.png"  alt="" class="grey-hover img-fluid">
-               </div>
-               </div>
-                <!-- <img src="images/logo/2.png" alt="" class="grey-hover">
+
+                  <img src="images/logo/logores.png" alt="" class="grey-hover img-fluid">
+                </div>
+              </div>
+              <!-- <img src="images/logo/2.png" alt="" class="grey-hover">
                 <img src="images/logo/3.png" alt="" class="grey-hover"> -->
 
-                <div class="spacer-double"></div>
+              <div class="spacer-double"></div>
 
-                <h3>Other Sponsors</h3>
-                <div class="spacer-single"></div>
-                <div class="row">
-                    <div class="col-md-4 mb30">
-                        
-                    <img src="images/logo/logocs.png" alt="" class="grey-hover">
-                    
-                </div>
+              <h3>Other Sponsors</h3>
+              <div class="spacer-single"></div>
+              <div class="row">
                 <div class="col-md-4 mb30">
-                <img src="images/logo/logosac.png" alt="" class="grey-hover">        
-            </div>
-                <div class="col-md-4 mb30">
-                <img src="images/logo/logoiem.png" alt="" class="grey-hover">
-                </div>
+
+                  <img src="images/logo/logocs.png" alt="" class="grey-hover">
 
                 </div>
-                <div class="row">
-                    <div class="col-md-4 mb30">
-                        
-                    <img src="images/logo/Zulip.png" style="max-height : 150px" alt="" class="grey-hover">
-                    <p class="lead">Zulip</p>
-                    
+                <div class="col-md-4 mb30">
+                  <img src="images/logo/logosac.png" alt="" class="grey-hover">
                 </div>
                 <div class="col-md-4 mb30">
-                <img src="images/logo/kriyayogafoundation.jpg" style="max-height : 150px" alt="" class="grey-hover">        
-                <p class="lead">Kriya Yogi Foundation</p>
-                
-            </div>
+                  <img src="images/logo/logoiem.png" alt="" class="grey-hover">
+                </div>
+
+              </div>
+              <div class="row">
                 <div class="col-md-4 mb30">
-                <img src="images/logo/ieeekolkata.jpg" style="max-height : 120px ; margin-top : 15px" alt="" class="grey-hover">
+
+                  <img src="images/logo/Zulip.png" style="max-height : 150px" alt="" class="grey-hover">
+                  <p class="lead">Zulip</p>
+
+                </div>
+                <div class="col-md-4 mb30">
+                  <img src="images/logo/kriyayogafoundation.jpg" style="max-height : 150px" alt="" class="grey-hover">
+                  <p class="lead">Kriya Yogi Foundation</p>
+
+                </div>
+                <div class="col-md-4 mb30">
+                  <img src="images/logo/ieeekolkata.jpg" style="max-height : 120px ; margin-top : 15px" alt="" class="grey-hover">
                 </div>
                 <!--<img src="images/logo/a4.png" alt="" class="grey-hover">
                 <img src="images/logo/a5.png" alt="" class="grey-hover"> -->
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+
+              <a class="btn btn-custom" href="https://drive.google.com/open?id=1_u9uMjGbzmR3obfWG6E0ZZPnvj6jTs1H" style="margin-top : 80px">Download Sponsorship Brochure</a>
+
+            </div>
+          </div>
         </div>
-        <div class = "row">
-                <div class="col-md-12 text-center">
-                
-                    <a class="btn btn-custom" href = "https://drive.google.com/open?id=1_u9uMjGbzmR3obfWG6E0ZZPnvj6jTs1H" style="margin-top : 80px">Download Sponsorship Brochure</a>
 
-                </div>                        
-        </div>
-    </div>
+      </section>
 
-</section>
-
-<!-- Sponsor Section close -->
+      <!-- Sponsor Section close -->
 
 
-<section id="section-tickets" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
-    <div class="overlay-bg pt80 pb80" id="registration">
-        <div class="container">
+      <section id="section-tickets" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
+        <div class="overlay-bg pt80 pb80" id="registration">
+          <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2><span class="id-color">Register</span>Now</h2>
-                    <p class="lead">Join The biggest technical event of IEEE CS in India</p>
-                    <div class="spacer-single"></div>
-                </div>
+              <div class="col-md-12 text-center">
+                <h2><span class="id-color">Register</span>Now</h2>
+                <p class="lead">Join The biggest technical event of IEEE CS in India</p>
+                <div class="spacer-single"></div>
+              </div>
 
-                <div class="col-md-12">
-                    <div class="item pricing">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="pricing-s1 mb30">
-                                        <div class="top">
-                                            <h2>IEEE CS <br> Student Members</h2>
-                                            <p class="price"><span class="currency">₹</span> <b>1800</b> <span class="month">/Per Person</span></p>
-                                        </div>
-                                        <div class="bottom">
-                                            <!--<ul>
+              <div class="col-md-12">
+                <div class="item pricing">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="pricing-s1 mb30">
+                          <div class="top">
+                            <h2>IEEE CS <br> Student Members</h2>
+                            <p class="price"><span class="currency">₹</span> <b>1800</b> <span class="month">/Per Person</span></p>
+                          </div>
+                          <div class="bottom">
+                            <!--<ul>
                                                 <li><i class="icon_check"></i>Facility 1</li>
                                                 <li><i class="icon_check"></i>Facility 2</li>
                                             </ul> -->
-                                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1HEkFhK6n0UbrROWFh3e5Zuj3IVfMsXspckgcRwd1mZAJVg/viewform" class="btn btn-custom">Register Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="pricing-s1 featured mb30">
-                                        <div class="top">
-                                            <h2>IEEE <br> Student Members</h2>
-                                            <p class="price"><span class="currency">₹</span> <b>2500</b> <span class="month">/Per Person</span></p>
-                                        </div>
-                                        <div class="bottom">
-                                             <!--<ul>
-                                                <li><i class="icon_check"></i>Facility 1</li>
-                                                <li><i class="icon_check"></i>Facility 2</li>
-                                            </ul> -->
-                                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1HEkFhK6n0UbrROWFh3e5Zuj3IVfMsXspckgcRwd1mZAJVg/viewform" class="btn btn-custom">Register Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="pricing-s1 mb30">
-                                        <div class="top">
-                                            <h2>Non-IEEE <br> Students</h2>
-                                            <p class="price"><span class="currency">₹</span> <b>3500</b> <span class="month">/Per Person</span></p>
-                                        </div>
-                                        <div class="bottom">
-                                              <!--<ul>
-                                                <li><i class="icon_check"></i>Facility 1</li>
-                                                <li><i class="icon_check"></i>Facility 2</li>
-                                            </ul> -->
-                                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1HEkFhK6n0UbrROWFh3e5Zuj3IVfMsXspckgcRwd1mZAJVg/viewform" class="btn btn-custom">Register Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1HEkFhK6n0UbrROWFh3e5Zuj3IVfMsXspckgcRwd1mZAJVg/viewform" class="btn btn-custom">Register Now</a>
+                          </div>
                         </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="pricing-s1 featured mb30">
+                          <div class="top">
+                            <h2>IEEE <br> Student Members</h2>
+                            <p class="price"><span class="currency">₹</span> <b>2500</b> <span class="month">/Per Person</span></p>
+                          </div>
+                          <div class="bottom">
+                            <!--<ul>
+                                                <li><i class="icon_check"></i>Facility 1</li>
+                                                <li><i class="icon_check"></i>Facility 2</li>
+                                            </ul> -->
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1HEkFhK6n0UbrROWFh3e5Zuj3IVfMsXspckgcRwd1mZAJVg/viewform" class="btn btn-custom">Register Now</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="pricing-s1 mb30">
+                          <div class="top">
+                            <h2>Non-IEEE <br> Students</h2>
+                            <p class="price"><span class="currency">₹</span> <b>3500</b> <span class="month">/Per Person</span></p>
+                          </div>
+                          <div class="bottom">
+                            <!--<ul>
+                                                <li><i class="icon_check"></i>Facility 1</li>
+                                                <li><i class="icon_check"></i>Facility 2</li>
+                                            </ul> -->
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1HEkFhK6n0UbrROWFh3e5Zuj3IVfMsXspckgcRwd1mZAJVg/viewform" class="btn btn-custom">Register Now</a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </section>
     </div>
-</section>
-        </div>
-        <!-- content close -->
-<!--schedule comment starts here
+    <!-- content close -->
+    <!--schedule comment starts here
         <section id="section-schedules" aria-label="section-services-tab" data-bgcolor="#f5f5f5">
             <div class="container" id="schedule">
                 <div class="row">
@@ -922,7 +965,7 @@
                                     <h3>Day <span>03</span></h3>
                                     <h4>18 March, 2018</h4>
                                 </li>
-                                
+
                             </ul>
 
                             <div class="de_tab_content text-left">
@@ -1161,7 +1204,7 @@
                                     </div>
                                 </div>
 
-                            
+
                             </div>
                         </div>
                     </div>
@@ -1169,8 +1212,8 @@
             </div>
         </section>
 -->
-  
-<!-- Grey Bar Div 
+
+    <!-- Grey Bar Div
 
         <div class="container text-center text-light">
             <div class="row" style="height : 10px ; width: 100%">
@@ -1179,466 +1222,505 @@
             </div>
         </div>
     -->
-        <section id="section-speakers">
-            <div class="container relative">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2><span class="id-color">Our Amazing</span> Team</h2>
-                        <p class="lead">Meet Our Team</p>
-                        <div class="spacer-single"></div>
-                    </div>
+    <section id="section-speakers">
+      <div class="container relative">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2><span class="id-color">Our Amazing</span> Team</h2>
+            <p class="lead">Meet Our Team</p>
+            <div class="spacer-single"></div>
+          </div>
 
-                    <div class="col-md-4 ">
-                        <div class="profile_pic text-center">
-                            <figure class="picframe mb30">
-                                <a class="image-popup" href="images/team/Shivam.jpg">
+          <div class="col-md-4 ">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Shivam.jpg">
                                 </a>
-                                <img src="images/team/Shivam.jpg" class="img-responsive" alt="">
-                            </figure>
+                <img src="images/team/Shivam.jpg" class="img-responsive" alt="">
+              </figure>
 
-                            <h3>Shivam <br> ( IEEE CS R-10 Student Ambassador )
+              <h3>Shivam <br> ( IEEE CS R-10 Student Ambassador )
                                 </h3>
-                            <span class="subtitle">Event Coordinator <br> +917905083422                                
+              <span class="subtitle">Event Coordinator <br> +917905083422
                                 </span>
-                        </div>
-                    </div>
+            </div>
+          </div>
 
-                    <div class="col-md-4 mb30">
-                        <div class="profile_pic text-center">
-                            <figure class="picframe mb30">
-                                <a class="image-popup" href="images/team/srishti.jpg">
+          <div class="col-md-4 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/srishti.jpg">
                                </a>
-                                <img src="images/team/srishti.jpg" class="img-responsive" alt="">
-                            </figure>
+                <img src="images/team/srishti.jpg" class="img-responsive" alt="">
+              </figure>
 
-                            <h3>Srishti <br> ( CSSR, IEEE Kolkata Section )
+              <h3>Srishti <br> ( CSSR, IEEE Kolkata Section )
                                 </h3>
-                            <span class="subtitle">Event Coordinator <br> +918210402086                                
+              <span class="subtitle">Event Coordinator <br> +918210402086
                                 </span>
-                        </div>
-                    </div>
+            </div>
+          </div>
 
-                    <div class="col-md-4 mb30">
-                        <div class="profile_pic text-center">
-                            <figure class="picframe mb30">
-                                <a class="image-popup" href="images/team/nitish.jpg">
+          <div class="col-md-4 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/nitish.jpg">
                                  </a>
-                                <img src="images/team/nitish.jpg" class="img-responsive" alt="">
-                            </figure>
+                <img src="images/team/nitish.jpg" class="img-responsive" alt="">
+              </figure>
 
-                            <h3>Nitish Singh <br>( Chairperson, IEEE Student Branch IEM Kolkata)
+              <h3>Nitish Singh <br>( Chairperson, IEEE Student Branch IEM Kolkata)
                                 </h3>
-                                <span class="subtitle">Event Coordinator <br> +918709055152                             
-                                    
+              <span class="subtitle">Event Coordinator <br> +918709055152
+
                             </span>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-md-3 mb30">
-                        <div class="profile_pic text-center">
-                            <figure class="picframe mb30">
-                                <a class="image-popup" href="images/team/Afnan.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Afnan.jpg">
                                </a>
-                                <img src="images/team/Afnan.jpg" class="img-responsive" alt="">
-                            </figure>
+                <img src="images/team/Afnan.jpg" class="img-responsive" alt="">
+              </figure>
 
-                            <h3>Afnan Nazer
+              <h3>Afnan Nazer
                                 </h3>
-                            <span class="subtitle">Design Lead
+              <span class="subtitle">Design Lead
                                 </span>
-                        </div>
-                    </div>
+            </div>
+          </div>
 
-                    <div class="col-md-3 mb30">
-                        <div class="profile_pic text-center">
-                            <figure class="picframe mb30">
-                                <a class="image-popup" href="images/team/Vignesh.jpg">
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Vignesh.jpg">
                                </a>
-                                <img src="images/team/Vignesh.jpg" class="img-responsive" alt="">
-                            </figure>
+                <img src="images/team/Vignesh.jpg" class="img-responsive" alt="">
+              </figure>
 
-                            <h3>Vignesh Hari
+              <h3>Vignesh Hari
                                 </h3>
-                            <span class="subtitle">Web Lead
+              <span class="subtitle">Web Lead
                                 </span>
-                        </div>
-                    </div>
+            </div>
+          </div>
 
-                    <div class="col-md-3 mb30">
-                        <div class="profile_pic text-center">
-                            <figure class="picframe mb30">
-                                <a class="image-popup" href="images/team/Pratik.jpg">
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Pratik.jpg">
                                 </a>
-                                <img src="images/team/Pratik.jpg" class="img-responsive" alt="">
-                            </figure>
+                <img src="images/team/Pratik.jpg" class="img-responsive" alt="">
+              </figure>
 
-                            <h3>Pratik Mangalore
+              <h3>Pratik Mangalore
                                 </h3>
-                            <span class="subtitle">Sponsorship Lead
+              <span class="subtitle">Sponsorship Lead
                                 </span>
-                        </div>
-                    </div>
+            </div>
+          </div>
 
-                    <div class="col-md-3 mb30">
-                        <div class="profile_pic text-center">
-                            <figure class="picframe mb30">
-                                <a class="image-popup" href="images/team/aanandita.jpg">
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/aanandita.jpg">
                                </a>
-                                <img src="images/team/aanandita.jpg" class="img-responsive" alt="">
-                            </figure>
+                <img src="images/team/aanandita.jpg" class="img-responsive" alt="">
+              </figure>
 
-                            <h3>Aanandita Dhawan
+              <h3>Aanandita Dhawan
                                 </h3>
-                            <span class="subtitle">Editor-In-Chief | Documentation
+              <span class="subtitle">Editor-In-Chief | Documentation
                                 </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                        <div class="col-md-3 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/Saurabh.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Saurabh.jpg">
                                    </a>
-                                    <img src="images/team/Saurabh.jpg" class="img-responsive" alt="">
-                                </figure>
-    
-                                <h3>Saurabh Tibrewal                                        
+                <img src="images/team/Saurabh.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Saurabh Tibrewal
                                     </h3>
-                                <span class="subtitle">Finance Lead                                        
+              <span class="subtitle">Finance Lead
                                     </span>
-                            </div>
-                        </div>
-    
-                        <div class="col-md-3 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/Sailakshmi.jpg">
+            </div>
+          </div>
+
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Sailakshmi.jpg">
                                     </a>
-                                    <img src="images/team/Sailakshmi.jpg" class="img-responsive" alt="">
-                                </figure>
-    
-                                <h3>Sailakshmi PV
+                <img src="images/team/Sailakshmi.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Sailakshmi PV
                                     </h3>
-                                <span class="subtitle">WIC Lead
+              <span class="subtitle">WIC Lead
                                     </span>
-                            </div>
-                        </div>
-    
-                        <div class="col-md-3 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/Zameel.jpg">
+            </div>
+          </div>
+
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Zameel.jpg">
                                        </a>
-                                    <img src="images/team/Zameel.jpg" class="img-responsive" alt="">
-                                </figure>
-    
-                                <h3>Zameel Ihsan
+                <img src="images/team/Zameel.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Zameel Ihsan
                                     </h3>
-                                <span class="subtitle">Publicity Lead
+              <span class="subtitle">Publicity Lead
                                     </span>
-                            </div>
-                        </div>
-    
-                        <div class="col-md-3 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/Mohit.jpg">
+            </div>
+          </div>
+
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Mohit.jpg">
                                       </a>
-                                    <img src="images/team/Mohit.jpg" class="img-responsive" alt="">
-                                </figure>
-    
-                                <h3>Mohit Dokania
+                <img src="images/team/Mohit.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Mohit Dokania
                                                                         </h3>
-                                <span class="subtitle">Registration Lead, IEEE Kolkata Section                                        
+              <span class="subtitle">Registration Lead, IEEE Kolkata Section
                                     </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" style="     text-align: center;                    
+            </div>
+          </div>
+        </div>
+        <div class="row" style="     text-align: center;
                     ">
-                    <div class=" col-md-3 mb30">
-                            <div class="profile_pic text-center">
-                                <figure class="picframe mb30">
-                                    <a class="image-popup" href="images/team/Anamitra.jpg">
+          <div class=" col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Anamitra.jpg">
                                          </a>
-                                    <img src="images/team/Anamitra.jpg" class="img-responsive" alt="">
-                                </figure>
-    
-                                <h3>Anamitra Sarma                                        
-                                        
+                <img src="images/team/Anamitra.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Anamitra Sarma
+
                                     </h3>
-                                <span class="subtitle">Documentation Lead
+              <span class="subtitle">Documentation Lead
                                     </span>
-                            </div>
-                        </div>
-                            <div class=" col-md-3 mb30">
-                                <div class="profile_pic text-center">
-                                    <figure class="picframe mb30">
-                                        <a class="image-popup" href="images/team/Jyotirmaya.jpg">
+            </div>
+          </div>
+          <div class=" col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Jyotirmaya.jpg">
                                              </a>
-                                        <img src="images/team/Jyotirmaya.jpg" class="img-responsive" alt="">
-                                    </figure>
-        
-                                    <h3>Jyotirmoy Jyoti
-                                            
+                <img src="images/team/Jyotirmaya.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Jyotirmoy Jyoti
+
                                         </h3>
-                                    <span class="subtitle">Logistics Lead
+              <span class="subtitle">Logistics Lead
                                         </span>
-                                </div>
-                            </div>
-        
-                            <div class="col-md-3 mb30">
-                                <div class="profile_pic text-center">
-                                    <figure class="picframe mb30">
-                                        <a class="image-popup" href="images/team/Aastha.jpg">
+            </div>
+          </div>
+
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Aastha.jpg">
                                              </a>
-                                        <img src="images/team/Aastha.jpg" class="img-responsive" alt="">
-                                    </figure>
-        
-                                    <h3>Aastha Verma                                            
+                <img src="images/team/Aastha.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Aastha Verma
                                         </h3>
-                                    <span class="subtitle">TISP Lead
+              <span class="subtitle">TISP Lead
                                         </span>
-                                </div>
-                            </div>
-        
-                            <div class="col-md-3 mb30">
-                                <div class="profile_pic text-center">
-                                    <figure class="picframe mb30">
-                                        <a class="image-popup" href="images/team/Shrutina.jpg">
+            </div>
+          </div>
+
+          <div class="col-md-3 mb30">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/Shrutina.jpg">
                                               </a>
-                                        <img src="images/team/Shrutina.jpg" class="img-responsive" alt="">
-                                    </figure>
-        
-                                    <h3>Shrutina Agarwal                                            
+                <img src="images/team/Shrutina.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Shrutina Agarwal
                                         </h3>
-                                    <span class="subtitle">Committee Supervisor                                            
+              <span class="subtitle">Committee Supervisor
                                         </span>
-                                </div>
-                            </div>
-        
-                       
-                        </div>
             </div>
-        </section>
+          </div>
 
-        <div class="container text-center text-light">
-            <div class="row" style="height : 10px ; width: 100%">
-                <div class="col-md-12">
-                </div>
-            </div>
+
         </div>
+      </div>
+    </section>
 
-        <section id="section-info">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2><span class="id-color">Venue</span> Information</h2>
-                        <p class="lead">How to Reach Sambodhi</p>
-                        <div class="spacer-single"></div>
-                    </div>
-
-                    <div class="col-md-4 text-center">
-                        <i class="fa fa-subway id-color fa-3x"></i>
-                        
-                        <h3>Train</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                    </div>
-
-                    <div class="col-md-4 text-center">
-                        <i class=" id-color fa  fa-fighter-jet fa-3x   "></i>
-                        <h3>Flight</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>                    </div>
-
-                    <div class="col-md-4 text-center">
-                        <i class="fa  fa-building id-color fa-3x"></i>
-                        <h3>Nearest Town</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- section close -->
-
-        <!-- section begin -->
-        <section id="section-map" class="no-top no-bottom" aria-label="map-container">
-            <div id="map"></div>
-        </section>
-        <!-- section close -->
-
-        <!-- section begin -->
-        <section id="section-quick-contact" class="bordertop">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <div class="wm-1"></div>
-                        <i class="icon_mobile id-color size40 mb20"></i>
-                        <h5>Call Us</h5>
-                        <h4>Number Here</h4>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="wm-1"></div>
-                        <i class="icon_house_alt id-color size40 mb20"></i>
-                        <h5>Address</h5>
-                        <h4>Adress here</h4>
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <div class="wm-1"></div>
-                        <i class="icon_mail_alt id-color size40 mb20"></i>
-                        <h5>Email Us</h5>
-                        <h4>Email Here</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- footer begin -->
-        <footer>
-            <div class="container text-center text-light">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="social-icons big">
-                            <a href="https://www.facebook.com/ieeecsis/"><i class="fa fa-facebook fa-lg"></i></a>
-                            <a href="https://twitter.com/ieeecsis?s=09"><i class="fa fa-twitter fa-lg"></i></a>
-                            <a href="https://www.instagram.com/ieeecsis18/"><i class="fa fa-instagram fa-lg"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="subfooter">
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-md-12">
-                            &copy; Copyright 2017-18 - Designed and Maintained by IEEE CSIS Web Team
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer close -->
-
-        <a href="#" id="back-to-top"></a>
-        <div id="preloader">
-            <div class="preloader1"></div>
+    <div class="container text-center text-light">
+      <div class="row" style="height : 10px ; width: 100%">
+        <div class="col-md-12">
         </div>
+      </div>
     </div>
 
+    <section id="section-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2><span class="id-color">Venue</span> Information</h2>
+            <p class="lead">How to Reach Sambodhi</p>
+            <div class="spacer-single"></div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <i class="fa fa-subway id-color fa-3x"></i>
+
+            <h3>Train</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <i class=" id-color fa  fa-fighter-jet fa-3x   "></i>
+            <h3>Flight</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <i class="fa  fa-building id-color fa-3x"></i>
+            <h3>Nearest Town</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- section close -->
+
+    <!-- section begin -->
+    <section id="section-map" class="no-top no-bottom" aria-label="map-container">
+      <div id="map"></div>
+    </section>
+    <!-- section close -->
+
+    <!-- section begin -->
+    <section id="section-quick-contact" class="bordertop">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="wm-1"></div>
+            <i class="icon_mobile id-color size40 mb20"></i>
+            <h5>Call Us</h5>
+            <h4>Number Here</h4>
+          </div>
+
+          <div class="col-md-4">
+            <div class="wm-1"></div>
+            <i class="icon_house_alt id-color size40 mb20"></i>
+            <h5>Address</h5>
+            <h4>Adress here</h4>
+          </div>
+
+          <div class="col-md-4">
+
+            <div class="wm-1"></div>
+            <i class="icon_mail_alt id-color size40 mb20"></i>
+            <h5>Email Us</h5>
+            <h4>Email Here</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--contact form -->
+    <div class="container text-center text-light">
+      <div class="row" style="height : 10px ; width: 100%">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+    <section id="section-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2><span class="id-color">Contact</span> Us</h2>
+            <p class="lead">Any Questions? Drop us a note</p>
+            <div class="spacer-single"></div>
+          </div>
+
+          <form id="ajax-contact" method="post" action="mailer.php" class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+
+              <input type="text" class="form-control" id="name" placeholder="Name" name="name" required></div>
+            <div class="form-group">
+
+              <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-default orange_btn">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+    <!-- contact form end -->
+
+    <!-- footer begin -->
+    <footer>
+      <div class="container text-center text-light">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="social-icons big">
+              <a href="https://www.facebook.com/ieeecsis/"><i class="fa fa-facebook fa-lg"></i></a>
+              <a href="https://twitter.com/ieeecsis?s=09"><i class="fa fa-twitter fa-lg"></i></a>
+              <a href="https://www.instagram.com/ieeecsis18/"><i class="fa fa-instagram fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subfooter">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-12">
+              &copy; Copyright 2017-18 - Designed and Maintained by IEEE CSIS Web Team
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer close -->
+
+    <a href="#" id="back-to-top"></a>
+    <div id="preloader">
+      <div class="preloader1"></div>
+    </div>
+  </div>
 
 
-    <!-- Javascript Files
+
+  <!-- Javascript Files
     ================================================== -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.countTo.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/enquire.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.plugin.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA550w0A8Wl9AW3zk1NkzfRD5zsFPZsfVI&callback=initMap"></script>
-    <script src="js/map.js"></script>
-    <script src="js/designesia.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.isotope.min.js"></script>
+  <script src="js/easing.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/jquery.countTo.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/enquire.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.plugin.js"></script>
+  <script src="js/jquery.countdown.js"></script>
+  <script src="js/countdown-custom.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA550w0A8Wl9AW3zk1NkzfRD5zsFPZsfVI&callback=initMap"></script>
+  <script src="js/map.js"></script>
+  <script src="js/designesia.js"></script>
 
-    <script>
-        $(function() {
-      var INDEX = 0; 
+  <script>
+    $(function() {
+      var INDEX = 0;
       $("#chat-submit").click(function(e) {
         e.preventDefault();
-        var msg = $("#chat-input").val(); 
-        if(msg.trim() == ''){
+        var msg = $("#chat-input").val();
+        if (msg.trim() == '') {
           return false;
         }
         generate_message(msg, 'self');
-        var buttons = [
-            {
-              name: 'Existing User',
-              value: 'existing'
-            },
-            {
-              name: 'New User',
-              value: 'new'
-            }
-          ];
-        setTimeout(function() {      
-          generate_message(msg, 'user');  
+        var buttons = [{
+            name: 'Existing User',
+            value: 'existing'
+          },
+          {
+            name: 'New User',
+            value: 'new'
+          }
+        ];
+        setTimeout(function() {
+          generate_message(msg, 'user');
         }, 1000)
-        
+
       })
-    
+
       var accessToken = "2a850bb4347449b5a957f68fc22879aa";
-            var baseUrl = "https://api.api.ai/v1/";
-      
-    function send() {
-                
-            }
-    
+      var baseUrl = "https://api.api.ai/v1/";
+
+      function send() {
+
+      }
+
       function generate_message(msg, type) {
         INDEX++;
-        
-        if(type == "self"){    
-            var str="";
-        str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
-        str += "          <span class=\"msg-avatar\">";
-        str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
-        str += "          <\/span>";
-        str += "          <div class=\"cm-msg-text\">";
-        str += msg;
-        str += "          <\/div>";
-        str += "        <\/div>";
-                            $(".chat-logs").append(str);
-        $("#cm-msg-"+INDEX).hide().fadeIn(300);
-         $("#chat-input").val(''); 
-    
-    }
-        else{
-                $.ajax({
-                    type: "POST",
-                    url: baseUrl + "query?v=20150910",
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    headers: {
-                        "Authorization": "Bearer " + accessToken
-                    },
-                    data: JSON.stringify({ query: msg, lang: "en", sessionId: "somerandomthing" }),
-                    success: function(data) {
-                        //console.log(JSON.stringify(data.result.fulfillment.speech, undefined, 2));
-                      var output = JSON.stringify(data.result.fulfillment.speech , undefined, 2);
-                        var str="";
-        str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
-        str += "          <span class=\"msg-avatar\">";
-        str += "            <img src=\"images\/logo-light.png\">";
-        str += "          <\/span>";
-        str += "          <div class=\"cm-msg-text\">";
-        str += output.slice(1, output.length -1);
-        str += "          <\/div>";
-        str += "        <\/div>";
-                            $(".chat-logs").append(str);
-        $("#cm-msg-"+INDEX).hide().fadeIn(300);
-            $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
-    
-                    }
-    
-                });
+
+        if (type == "self") {
+          var str = "";
+          str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg " + type + "\">";
+          str += "          <span class=\"msg-avatar\">";
+          str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+          str += "          <\/span>";
+          str += "          <div class=\"cm-msg-text\">";
+          str += msg;
+          str += "          <\/div>";
+          str += "        <\/div>";
+          $(".chat-logs").append(str);
+          $("#cm-msg-" + INDEX).hide().fadeIn(300);
+          $("#chat-input").val('');
+
+        } else {
+          $.ajax({
+            type: "POST",
+            url: baseUrl + "query?v=20150910",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            headers: {
+              "Authorization": "Bearer " + accessToken
+            },
+            data: JSON.stringify({
+              query: msg,
+              lang: "en",
+              sessionId: "somerandomthing"
+            }),
+            success: function(data) {
+              //console.log(JSON.stringify(data.result.fulfillment.speech, undefined, 2));
+              var output = JSON.stringify(data.result.fulfillment.speech, undefined, 2);
+              var str = "";
+              str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg " + type + "\">";
+              str += "          <span class=\"msg-avatar\">";
+              str += "            <img src=\"images\/logo-light.png\">";
+              str += "          <\/span>";
+              str += "          <div class=\"cm-msg-text\">";
+              str += output.slice(1, output.length - 1);
+              str += "          <\/div>";
+              str += "        <\/div>";
+              $(".chat-logs").append(str);
+              $("#cm-msg-" + INDEX).hide().fadeIn(300);
+              $(".chat-logs").stop().animate({
+                scrollTop: $(".chat-logs")[0].scrollHeight
+              }, 1000);
+
+            }
+
+          });
         }
-    
-      }  
-      
-      function generate_button_message(msg, buttons){    
-        /* Buttons should be object array 
+
+      }
+
+      function generate_button_message(msg, buttons) {
+        /* Buttons should be object array
           [
             {
               name: 'Existing User',
@@ -1652,10 +1734,10 @@
         */
         INDEX++;
         var btn_obj = buttons.map(function(button) {
-           return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+          return "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\"" + button.value + "\">" + button.name + "<\/a><\/li>";
         }).join('');
-        var str="";
-        str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+        var str = "";
+        str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg user\">";
         str += "          <span class=\"msg-avatar\">";
         str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
         str += "          <\/span>";
@@ -1663,36 +1745,38 @@
         str += msg;
         str += "          <\/div>";
         str += "          <div class=\"cm-msg-button\">";
-        str += "            <ul>";   
+        str += "            <ul>";
         str += btn_obj;
         str += "            <\/ul>";
         str += "          <\/div>";
         str += "        <\/div>";
         $(".chat-logs").append(str);
-        $("#cm-msg-"+INDEX).hide().fadeIn(300);   
-        $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+        $("#cm-msg-" + INDEX).hide().fadeIn(300);
+        $(".chat-logs").stop().animate({
+          scrollTop: $(".chat-logs")[0].scrollHeight
+        }, 1000);
         $("#chat-input").attr("disabled", true);
       }
-      
+
       $(document).delegate(".chat-btn", "click", function() {
         var value = $(this).attr("chat-value");
         var name = $(this).html();
         $("#chat-input").attr("disabled", false);
         generate_message(name, 'self');
       })
-      
-      $("#chat-circle").click(function() {    
+
+      $("#chat-circle").click(function() {
         $("#chat-circle").toggle('scale');
         $(".chat-box").toggle('scale');
       })
-      
+
       $(".chat-box-toggle").click(function() {
         $("#chat-circle").toggle('scale');
         $(".chat-box").toggle('scale');
       })
-      
+
     })
-        </script>
+  </script>
 
 
 </body>
