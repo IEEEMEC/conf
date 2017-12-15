@@ -8715,3 +8715,67 @@ a, img {
 		padding: 0;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dl {
+	
+}
+
+dd {
+   margin: 0;
+   padding: 1.2em;
+}
+
+dt {
+   cursor: pointer;
+   font-weight: bold;
+   font-size: 1.5em;
+   line-height: 2.5em;
+   background: #F9A42A;
+   border-bottom: 1px solid white;
+   color: white;
+ 
+   transition: all ease-in-out;
+   -webkit-transition: all ease-in-out;
+}
+
+dt::first-of-type {
+   border-top: 0;
+}
+
+dt::last-of-type {
+   border-bottom: 0;
+}
+
+.faqa {
+ font-size: 1.2em;
+ padding-left: 25px;
+ background: #a7d3c9;
+}
+
+.faqb {
+ font-weight: bold;
+ padding: 2em;
+}

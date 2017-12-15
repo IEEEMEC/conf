@@ -1555,7 +1555,33 @@
 
 
     <!--contact form -->
-
+<!-- FAQ Section -->
+<section class="cd-faq" style="margin: 0 auto ; text-align: center">
+        <h2><span class="id-color">FA</span>Q</h2>
+        <p class="lead">Click on the question to expand it</p>    
+    <div class="col-md-offset-2 col-md-8 text-center">
+                
+    <dl style="margin-top : 20px">
+                <dt>Test Data?</dt>
+                <dd>We are open 24/7.</dd>
+                <dt>What are your hours?</dt>
+                <dd>We are open 24/7.</dd>
+                <dt>What are your hours?</dt>
+                <dd>We are open 24/7.</dd>
+                <dt>What are your hours?</dt>
+                <dd>We are open 24/7.</dd>
+                <dt>What are your hours?</dt>
+                <dd>We are open 24/7.</dd>
+              </dl>
+              </div>
+            </section> <!-- cd-faq -->
+<!-- FAQ Section -->
+<div class="container text-center text-light">
+        <div class="row" style="height : 10px ; width: 100%">
+          <div class="col-md-12">
+          </div>
+        </div>
+      </div>
 
     <section id="section-info">
       <div class="container">
@@ -1565,12 +1591,7 @@
             <p class="lead">Any Questions? Drop us a note</p>
             <div class="spacer-single"></div>
           </div>
-<<<<<<< HEAD
 <!-- change form action to relative url when hosting -->
-=======
-
-          <!--NOTE : Form action URL has been hosted on hosting for test purposes.Change it to relative path when hosting.-->
->>>>>>> 6bd508e10f288a285f184301085e3d3bf5e06e3a
           <form id="ajax-contact" method="post" action="http://ieeecsis.org/scripts/mailer.php" class="col-md-6 col-md-offset-3">
             <div class="form-group">
 
@@ -1645,6 +1666,26 @@
   <script src="js/designesia.js"></script>
 
   <script>
+        (function () {
+            
+            $('dd').filter(':nth-child(n+4)').hide(); //select every dd after the 4th child of dl
+            
+            $('dl').on("click", "dt", function () { //prvents a listener from being attached to multiple dd elements, which would hinder performance
+                $(this).next()
+                    .slideDown()
+                    .switchClass(" ", "bold", 300, "easeInOutQuad")
+                    .siblings('dd')
+                        .slideUp(200)
+                        .removeClass("faqa");
+              
+                $(this)
+                  .switchClass(" ", "faqa", 300, "easeInOutQuad") 
+                  .siblings('dt').removeClass('faqa')
+              
+            });
+        })();
+
+
     $(function() {
       var INDEX = 0;
       $("#chat-submit").click(function(e) {
