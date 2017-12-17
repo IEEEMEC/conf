@@ -40,12 +40,13 @@
     #chat-circle {
       position: fixed;
       z-index: 9999;
-      bottom: 50px;
+      bottom: 35px;
       right: 50px;
+      opacity: .78;
       background: #eeb807;
 
-      width: 80px;
-      height: 80px;
+      width: 75px;
+      height: 75px;
       border-radius: 50%;
       color: white;
       padding: 28px;
@@ -98,7 +99,7 @@
     }
 
     .chat-box-header {
-      background: rgb(212, 150, 14);
+      background: #F9A42A;
       height: 50px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
@@ -295,7 +296,7 @@
 
   <div id="chat-circle" class="btn btn-raised">
     <div id="chat-overlay"></div>
-    <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
+    <i class="fa fa-comments fa-lg"  aria-hidden="true"></i>
   </div>
 
   <div class="chat-box">
@@ -1646,7 +1647,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <h2><span class="id-color">Contact</span> Us</h2>
-            <p class="lead">Any Questions? Drop us a note</p>
+            <p class="lead">Any Questions? Drop us a note and We'll Get Back to you</p>
             <div class="spacer-single"></div>
           </div>
 <!-- change form action to relative url when hosting -->
@@ -1813,9 +1814,7 @@
         if (type == "self") {
           var str = "";
           str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg " + type + "\">";
-          str += "          <span class=\"msg-avatar\">";
-          str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
-          str += "          <\/span>";
+
           str += "          <div class=\"cm-msg-text\">";
           str += msg;
           str += "          <\/div>";
