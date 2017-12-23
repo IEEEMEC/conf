@@ -13,7 +13,7 @@
 
         $recipient = "itzsrishti.smile@gmail.com";
 
-        $recipient_2 = "shaneapen@gmail.com";
+        $recipient_2 = "vigneshhari@ieee.com";
 
         $subject = "New query from $name";
 
