@@ -1118,7 +1118,7 @@ More than 50 papers has been published in these conferences by IEM students.
                         <div class="pricing-s1 mb30">
                           <div class="top">
                             <h2>IEEE CS <br> Student Members</h2>
-                            <p class="price"><span class="currency">₹</span> <b>1800</b> <span class="month">/Per Person</span></p>
+                            <p class="price"><span class="currency">₹</span> <b>2300</b> <span class="month">/Per Person</span></p>
                           </div>
                           <div class="bottom">
                             <!--<ul>
@@ -1133,7 +1133,7 @@ More than 50 papers has been published in these conferences by IEM students.
                         <div class="pricing-s1 featured mb30">
                           <div class="top">
                             <h2>IEEE <br> Student Members</h2>
-                            <p class="price"><span class="currency">₹</span> <b>2500</b> <span class="month">/Per Person</span></p>
+                            <p class="price"><span class="currency">₹</span> <b>3000</b> <span class="month">/Per Person</span></p>
                           </div>
                           <div class="bottom">
                             <!--<ul>
@@ -1148,7 +1148,7 @@ More than 50 papers has been published in these conferences by IEM students.
                         <div class="pricing-s1 mb30">
                           <div class="top">
                             <h2>Non-IEEE <br> Students</h2>
-                            <p class="price"><span class="currency">₹</span> <b>3500</b> <span class="month">/Per Person</span></p>
+                            <p class="price"><span class="currency">₹</span> <b>4000</b> <span class="month">/Per Person</span></p>
                           </div>
                           <div class="bottom">
                             <!--<ul>
@@ -2161,15 +2161,26 @@ More than 50 papers has been published in these conferences by IEM students.
 
       $(document).delegate("#music", "click", function() {
 
-        var x = document.getElementById("myAudio"); 
+        var myAudio = document.getElementById("myAudio"); 
 
         if( $("#music").text() == "Music OFF"){
           $("#music").text("Music ON") ;
-          x.play(); 
-        }
+          if (typeof myAudio.loop == 'boolean')
+          {
+              myAudio.loop = true;
+          }
+          else
+          {
+              myAudio.addEventListener('ended', function() {
+                  this.currentTime = 0;
+                  this.play();
+              }, false);
+          }
+          myAudio.play();
+                }
         else{
           $("#music").text("Music OFF") ;
-          x.pause(); 
+          myAudio.pause(); 
         }
         });
     })
