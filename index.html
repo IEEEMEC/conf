@@ -367,6 +367,7 @@
                 <li><a href="#speakers">Speakers</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#registration">Registration</a></li>
+                <li><a id = "music" href="#music">Music OFF</a></li>
                 <!-- <li><a href="#schedule">Schedule</a></li> -->
               </ul>
             </nav>
@@ -2158,9 +2159,27 @@ More than 50 papers has been published in these conferences by IEM students.
         $(".chat-box").toggle('scale');
       })
 
+      $(document).delegate("#music", "click", function() {
+
+        var x = document.getElementById("myAudio"); 
+
+        if( $("#music").text() == "Music OFF"){
+          $("#music").text("Music ON") ;
+          x.play(); 
+        }
+        else{
+          $("#music").text("Music OFF") ;
+          x.pause(); 
+        }
+        });
     })
   </script>
 
+  <audio id="myAudio" style="visibility: hidden">
+      <source src="bgm.ogg" type="audio/ogg">
+      <source src="http://ieeecsis.org/bgm.mpeg" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
 
 </body>
 
