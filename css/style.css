@@ -2897,7 +2897,7 @@ span.teaser {
 /* preloader */
 
 
-/* ================================================== */
+/* ================================================== 
 
 #preloader {
 	position: fixed;
@@ -2906,7 +2906,7 @@ span.teaser {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: url(../images/logo-smaller.png) center no-repeat #222222 !important;
+	background: url(../images/logo-smaller.png) center no-repeat #ffffff !important;
 	text-align: center;
 }
 .preloader1 {
@@ -6107,48 +6107,8 @@ h1, h2, h3 {
 
 /* ================================================== */
 
-#preloader {
-	position: fixed;
-	z-index: 20000;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../images/logo-smaller.png) center no-repeat #222222 !important;
-	text-align: center;
-}
-.preloader1 {
-	width: 60px;
-	height: 60px;
-	display: inline-block;
-	padding: 0px;
-	border-radius: 100%;
-	border: 2px solid;
-	border-top-color: rgba(0, 0, 0, 0.65);
-	border-bottom-color: rgba(0, 0, 0, 0.1);
-	border-left-color: rgba(0, 0, 0, 0.1);
-	border-right-color: rgba(0, 0, 0, 0.1);
-	animation: preloader1 0.8s ease-in infinite;
-	position:absolute;
-	margin-left:-30px;
-	top:45%;
-}
-@keyframes preloader1 {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-@-webkit-keyframes preloader1 {
-	from {
-		-webkit-transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-	}
-}
+
+
 
 /* progress bar */
 
