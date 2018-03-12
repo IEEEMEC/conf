@@ -595,6 +595,8 @@ More than 50 papers has been published in these conferences by IEM students.
       </section>
       <!-- section service close -->
 
+
+      
       <!-- section speakers -->
       <section id="section-speakers">
         <div class="container relative" id="speakers">
@@ -1029,7 +1031,23 @@ More than 50 papers has been published in these conferences by IEM students.
                   </div>
         </section>
 
-
+        <section id="section-tickets" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
+          <div class="overlay-bg pt80 pb80" id="app">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h2><span class="id-color">Download </span>the CSIS'18 Delegate<span class="id-color"> APP Now</span></h2>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+        
+                      <a class="btn btn-custom" id="app1" href="http://ieeecsis.org/App/CSIS18.apk" style="margin-top : 80px ; color : black;">Download CSIS'18 Android APP</a>
+        
+                    </div>
+                  </div>                  <div class="spacer-single"></div>
+                </div>
+  
+          </div>
+        </section>
       <!-- section begin -->
       <!-- testimonial comments starts here
  <section id="section-testimonial-no-bg" data-stellar-background-ratio=".2">
@@ -1098,14 +1116,14 @@ More than 50 papers has been published in these conferences by IEM students.
 -->
       <!-- section close -->
 
-      <!-- Sponsor section start -->
+      <!-- Sponsor section start 
 
       <div class="container text-center text-light">
         <div class="row" style="height : 10px ; width: 100%">
           <div class="col-md-12">
           </div>
         </div>
-      </div>
+      </div>-->
 
       <section id="section-sponsors">
         <div class="container relative" id="sponsors">
@@ -2153,6 +2171,12 @@ More than 50 papers has been published in these conferences by IEM students.
                 },function(){
                     $(this).text($main_text);
                     });
+            $('#app1').hover(function(){
+                      $main_text=$(this).text();
+                      $(this).text("You Are Going to Love This").fadeIn();
+                  },function(){
+                      $(this).text($main_text);
+                      });
         });
 
         $(function() {
