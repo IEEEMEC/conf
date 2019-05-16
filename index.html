@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>CSIS 2018</title>
+  <title>.conf 2019</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Computer Society India Symposium 2018">
-  <meta name="keywords" content="CSIS, conference, conference, event, IEEE, CSIS'18,CS,  Symposium, Bodhgaya">
+  <meta name="description" content="MEC.conf 2019">
+  <meta name="keywords" content=".conf, conference, event, IEEE, CS, MEC, FOSS, open source">
   <meta name="author" content="">
-  <link rel="preload" href="csis_gif.gif" as="image" type="image/gif" >
+  <link rel="preload" href="csis_gif.gif" as="image" type="image/gif">
 
   <!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
@@ -16,31 +16,31 @@
 
   <style>
     #preloader {
-	position: fixed;
-	z-index: 20000;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: center no-repeat #ffffff !important;
-	text-align: center;
-}
-.preloader1 {
-		background: url('csis_gif.gif') no-repeat center center;
-	position: absolute; 
-	width: 60px;
-	height: 60px;
-	display: inline-block;
-	padding: 0px;
-}
-    </style
+      position: fixed;
+      z-index: 20000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: center no-repeat #ffffff !important;
+      text-align: center;
+    }
 
-    <a href="#" id="back-to-top"></a>
-    <div id="preloader">
-      <div class="preloader1"></div>
-    </div>
+    .preloader1 {
+      background: url('csis_gif.gif') no-repeat center center;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      padding: 0px;
+    }
+  </style>
+
+  <a href="#" id="back-to-top"></a>
+  <div id="preloader">
+    <div class="preloader1"></div>
   </div>
-
+  </div>
 
   <!-- CSS Files
     ================================================== -->
@@ -52,267 +52,23 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
 
-  <!-- ChatBot CSS Files
-    ================================================== -->
-
   <style>
-@media (min-width: 992px) {
-    .cen-img {
-        left: 37.5%; /* IMPORTANT */
-
-    }
-}
-    #center-text {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-
+    .form-control {
+      padding: 20px !important;
+      font-size: 16px !important;
     }
 
-    #chat-circle {
-      position: fixed;
-      z-index: 9999;
-      bottom: 35px;
-      right: 50px;
-      background: #eeb807;
-
-      width: 75px;
-      height: 75px;
-      border-radius: 50%;
+    .orange_btn {
       color: white;
-      padding: 28px;
-      cursor: pointer;
-      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.6), 0 2px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+      background: #efb808;
+      padding: 10px 40px;
     }
 
-    .btn#my-btn {
-      background: white;
-      padding-top: 13px;
-      padding-bottom: 12px;
-      border-radius: 45px;
-      padding-right: 40px;
-      padding-left: 40px;
-      color: #5865C3;
-    }
-
-    #chat-overlay {
-      background: rgba(255, 255, 255, 0.1);
-      position: absolute;
-      z-index: 9999;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: none;
-    }
-
-
-    .chat-box {
-      display: none;
-      background: #efefef;
-      position: fixed;
-      z-index: 9999;
-
-      right: 30px;
-      bottom: 50px;
-      width: 350px;
-      max-width: 85vw;
-      max-height: 100vh;
-      border-radius: 5px;
-      box-shadow: 0px 2px 40px 2px #70706f;
-      /*box-shadow: 0px 5px 5px 9px #ccc; */
-    }
-
-    .chat-box-toggle {
-      float: right;
-      margin-right: 15px;
-      cursor: pointer;
-    }
-
-    .chat-box-header {
-      background: #F9A42A;
-      height: 50px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+    .orange_btn:hover {
+      background-color: #f5bd09;
       color: white;
-      text-align: center;
-      font-size: 20px;
-      padding-top: 12px;
-    }
-
-    .chat-box-body {
-      position: relative;
-      height: 370px;
-      height: auto;
-      border: 1px solid #ccc;
-      overflow: hidden;
-    }
-
-    .chat-box-body:after {
-      content: "";
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAgOCkiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3g9IjE3NiIgY3k9IjEyIiByPSI0Ii8+PHBhdGggZD0iTTIwLjUuNWwyMyAxMW0tMjkgODRsLTMuNzkgMTAuMzc3TTI3LjAzNyAxMzEuNGw1Ljg5OCAyLjIwMy0zLjQ2IDUuOTQ3IDYuMDcyIDIuMzkyLTMuOTMzIDUuNzU4bTEyOC43MzMgMzUuMzdsLjY5My05LjMxNiAxMC4yOTIuMDUyLjQxNi05LjIyMiA5LjI3NC4zMzJNLjUgNDguNXM2LjEzMSA2LjQxMyA2Ljg0NyAxNC44MDVjLjcxNSA4LjM5My0yLjUyIDE0LjgwNi0yLjUyIDE0LjgwNk0xMjQuNTU1IDkwcy03LjQ0NCAwLTEzLjY3IDYuMTkyYy02LjIyNyA2LjE5Mi00LjgzOCAxMi4wMTItNC44MzggMTIuMDEybTIuMjQgNjguNjI2cy00LjAyNi05LjAyNS0xOC4xNDUtOS4wMjUtMTguMTQ1IDUuNy0xOC4xNDUgNS43IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTg1LjcxNiAzNi4xNDZsNS4yNDMtOS41MjFoMTEuMDkzbDUuNDE2IDkuNTIxLTUuNDEgOS4xODVIOTAuOTUzbC01LjIzNy05LjE4NXptNjMuOTA5IDE1LjQ3OWgxMC43NXYxMC43NWgtMTAuNzV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjcxLjUiIGN5PSI3LjUiIHI9IjEuNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjE3MC41IiBjeT0iOTUuNSIgcj0iMS41Ii8+PGNpcmNsZSBmaWxsPSIjMDAwIiBjeD0iODEuNSIgY3k9IjEzNC41IiByPSIxLjUiLz48Y2lyY2xlIGZpbGw9IiMwMDAiIGN4PSIxMy41IiBjeT0iMjMuNSIgcj0iMS41Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTkzIDcxaDN2M2gtM3ptMzMgODRoM3YzaC0zem0tODUgMThoM3YzaC0zeiIvPjxwYXRoIGQ9Ik0zOS4zODQgNTEuMTIybDUuNzU4LTQuNDU0IDYuNDUzIDQuMjA1LTIuMjk0IDcuMzYzaC03Ljc5bC0yLjEyNy03LjExNHpNMTMwLjE5NSA0LjAzbDEzLjgzIDUuMDYyLTEwLjA5IDcuMDQ4LTMuNzQtMTIuMTF6bS04MyA5NWwxNC44MyA1LjQyOS0xMC44MiA3LjU1Ny00LjAxLTEyLjk4N3pNNS4yMTMgMTYxLjQ5NWwxMS4zMjggMjAuODk3TDIuMjY1IDE4MGwyLjk0OC0xOC41MDV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxwYXRoIGQ9Ik0xNDkuMDUgMTI3LjQ2OHMtLjUxIDIuMTgzLjk5NSAzLjM2NmMxLjU2IDEuMjI2IDguNjQyLTEuODk1IDMuOTY3LTcuNzg1LTIuMzY3LTIuNDc3LTYuNS0zLjIyNi05LjMzIDAtNS4yMDggNS45MzYgMCAxNy41MSAxMS42MSAxMy43MyAxMi40NTgtNi4yNTcgNS42MzMtMjEuNjU2LTUuMDczLTIyLjY1NC02LjYwMi0uNjA2LTE0LjA0MyAxLjc1Ni0xNi4xNTcgMTAuMjY4LTEuNzE4IDYuOTIgMS41ODQgMTcuMzg3IDEyLjQ1IDIwLjQ3NiAxMC44NjYgMy4wOSAxOS4zMzEtNC4zMSAxOS4zMzEtNC4zMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=');
-      opacity: 0.1;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-    }
-
-    #chat-input {
-      background: #f4f7f9;
-      width: 100%;
-      position: relative;
-      height: 47px;
-      padding-top: 10px;
-      padding-right: 50px;
-      padding-bottom: 10px;
-      padding-left: 15px;
-      border: none;
-      resize: none;
-      outline: none;
-      border: 1px solid #ccc;
-      color: #888;
-      border-top: none;
-      border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      overflow: hidden;
-    }
-
-    .chat-input>form {
-      margin-bottom: 0;
-    }
-
-    #chat-input::-webkit-input-placeholder {
-      /* Chrome/Opera/Safari */
-      color: #ccc;
-    }
-
-    #chat-input::-moz-placeholder {
-      /* Firefox 19+ */
-      color: #ccc;
-    }
-
-    #chat-input:-ms-input-placeholder {
-      /* IE 10+ */
-      color: #ccc;
-    }
-
-    #chat-input:-moz-placeholder {
-      /* Firefox 18- */
-      color: #ccc;
-    }
-
-    .chat-submit {
-      position: absolute;
-      bottom: 3px;
-      right: 10px;
-      background: transparent;
-      box-shadow: none;
-      border: none;
-      border-radius: 50%;
-      color: rgb(209, 159, 20);
-      width: 35px;
-      height: 35px;
-    }
-
-    .chat-logs {
-      padding: 15px;
-      height: 370px;
-      overflow-y: scroll;
-    }
-
-    .chat-logs::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      background-color: #F5F5F5;
-    }
-
-    .chat-logs::-webkit-scrollbar {
-      width: 5px;
-      background-color: #F5F5F5;
-    }
-
-    .chat-logs::-webkit-scrollbar-thumb {
-      background-color: rgb(201, 139, 5);
-    }
-
-
-
-    @media only screen and (max-width: 500px) {
-      .chat-logs {
-        height: 40vh;
-      }
-    }
-
-    .chat-msg.user>.msg-avatar img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      float: left;
-      width: 15%;
-    }
-
-    .chat-msg.self>.msg-avatar img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      float: right;
-      width: 15%;
-    }
-
-    .cm-msg-text {
-      background: white;
-      padding: 10px 15px 10px 15px;
-      color: #666;
-      max-width: 75%;
-      float: left;
-      margin-left: 10px;
-      position: relative;
-      margin-bottom: 20px;
-      border-radius: 30px;
-    }
-
-    .chat-msg {
-      clear: both;
-    }
-
-    .chat-msg.self>.cm-msg-text {
-      float: right;
-      margin-right: 10px;
-      background: #5A5EB9;
-      color: white;
-    }
-
-    .cm-msg-button>ul>li {
-      list-style: none;
-      float: left;
-      width: 50%;
-    }
-
-    .cm-msg-button {
-      clear: both;
-      margin-bottom: 70px;
     }
   </style>
-<style>
-  .form-control{
-    padding: 20px!important;
-    font-size: 16px!important;
-  }
-  .orange_btn{
-    color: white;
-    background: #efb808;
-    padding: 10px 40px;
-  }
-  .orange_btn:hover{
-        background-color: #f5bd09;color:white;
-  }
-</style>
 
 
   <!-- background -->
@@ -324,36 +80,6 @@
 
 <body id="homepage">
 
-
-
-
-
-  <div id="chat-circle" class="btn btn-raised">
-    <div id="chat-overlay"></div>
-    <i class="fa fa-comments fa-lg"  aria-hidden="true"></i>
-  </div>
-
-  <div class="chat-box">
-    <div class="chat-box-header">
-      CSIS Chatbot
-      <span class="chat-box-toggle"><i class="fa fa-times"></i></span>
-    </div>
-    <div class="chat-box-body">
-      <div class="chat-box-overlay">
-      </div>
-      <div class="chat-logs">
-
-      </div>
-      <!--chat-log -->
-    </div>
-    <div class="chat-input">
-      <form>
-        <input type="text" id="chat-input" placeholder="Send a message..." />
-        <button type="submit" class="chat-submit" id="chat-submit"><i class="fa fa-paper-plane-o"></i></button>
-      </form>
-    </div>
-  </div>
-
   <div id="wrapper">
 
     <!-- header begin -->
@@ -362,7 +88,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8">
-              <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Sambhodhi Retreat, Bodhgaya</div>
+              <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Sambhodhi Retreat, Bodhgaya
+              </div>
               <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>March 16-18 2018 PM
               </div>
             </div>
@@ -377,9 +104,10 @@
             <!-- logo begin -->
             <div id="logo">
               <a href="#">
-                                <img class="logo" src="images/logo-light.png" style="height:90px ; width:auto" alt="">
-                                <img class="logo-2 logomarg" src="images/logo-light.png" style="height:70px ;align-self:center;  width:auto " alt="">
-                            </a>
+                <img class="logo" src="images/logo-light.png" style="height:90px ; width:auto" alt="">
+                <img class="logo-2 logomarg" src="images/logo-light.png"
+                  style="height:70px ;align-self:center;  width:auto " alt="">
+              </a>
             </div>
             <!-- logo close -->
 
@@ -396,7 +124,7 @@
                 <li><a href="#speakers">Speakers</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#registration">Registration</a></li>
-                <li><a id = "music" href="#music">Music OFF</a></li>
+                <li><a id="music" href="#music">Music OFF</a></li>
                 <!-- <li><a href="#schedule">Schedule</a></li> -->
               </ul>
             </nav>
@@ -423,9 +151,10 @@
                 <div class="col-md-12">
                   <div class="spacer-double"></div>
                   <div class="spacer-double"></div>
-                  <h1 class="ultra-big">CSIS<span class="id-color">'18</span></h1>
+                  <h1 class="ultra-big">.conf<span class="id-color">'19</span></h1>
                   <div class="spacer-single"></div>
-                  <div class="subtitle s2"><span><i class="fa fa-calendar-o id-color"></i>March 16th to 18th</span><span><i class="fa fa-map-marker id-color"></i>Sambodhi Retreat, Bodhgaya</span></div>
+                  <div class="subtitle s2"><span><i class="fa fa-calendar-o id-color"></i>July 27th to
+                      29th</span><span><i class="fa fa-map-marker id-color"></i>Model Engineering College, Cochin</span></div>
                   <div class="spacer-single"></div>
                   <div class="spacer-single"></div>
                   <div class="spacer-double"></div>
@@ -445,32 +174,34 @@
         <div class="container" id="about">
           <div class="row">
             <div class="col-md-12 text-center wow fadeInUp">
-              <h2>About CSIS</h2>
-              <p class="lead">The Computer Society India Symposium (CSIS) is one of the remarkable events of the IEEE Computer Society in India and is held annually with the venue being rotated among the various sections of India. The main scope of this symposium is
-                to bring professionals, speakers, experts, and other academicians so that the participants can interact with and in the process learn. The symposium is generally a 3-day event and includes talks, workshops, and events on a wide array of
-                domains such as technical, industrial, management, social development and much more. </p>
+              <h2>About .conf</h2>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
               <div class="spacer-single"></div>
             </div>
 
             <div class="col-md-4 text-center wow fadeInUp">
               <i class="fa fa-bookmark id-color fa-2x" style="padding-bottom: 15px"></i>
               <h3>Professional Development</h3>
-              <p>Where the participants get a chance to hone their professional and soft skills that is going to give them extra mileage in the process of building a successful career.
+              <p>Where the participants get a chance to hone their professional and soft skills that is going to give
+                them extra mileage in the process of building a successful career.
               </p>
             </div>
 
             <div class="col-md-4 text-center wow fadeInUp">
               <i class="fa fa-cogs id-color fa-2x " style="padding-bottom: 15px"></i>
               <h3>Developing the Society</h3>
-              <p>IEEE CSIS intends to promote the sense of innovation and technological zeal among the participating delegates.
-                The symposium provides a platform for the confluence of researchers, innovators and entrepreneurs from various domains to share their knowledge and experiences.</p>
+              <p>IEEE CSIS intends to promote the sense of innovation and technological zeal among the participating
+                delegates.
+                The symposium provides a platform for the confluence of researchers, innovators and entrepreneurs from
+                various domains to share their knowledge and experiences.</p>
 
             </div>
 
             <div class="col-md-4 text-center wow fadeInUp">
               <i class="fa fa-info-circle id-color fa-2x " style="padding-bottom: 15px"></i>
               <h3>Technological Innovation</h3>
-              <p>Where the sessions and the talks by the leading professionals expose the participants to the latest technologies and innovations and inspire them to innovate too.
+              <p>Where the sessions and the talks by the leading professionals expose the participants to the latest
+                technologies and innovations and inspire them to innovate too.
               </p>
 
             </div>
@@ -486,58 +217,77 @@
           <div class="row">
             <div class="col-md-12 text-center wow fadeInUp">
               <h2>About IEEE Kolkata Section</h2>
-              <p class="lead">IEEE Kolkata Section’s mission is to spread IEEE Activities to all the remote corners by educational activities, human networking, and to develop technology and its applications for humanitarian challenges. It also aims at enlightening women and students about the innovations and encouraging them to choose engineering and science for building their careers.
-              Currently the IEEE Kolkata Section extends across West Bengal, Jharkhand, Bihar and Odisha, and brags of around 38 Students Branches, 13 Chapters and 3 Affinity Groups, namely, IEEE Young Professional Affinity Group, IEEE SIGHT, and IEEE Women In Engineering (WIE). The Section works closely and coherently with its branches and affinity groups; not only in technical, education and membership development activities but also in outreach activities which a major focus of this section.
-              IEEE Kolkata Section received the accolade of 2016 Outstanding Section Membership Recruitment Performance. IEEE CoMSoc Kolkata Chapter received CAA- 2017 CHAPTER ACHIEVEMENT AWARD. IEEE MTT-S Outstanding Chapter Award 2017 was received by IEEE AP/MTT Joint Chapter, Kolkata Section.</p>
+              <p class="lead">IEEE Kolkata Section’s mission is to spread IEEE Activities to all the remote corners by
+                educational activities, human networking, and to develop technology and its applications for
+                humanitarian challenges. It also aims at enlightening women and students about the innovations and
+                encouraging them to choose engineering and science for building their careers.
+                Currently the IEEE Kolkata Section extends across West Bengal, Jharkhand, Bihar and Odisha, and brags of
+                around 38 Students Branches, 13 Chapters and 3 Affinity Groups, namely, IEEE Young Professional Affinity
+                Group, IEEE SIGHT, and IEEE Women In Engineering (WIE). The Section works closely and coherently with
+                its branches and affinity groups; not only in technical, education and membership development activities
+                but also in outreach activities which a major focus of this section.
+                IEEE Kolkata Section received the accolade of 2016 Outstanding Section Membership Recruitment
+                Performance. IEEE CoMSoc Kolkata Chapter received CAA- 2017 CHAPTER ACHIEVEMENT AWARD. IEEE MTT-S
+                Outstanding Chapter Award 2017 was received by IEEE AP/MTT Joint Chapter, Kolkata Section.</p>
               <div class="spacer-single"></div>
             </div>
           </div>
 
-          </div>
+        </div>
       </section>
       <!-- section close -->
 
-	  <!-- section begin -->
-      <section id="section-intro-iem" background: "#8e9eab;" /* fallback for old browsers */>
+      <!-- section begin -->
+      <section id="section-intro-iem" background: "#8e9eab;" /* fallback for old browsers * />
 
-        <div class="container" id="iem">
-          <div class="row">
-            <div class="col-md-12 text-center wow fadeInUp back" >
+      <div class="container" id="iem">
+        <div class="row">
+          <div class="col-md-12 text-center wow fadeInUp back">
 
 
-              <h2> About IEM IEEE Students Branch </h2>
-              <p class="lead">The IEEE Student Branch of Institute of Engineering and Management (IEM), Kolkata is one of the most active student branches of the IEEE Kolkata section. The Branch is enthusiastic in carrying out several events for the student members to provide them the facilities in the relevant fields necessary. It aims at organizing events to develop the student's social as well as professional skills and workshops from famous companies that offer adequate knowledge needed for stepping into the industrial world.
- </p>
-              <div class="spacer-single"></div>
-            </div>
+            <h2> About IEM IEEE Students Branch </h2>
+            <p class="lead">The IEEE Student Branch of Institute of Engineering and Management (IEM), Kolkata is one of
+              the most active student branches of the IEEE Kolkata section. The Branch is enthusiastic in carrying out
+              several events for the student members to provide them the facilities in the relevant fields necessary. It
+              aims at organizing events to develop the student's social as well as professional skills and workshops
+              from famous companies that offer adequate knowledge needed for stepping into the industrial world.
+            </p>
+            <div class="spacer-single"></div>
+          </div>
 
-            <div class="col-md-4 text-center wow fadeInUp">
-              <i class="fa fa-graduation-cap id-color fa-2x" style="padding-bottom: 15px"></i>
-              <h3>Student Activities</h3>
-              <p>The Branch currently stand with approximately 100 members and will be encouraging more students from various streams to join IEEE in order to boost their career potential. Members of the Branch have recently hosted our maiden event, Technology Awareness Programme (T.A.P.) 2017, which has primarily funded jointly by IEEE Region10 Students Activities Committee and the IEEE Computer Society and was an overwhelming success.
+          <div class="col-md-4 text-center wow fadeInUp">
+            <i class="fa fa-graduation-cap id-color fa-2x" style="padding-bottom: 15px"></i>
+            <h3>Student Activities</h3>
+            <p>The Branch currently stand with approximately 100 members and will be encouraging more students from
+              various streams to join IEEE in order to boost their career potential. Members of the Branch have recently
+              hosted our maiden event, Technology Awareness Programme (T.A.P.) 2017, which has primarily funded jointly
+              by IEEE Region10 Students Activities Committee and the IEEE Computer Society and was an overwhelming
+              success.
 
-              </p>
-            </div>
+            </p>
+          </div>
 
-            <div class="col-md-4 text-center wow fadeInUp">
-              <i class="fa fa-book id-color fa-2x " style="padding-bottom: 15px"></i>
-              <h3>Chapters</h3>
-              <p>The IEEE Student Branch of IEM, Kolkata has four active chapters:
-Electron Devices Society (EDS), Computer Society (CS), Women In Engineering (WIE)  and Industry Applications Society (IAS).</p>
-
-            </div>
-
-            <div class="col-md-4 text-center wow fadeInUp">
-              <i class="fa fa-users id-color fa-2x " style="padding-bottom: 15px"></i>
-              <h3>Collaboration</h3>
-              <p>IEM has collaborated with IEEE to organize more than 7 international conferences in recent past at Canada, Thailand and USA.
-More than 50 papers has been published in these conferences by IEM students.
-              </p>
-
-            </div>
+          <div class="col-md-4 text-center wow fadeInUp">
+            <i class="fa fa-book id-color fa-2x " style="padding-bottom: 15px"></i>
+            <h3>Chapters</h3>
+            <p>The IEEE Student Branch of IEM, Kolkata has four active chapters:
+              Electron Devices Society (EDS), Computer Society (CS), Women In Engineering (WIE) and Industry
+              Applications Society (IAS).</p>
 
           </div>
+
+          <div class="col-md-4 text-center wow fadeInUp">
+            <i class="fa fa-users id-color fa-2x " style="padding-bottom: 15px"></i>
+            <h3>Collaboration</h3>
+            <p>IEM has collaborated with IEEE to organize more than 7 international conferences in recent past at
+              Canada, Thailand and USA.
+              More than 50 papers has been published in these conferences by IEM students.
+            </p>
+
+          </div>
+
         </div>
+      </div>
       </section>
       <!-- section close -->
 
@@ -554,9 +304,15 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="col-md-5 wow fadeInLeft" data-wow-delay=".5s">
                 <h2>Sambodhi Retreat</h2>
                 <p class="lead">CSIS Venue</p>
-                <p>It’s a luxury ecotel resort where the visitors can open up to a whole new world of luxurious spiritualism and immerse in the enlightenment land of Lord Buddha. Exquisitely designed rooms, unmatched amenities, organic food, village trails,
-                  swimming pool, splash pool etc. are some of the unique features which makes the stay a memorable one. The early morning sunlight offers an unmatched view of the Mahabodhi temple overlooking river Falgu. The temple is just a few minutes’
-                  walk from the resort through river Falgu and fifteen minutes from the Sujata Garh remains. Sambodhi Retreat is ideally located and approachable by train and the nearest station is 15 kms away, the Gaya junction. Nearest airport is 7
+                <p>It’s a luxury ecotel resort where the visitors can open up to a whole new world of luxurious
+                  spiritualism and immerse in the enlightenment land of Lord Buddha. Exquisitely designed rooms,
+                  unmatched amenities, organic food, village trails,
+                  swimming pool, splash pool etc. are some of the unique features which makes the stay a memorable one.
+                  The early morning sunlight offers an unmatched view of the Mahabodhi temple overlooking river Falgu.
+                  The temple is just a few minutes’
+                  walk from the resort through river Falgu and fifteen minutes from the Sujata Garh remains. Sambodhi
+                  Retreat is ideally located and approachable by train and the nearest station is 15 kms away, the Gaya
+                  junction. Nearest airport is 7
                   kms away, the Gaya International airport and Patna airport is 122 kms away.
                 </p>
                 <div class="spacer-single"></div>
@@ -582,9 +338,14 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="col-md-5 col-md-offset-7 wow fadeInRight" data-wow-delay=".5s">
                 <h2>The Bodhgaya Experience<span class="id-color">.</span></h2>
                 <p class="lead">Bodhgaya details</p>
-                <p>Bodh Gaya, rightfully said the birthplace of Buddhism since under a tree here (now called Bodhi tree), Gautama Buddha, the founder of Buddhism, attained true knowledge is the most holy place for the Buddhists. Most of the Buddhist countries
-                  have their monasteries and temples in this town in Bihar making it a huge tourist attraction for people from all parts of the world so much so that it has been declared the world heritage site by the United Nations a few years back.
-                  Bodh Gaya is well-known for being a place where people come and experience real peace and serenity in spite of it being flooded with tourists throughout the year.</p>
+                <p>Bodh Gaya, rightfully said the birthplace of Buddhism since under a tree here (now called Bodhi
+                  tree), Gautama Buddha, the founder of Buddhism, attained true knowledge is the most holy place for the
+                  Buddhists. Most of the Buddhist countries
+                  have their monasteries and temples in this town in Bihar making it a huge tourist attraction for
+                  people from all parts of the world so much so that it has been declared the world heritage site by the
+                  United Nations a few years back.
+                  Bodh Gaya is well-known for being a place where people come and experience real peace and serenity in
+                  spite of it being flooded with tourists throughout the year.</p>
                 <div class="spacer-single"></div>
                 <a href="http://whc.unesco.org/en/list/1056" class="btn-line">View Tourism Page</a>
               </div>
@@ -596,7 +357,7 @@ More than 50 papers has been published in these conferences by IEM students.
       <!-- section service close -->
 
 
-      
+
       <!-- section speakers -->
       <section id="section-speakers">
         <div class="container relative" id="speakers">
@@ -610,18 +371,21 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Mangeshda.jpg">
-                                        <span class="overlay-v">
-                                            <span style=" font-size-adjust: inherit">Sri Sri Mangeshda is a Karmayogi who has dedicated His life for mental, physical and spiritual well-being of the society through Kriya Yoga. His mission is to awaken and integrate people of all castes, creed and religions on the path of Humanity, by a strong bond of Unconditional Love.
-                                                </span>
-                                        </span>
-                                    </a>
+                    <span class="overlay-v">
+                      <span style=" font-size-adjust: inherit">Sri Sri Mangeshda is a Karmayogi who has dedicated His
+                        life for mental, physical and spiritual well-being of the society through Kriya Yoga. His
+                        mission is to awaken and integrate people of all castes, creed and religions on the path of
+                        Humanity, by a strong bond of Unconditional Love.
+                      </span>
+                    </span>
+                  </a>
                   <img src="images/team/speakers/Mangeshda.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>HH Sadguru Yogiraj Sri Sri Dr. Mangeshda
-                                </h3>
+                </h3>
                 <span class="subtitle">Public Figure
-                                                                    </span>
+                </span>
               </div>
             </div>
 
@@ -629,17 +393,19 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Surabhi.jpg">
-                                        <span class="overlay-v">
-                                            <span>Ms. Surabhi gautam is an IAS officer and an Ex-IES officer with All India Rank 1. She has worked as a scientist in the Bhabha Atomic Research Centre. She had also topped the Indian Space and Research Organization exams with AIR 1.
-                                                </span>
-                                    </a>
+                    <span class="overlay-v">
+                      <span>Ms. Surabhi gautam is an IAS officer and an Ex-IES officer with All India Rank 1. She has
+                        worked as a scientist in the Bhabha Atomic Research Centre. She had also topped the Indian Space
+                        and Research Organization exams with AIR 1.
+                      </span>
+                  </a>
                   <img src="images/team/speakers/Surabhi.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>Ms. Surabhi Gautam
-                                    </h3>
+                </h3>
                 <span class="subtitle">IAS officer,Ex IES officer AIR 1,Ex BARC scientist,ISRO AIR 1.
-                                    </span>
+                </span>
               </div>
             </div>
 
@@ -647,16 +413,19 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/sujith.jpg">
-                                        <span class="overlay-v">
-                                            <span>Dr. Sujit Kumar Biswas is the Chair of the IEEE Kolkata Section that covers four major states of India : West Bengal, Odisha, Bihar and Jharkhand. He is a well known consultant in the field of Power Conversion for the last 25 years. He has received many esteemed awards including, 20th IETE Bimal Bose Award for Outstanding contribution in the area of Power Electronics.
-                                                </span>
-                                    </a>
+                    <span class="overlay-v">
+                      <span>Dr. Sujit Kumar Biswas is the Chair of the IEEE Kolkata Section that covers four major
+                        states of India : West Bengal, Odisha, Bihar and Jharkhand. He is a well known consultant in the
+                        field of Power Conversion for the last 25 years. He has received many esteemed awards including,
+                        20th IETE Bimal Bose Award for Outstanding contribution in the area of Power Electronics.
+                      </span>
+                  </a>
                   <img src="images/team/speakers/sujith.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>Prof. Sujit K Biswas</h3>
                 <span class="subtitle">Chairperson | IEEE Kolkata Section
-                                    </span>
+                </span>
               </div>
             </div>
           </div>
@@ -665,16 +434,20 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Sarmistha.jpg">
-                                        <span class="overlay-v">
-                                            <span>Dr. Sarmistha Neogy is a Professor in Dept. of Computer Science & Engineering at Jadavpur University, Kolkata, India. She has published papers in international journals and international/national conferences. She has co-authored 2 books, including a book on Operating Systems. Dr. Neogy has delivered invited talks and lectures in Conferences and Workshops in India.
-                                                </span>
-                                    </a>
+                    <span class="overlay-v">
+                      <span>Dr. Sarmistha Neogy is a Professor in Dept. of Computer Science & Engineering at Jadavpur
+                        University, Kolkata, India. She has published papers in international journals and
+                        international/national conferences. She has co-authored 2 books, including a book on Operating
+                        Systems. Dr. Neogy has delivered invited talks and lectures in Conferences and Workshops in
+                        India.
+                      </span>
+                  </a>
                   <img src="images/team/speakers/Sarmistha.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>Prof. Sarmistha Neogy</h3>
                 <span class="subtitle">Chairperson | IEEE CS Chapter Kolkata Section
-                                    </span>
+                </span>
               </div>
             </div>
 
@@ -682,16 +455,19 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Shekhar.jpg">
-                                        <span class="overlay-v">
-                                            <span>Dr. Shekhar Verma is the Chair of the IEEE Computer Society Professional Chapter of the Uttar Pradesh section. Currently serving in Indian Institute of Information Technology (IIIT), Allahabad, he is absolutely adored by his students and is given quite respectable positions in the prestigious institute. </span>
-                                    </a>
+                    <span class="overlay-v">
+                      <span>Dr. Shekhar Verma is the Chair of the IEEE Computer Society Professional Chapter of the
+                        Uttar Pradesh section. Currently serving in Indian Institute of Information Technology (IIIT),
+                        Allahabad, he is absolutely adored by his students and is given quite respectable positions in
+                        the prestigious institute. </span>
+                  </a>
                   <img src="images/team/speakers/Shekhar.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>Prof. Shekhar Verma
-                                    </h3>
+                </h3>
                 <span class="subtitle">Chairperson | IEEE CS Chapter Uttar Pradesh Section.
-                                    </span>
+                </span>
               </div>
             </div>
 
@@ -699,17 +475,21 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Senthil.jpg">
-                                        <span class="overlay-v">
-                                            <span>Mr. Senthil Kumar has received top ten most innovative entrepreneur award from honourable IT minister of Telangana KT Rama Rao at Global Entrepreneurship Summit 2017. He has been honoured as the top 5 Technology Explorers in India by Nasscom. He has also worked as a senior software engineer in developing the new smartphone platform called Tizen at Samsung India Software Operation.
-                                                </span>
-                                    </a>
+                    <span class="overlay-v">
+                      <span>Mr. Senthil Kumar has received top ten most innovative entrepreneur award from honourable IT
+                        minister of Telangana KT Rama Rao at Global Entrepreneurship Summit 2017. He has been honoured
+                        as the top 5 Technology Explorers in India by Nasscom. He has also worked as a senior software
+                        engineer in developing the new smartphone platform called Tizen at Samsung India Software
+                        Operation.
+                      </span>
+                  </a>
                   <img src="images/team/speakers/Senthil.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>Mr. Senthil Kumar
-                                    </h3>
+                </h3>
                 <span class="subtitle">Ex-Samsung , Ex-Qualcomm Engineer
-                                    </span>
+                </span>
               </div>
             </div>
           </div>
@@ -718,121 +498,141 @@ More than 50 papers has been published in these conferences by IEM students.
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Garima.jpg">
-                                        <span class="overlay-v">
-                                            <span>An MBA graduate from IIM Lucknow, Garima hails from the town of Selra in Bihar. Presently, she is the founder of Dejawoo School of Innovation, a school aimed not only to impart education but also to develop personalities and culture of innovation and freedom of thought.The school has impacted lives of many people. She is an inspiration  for many to follow their passion and test their limit.</span>
-                                    </a>
+                    <span class="overlay-v">
+                      <span>An MBA graduate from IIM Lucknow, Garima hails from the town of Selra in Bihar. Presently,
+                        she is the founder of Dejawoo School of Innovation, a school aimed not only to impart education
+                        but also to develop personalities and culture of innovation and freedom of thought.The school
+                        has impacted lives of many people. She is an inspiration for many to follow their passion and
+                        test their limit.</span>
+                  </a>
                   <img src="images/team/speakers/Garima.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>Mrs. Garima Vishal
-                                    </h3>
+                </h3>
                 <span class="subtitle">Alumni | IIM Lucknow, Director | Dejawoo School of Innovation
-                                    </span>
+                </span>
               </div>
             </div>
             <div class="col-md-4 mb30">
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Vishnu.jpg">
-                                            <span class="overlay-v">
-                                                <span>Mr. Vishnu Ks completed the prestigious Google Summer of Code 2017. And he is also representing IIIT-Allahabad and India in its first batch of Github Campus Experts. He is Google code-in organization head this year and outreach mentor. Presently, he is working as full stack developer in Zulip. </span>
-                                        </a>
+                    <span class="overlay-v">
+                      <span>Mr. Vishnu Ks completed the prestigious Google Summer of Code 2017. And he is also
+                        representing IIIT-Allahabad and India in its first batch of Github Campus Experts. He is Google
+                        code-in organization head this year and outreach mentor. Presently, he is working as full stack
+                        developer in Zulip. </span>
+                  </a>
                   <img src="images/team/speakers/Vishnu.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>Mr. Vishnu Ks
 
-                                        </h3>
+                </h3>
                 <span class="subtitle">Google Code In | Organisation Head ,
-                                            Full Stack Developer | Zulip
-                                            </span>
+                  Full Stack Developer | Zulip
+                </span>
               </div>
             </div>
             <div class="col-md-4 mb30">
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Somak.jpg">
-                                            <span class="overlay-v">
-                                                <span>
-                                                    Assistant Professor in the Department of Electronics Engineering at IIT, Varanasi.
-                                                    He completed his PhD thesis on microwave absorbers and metamaterials in 2015 from
-                                                    IIT, Kanpur.
-                                                    He is the recipient of Young Scientist Award ​in International Symposium on
-                                                    Electromagnetic Theory, 2013. And he was recently recognised as a Radio Scientist​ by
-                                                    the International Union of Radio Science.
-                                                </span>
-                                        </a>
+                    <span class="overlay-v">
+                      <span>
+                        Assistant Professor in the Department of Electronics Engineering at IIT, Varanasi.
+                        He completed his PhD thesis on microwave absorbers and metamaterials in 2015 from
+                        IIT, Kanpur.
+                        He is the recipient of Young Scientist Award ​in International Symposium on
+                        Electromagnetic Theory, 2013. And he was recently recognised as a Radio Scientist​ by
+                        the International Union of Radio Science.
+                      </span>
+                  </a>
                   <img src="images/team/speakers/Somak.jpg" class="img-responsive" alt="">
                 </figure>
 
                 <h3>Dr. Somak Bhattacharya
 
-                                        </h3>
+                </h3>
                 <span class="subtitle">Radio Scientist
-                                            </span>
+                </span>
               </div>
             </div>
           </div>
 
-            <div class="row">
+          <div class="row">
             <div class="col-md-4 mb30 ">
               <div class="profile_pic text-center">
                 <figure class="picframe mb30">
                   <a class="image-popup" href="images/team/speakers/Shyamala.jpeg">
-                                            <span class="overlay-v">
-                                                <span>
-                                                 Mrs Shyamala Rajaram is Co-Founder and Director at UniMity Solutions, based in Chennai. She is an IIT Madras graduate and the Principal Technology Consultant at Across World Education LLC. She is high expertise in designing and developing solutions using Open Source platforms and in web, mobile and cloud technologies.
-                                                </span>
-                                        </a>
+                    <span class="overlay-v">
+                      <span>
+                        Mrs Shyamala Rajaram is Co-Founder and Director at UniMity Solutions, based in Chennai. She is
+                        an IIT Madras graduate and the Principal Technology Consultant at Across World Education LLC.
+                        She is high expertise in designing and developing solutions using Open Source platforms and in
+                        web, mobile and cloud technologies.
+                      </span>
+                  </a>
                   <img src="images/team/speakers/Shyamala.jpeg" class="img-responsive" alt="">
                 </figure>
 
                 <h3> Mrs Shyamala Rajaram
-                                        </h3>
+                </h3>
                 <span class="subtitle">Director and Co-Founder | UniMity Solutions
-                                            </span>
+                </span>
               </div>
             </div>
-  <div class="col-md-4 mb30">
-    <div class="profile_pic text-center">
-      <figure class="picframe mb30">
-        <a class="image-popup" href="images/team/speakers/Nikky.jpg">
-                                  <span class="overlay-v">
-                                      <span>
-                                        Nikky Kumar Jha is an Electrical & Electronics Engineer, Sustainable developer, Techpreneur, and Writer. His Inventions include Generation of Electricity from Coal Ash, Very Low cost Solar Computer, House with a rotating roof made up of solar panel, fully solar powered cold storage with rotating roof, Generation of Electricity from coal ash, wearable medical device, Agro-electronics devices, Sun tracker etc. He is the author of the book named MIRACLE MINDS.                                       </span>
-                              </a>
-        <img src="images/team/speakers/Nikky.jpg" class="img-responsive" alt="">
-      </figure>
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/Nikky.jpg">
+                    <span class="overlay-v">
+                      <span>
+                        Nikky Kumar Jha is an Electrical & Electronics Engineer, Sustainable developer, Techpreneur, and
+                        Writer. His Inventions include Generation of Electricity from Coal Ash, Very Low cost Solar
+                        Computer, House with a rotating roof made up of solar panel, fully solar powered cold storage
+                        with rotating roof, Generation of Electricity from coal ash, wearable medical device,
+                        Agro-electronics devices, Sun tracker etc. He is the author of the book named MIRACLE MINDS.
+                      </span>
+                  </a>
+                  <img src="images/team/speakers/Nikky.jpg" class="img-responsive" alt="">
+                </figure>
 
-      <h3> Nikky Kumar Jha
-                              </h3>
-      <span class="subtitle"> Paryavaran Ratna | Scientific Advisor | Technoculture Research.
-                                  </span>
-    </div>
-  </div>
+                <h3> Nikky Kumar Jha
+                </h3>
+                <span class="subtitle"> Paryavaran Ratna | Scientific Advisor | Technoculture Research.
+                </span>
+              </div>
+            </div>
 
-  <div class="col-md-4 mb30">
-    <div class="profile_pic text-center">
-      <figure class="picframe mb30">
-        <a class="image-popup" href="images/team/speakers/maggie.jpg">
-                                  <span class="overlay-v">
-                                      <span>
-                                        IEEE CSIS 2018 is happy to introduce Maggie Inbamuthiah, the Director of Communities, Programs and Business Development at AnitaB.org India. In her role she focuses on building a community of women technologists in India. With 20+ years of experience in building and deploying at different reputable industries, she proves to be a remarkable inspiration for all women across India. She will be conducting a session on "The Bits and Bytes of Building a Tech Career" as a part of the Women In Computing Track.
-                                      </a>
-        <img src="images/team/speakers/maggie.jpg" class="img-responsive" alt="">
-      </figure>
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/maggie.jpg">
+                    <span class="overlay-v">
+                      <span>
+                        IEEE CSIS 2018 is happy to introduce Maggie Inbamuthiah, the Director of Communities, Programs
+                        and Business Development at AnitaB.org India. In her role she focuses on building a community of
+                        women technologists in India. With 20+ years of experience in building and deploying at
+                        different reputable industries, she proves to be a remarkable inspiration for all women across
+                        India. She will be conducting a session on "The Bits and Bytes of Building a Tech Career" as a
+                        part of the Women In Computing Track.
+                  </a>
+                  <img src="images/team/speakers/maggie.jpg" class="img-responsive" alt="">
+                </figure>
 
-      <h3> Maggie Inbamuthiah
-                              </h3>
-      <span class="subtitle"> Director, Community, Programs and Business Development (AnitaB.org India)
-                                  </span>
-    </div>
-  </div>
+                <h3> Maggie Inbamuthiah
+                </h3>
+                <span class="subtitle"> Director, Community, Programs and Business Development (AnitaB.org India)
+                </span>
+              </div>
+            </div>
 
-</div>
+          </div>
 
-            <!-- END ROW -->
-          
+          <!-- END ROW -->
+
         </div>
       </section>
 
@@ -896,7 +696,7 @@ More than 50 papers has been published in these conferences by IEM students.
                   <a class="image-popup" href="images/team/adcom/MainakSaha.jpg">
                     <span class="overlay-v">
                       <span style=" font-size-adjust: inherit">
-                          Student Branch Mentor | IEM, Kolkata
+                        Student Branch Mentor | IEM, Kolkata
                       </span>
                     </span>
                   </a>
@@ -918,138 +718,140 @@ More than 50 papers has been published in these conferences by IEM students.
                       <span>
                         Branch Counsellor | IEM, Kolkata
                       </span>
-                      </span>
-                    </a>
-                    <img src="images/team/adcom/drhimadrisaha.jpg" class="img-responsive" alt="">
-                  </figure>
-
-                  <h3>Dr. Himadri Nath Saha
-                  </h3>
-                  <span class="subtitle">Branch Counsellor | IEM, Kolkata
-                  </span>
-                </div>
-              </div>
-
-              <div class="col-md-4 mb30">
-                <div class="profile_pic text-center">
-                  <figure class="picframe mb30">
-                    <a class="image-popup" href="images/team/adcom/Dr.SatyajitChakrabarti.JPG">
-                      <span class="overlay-v">
-                        <span>
-                          Director | IEM, Kolkata
-                        </span>
-                      </a>
-                      <img src="images/team/adcom/Dr.SatyajitChakrabarti.JPG" class="img-responsive" alt="">
-                    </figure>
-
-                    <h3>Dr. Satyajit Chakrabarti</h3>
-                    <span class="subtitle">Director | IEM, Kolkata
                     </span>
-                  </div>
-                </div>
+                  </a>
+                  <img src="images/team/adcom/drhimadrisaha.jpg" class="img-responsive" alt="">
+                </figure>
+
+                <h3>Dr. Himadri Nath Saha
+                </h3>
+                <span class="subtitle">Branch Counsellor | IEM, Kolkata
+                </span>
               </div>
+            </div>
 
-              <div class="row">
-                <div class="col-md-4 mb30">
-                  <div class="profile_pic text-center">
-                    <figure class="picframe mb30">
-                      <a class="image-popup" href="images/team/adcom/Dr.SarmisthaNeogy.jpg">
-                        <span class="overlay-v">
-                          <span>
-                            Chair | IEEE CS Professional Chapter, Kolkata
-                          </span>
-                        </a>
-                        <img src="images/team/adcom/Dr.SarmisthaNeogy.jpg" class="img-responsive" alt="">
-                      </figure>
-
-                      <h3>Prof. Sarmistha Neogy</h3>
-                      <span class="subtitle">Chair | IEEE CS Professional Chapter, Kolkata
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/adcom/Dr.SatyajitChakrabarti.JPG">
+                    <span class="overlay-v">
+                      <span>
+                        Director | IEM, Kolkata
                       </span>
-                    </div>
-                  </div>
+                  </a>
+                  <img src="images/team/adcom/Dr.SatyajitChakrabarti.JPG" class="img-responsive" alt="">
+                </figure>
 
-                  <div class="col-md-4 mb30">
-                    <div class="profile_pic text-center">
-                      <figure class="picframe mb30">
-                        <a class="image-popup" href="images/team/speakers/sujith.jpg">
-                          <span class="overlay-v">
-                            <span>
-                              Chair | IEEE Kolkata
-                          </a>
-                          <img src="images/team/adcom/Dr.SujitKBiswas.png" class="img-responsive" alt="">
-                        </figure>
+                <h3>Dr. Satyajit Chakrabarti</h3>
+                <span class="subtitle">Director | IEM, Kolkata
+                </span>
+              </div>
+            </div>
+          </div>
 
-                        <h3>Dr. Sujit Kumar Biswas
-                        </h3>
-                        <span class="subtitle">
-                          Chair | IEEE Kolkata
-                        </span>
-                      </div>
-                    </div>
+          <div class="row">
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/adcom/Dr.SarmisthaNeogy.jpg">
+                    <span class="overlay-v">
+                      <span>
+                        Chair | IEEE CS Professional Chapter, Kolkata
+                      </span>
+                  </a>
+                  <img src="images/team/adcom/Dr.SarmisthaNeogy.jpg" class="img-responsive" alt="">
+                </figure>
 
-                    <div class="col-md-4 mb30">
-                      <div class="profile_pic text-center">
-                        <figure class="picframe mb30">
-                          <a class="image-popup" href="images/team/adcom/AravindhanAnbazhagan.jpg">
-                            <span class="overlay-v">
-                              <span>
-                                Chair | IEEE CS India SAC
-                              </span>
-                            </a>
-                            <img src="images/team/adcom/AravindhanAnbazhagan.jpg" class="img-responsive" alt="">
-                          </figure>
+                <h3>Prof. Sarmistha Neogy</h3>
+                <span class="subtitle">Chair | IEEE CS Professional Chapter, Kolkata
+                </span>
+              </div>
+            </div>
 
-                          <h3>Aravindhan Anbazhagan
-                          </h3>
-                          <span class="subtitle">
-                            Chair | IEEE CS India SAC
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/speakers/sujith.jpg">
+                    <span class="overlay-v">
+                      <span>
+                        Chair | IEEE Kolkata
+                  </a>
+                  <img src="images/team/adcom/Dr.SujitKBiswas.png" class="img-responsive" alt="">
+                </figure>
 
-                    <div class="col-md-4 mb30 cen-img">
-                      <div class="profile_pic text-center">
-                        <figure class="picframe mb30">
-                          <a class="image-popup" href="images/team/adcom/MeghaBen.jpg">
-                            <span class="overlay-v">
-                              <span>
-                                Secretary | IEEE CS India SAC
-                              </span>
-                            </a>
-                            <img src="images/team/adcom/MeghaBen.jpg" class="img-responsive" alt="">
-                          </figure>
+                <h3>Dr. Sujit Kumar Biswas
+                </h3>
+                <span class="subtitle">
+                  Chair | IEEE Kolkata
+                </span>
+              </div>
+            </div>
 
-                          <h3>Megha Ben
-                          </h3>
-                          <span class="subtitle">Secretary | IEEE CS India SAC
-                          </span>
-                        </div>
-                      </div>
-                      <!-- END ROW -->
-                    </div>
-                  </div>
-        </section>
+            <div class="col-md-4 mb30">
+              <div class="profile_pic text-center">
+                <figure class="picframe mb30">
+                  <a class="image-popup" href="images/team/adcom/AravindhanAnbazhagan.jpg">
+                    <span class="overlay-v">
+                      <span>
+                        Chair | IEEE CS India SAC
+                      </span>
+                  </a>
+                  <img src="images/team/adcom/AravindhanAnbazhagan.jpg" class="img-responsive" alt="">
+                </figure>
 
-        <section id="section-tickets" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
-          <div class="overlay-bg pt80 pb80" id="app">
-            <div class="container">
+                <h3>Aravindhan Anbazhagan
+                </h3>
+                <span class="subtitle">
+                  Chair | IEEE CS India SAC
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb30 cen-img">
+            <div class="profile_pic text-center">
+              <figure class="picframe mb30">
+                <a class="image-popup" href="images/team/adcom/MeghaBen.jpg">
+                  <span class="overlay-v">
+                    <span>
+                      Secretary | IEEE CS India SAC
+                    </span>
+                </a>
+                <img src="images/team/adcom/MeghaBen.jpg" class="img-responsive" alt="">
+              </figure>
+
+              <h3>Megha Ben
+              </h3>
+              <span class="subtitle">Secretary | IEEE CS India SAC
+              </span>
+            </div>
+          </div>
+          <!-- END ROW -->
+        </div>
+    </div>
+    </section>
+
+    <section id="section-tickets" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
+      <div class="overlay-bg pt80 pb80" id="app">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2><span class="id-color">Download </span>the CSIS'18 Delegate<span class="id-color"> APP Now</span></h2>
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <h2><span class="id-color">Download </span>the CSIS'18 Delegate<span class="id-color"> APP Now</span></h2>
-                  <div class="row">
-                    <div class="col-md-12 text-center">
-        
-                      <a class="btn btn-custom" id="app1" href="http://ieeecsis.org/App/CSIS18.apk" style="margin-top : 80px ; color : black;">Download CSIS'18 Android APP</a>
-        
-                    </div>
-                  </div>                  <div class="spacer-single"></div>
+
+                  <a class="btn btn-custom" id="app1" href="http://ieeecsis.org/App/CSIS18.apk"
+                    style="margin-top : 80px ; color : black;">Download CSIS'18 Android APP</a>
+
                 </div>
-  
+              </div>
+              <div class="spacer-single"></div>
+            </div>
+
           </div>
-        </section>
-      <!-- section begin -->
-      <!-- testimonial comments starts here
+    </section>
+    <!-- section begin -->
+    <!-- testimonial comments starts here
  <section id="section-testimonial-no-bg" data-stellar-background-ratio=".2">
     <div class="container relative">
         <div class="row">
@@ -1114,9 +916,9 @@ More than 50 papers has been published in these conferences by IEM students.
     </div>
 </section>
 -->
-      <!-- section close -->
+    <!-- section close -->
 
-      <!-- Sponsor section start 
+    <!-- Sponsor section start 
 
       <div class="container text-center text-light">
         <div class="row" style="height : 10px ; width: 100%">
@@ -1125,165 +927,172 @@ More than 50 papers has been published in these conferences by IEM students.
         </div>
       </div>-->
 
-      <section id="section-sponsors">
-        <div class="container relative" id="sponsors">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h2><span class="id-color">Event</span> Sponsors</h2>
-              <p class="lead">Check who make this event possible</p>
-              <div class="spacer-single"></div>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <h3>Title Sponsor</h3>
-              <div class="spacer-single"></div>
-              <div class="row">
-                <div class="col-md-12 mb30">
-
-                  <img src="images/logo/logores.png" alt="" class="grey-hover img-fluid" style="height: auto ; width : 80% ; max-width : 400px ">
-                </div>
-              </div>
-              <!-- <img src="images/logo/2.png" alt="" class="grey-hover">
-                <img src="images/logo/3.png" alt="" class="grey-hover"> -->
-
-              <div class="spacer-double"></div>
-
-              <h3>Platinum Sponsor</h3>
-              <div class="spacer-single"></div>
-              <div class="row">
-                <div class="col-md-12 mb30">
-
-                  <img src="images/logo/logotata.jpg" alt="" class="grey-hover img-fluid" style="height: auto ; width : 80% ; max-width : 400px ">
-                </div>
-              </div>
-
-              <div class="spacer-double"></div>
-
-              <h3>Gold Sponsor</h3>
-              <div class="spacer-single"></div>
-              <div class="row">
-                <div class="col-md-12 mb30">
-
-                  <img src="images/logo/mit_logo_big.png" alt="" class="grey-hover img-fluid" style="height: 40% ; width : auto ; max-width : 300px ; max-height : 300px ">
-                </div>
-              </div>
-              <!-- <img src="images/logo/2.png" alt="" class="grey-hover">
-                <img src="images/logo/3.png" alt="" class="grey-hover"> -->
-
-              <div class="spacer-double"></div>
-
-              <h3>Other Sponsors</h3>
-              <div class="spacer-single"></div>
-              <div class="row">
-                <div class="col-md-4 mb30">
-                  <img src="images/logo/logointel.jpg" alt="" class="grey-hover">
-                </div>
-                <div class="col-md-4 mb30">
-
-                  <img src="images/logo/logocs.png" alt="" class="grey-hover">
-
-                </div>
-               
-                <div class="col-md-4 mb30">
-                  <img src="images/logo/logoiem.png" alt="" class="grey-hover">
-                </div>
-
-              </div>
-              <div class="row">
-                <div class="col-md-4 mb30">
-
-                  <img src="images/logo/Zulip.png" style="max-height : 150px" alt="" class="grey-hover">
-                  <p class="lead">Zulip</p>
-
-                </div>
-                <div class="col-md-4 mb30">
-                  <img src="images/logo/kriyayogafoundation.jpg" style="max-height : 150px" alt="" class="grey-hover">
-                  <p class="lead">Kriya Yoga Foundation</p>
-
-                </div>
-                <div class="col-md-4 mb30">
-                  <img src="images/logo/ieeekolkata.jpg" style="max-height : 120px ; margin-top : 15px" alt="" class="grey-hover">
-                </div>
-                <!--<img src="images/logo/a4.png" alt="" class="grey-hover">
-                <img src="images/logo/a5.png" alt="" class="grey-hover"> -->
-              </div>
-              <div class="row">
-                  <div class="col-md-4 mb30">
-
-                      <img src="images/logo/logogeomeo.png" style="max-height : 150px" alt="" class="grey-hover">
-    
-                    </div>
-                    <div class="col-md-4 mb30">
-
-                        <img src="images/logo/KolkataVentures.jpeg" style="max-height : 150px" alt="" class="grey-hover">
-      
-                      </div>
-                      <div class="col-md-4 mb30">
-
-                        <img src="images/logo/Unimity.jpg" style="max-height : 150px;" alt="" class="grey-hover">
-      
-                      </div>
-              </div>
-              <div class="row">
-             
-                <div class="col-md-4 mb30 cen-img">
-                  <img src="images/logo/logosac.png" alt="" class="grey-hover">
-                </div>
-         
-
-              </div>
-              <div class="spacer-double"></div>
-
-              <h3>Community Partner</h3>
-              <div class="spacer-single"></div>
-              <div class="row">
-                <div class="col-md-12 mb30">
-
-                  <img src="images/logo/anithalogo.jpg" alt="" class="grey-hover img-fluid" style="height: auto ; width : 80% ; max-width : 400px ">
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-          <style>
-
-
-          </style>
-
-               
-
-          <div class="row">
-            <div class="col-md-12 text-center">
-
-              <a class="btn btn-custom" id="hoverbut" href="https://drive.google.com/open?id=1_u9uMjGbzmR3obfWG6E0ZZPnvj6jTs1H" style="margin-top : 80px">Download Sponsorship Brochure</a>
-
-            </div>
+    <section id="section-sponsors">
+      <div class="container relative" id="sponsors">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2><span class="id-color">Event</span> Sponsors</h2>
+            <p class="lead">Check who make this event possible</p>
+            <div class="spacer-single"></div>
           </div>
 
-
-        </div>
-
-      </section>
-
-      <!-- Sponsor Section close -->
-
-
-      <section id="section-tickets" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
-        <div class="overlay-bg pt80 pb80" id="registration">
-          <div class="container">
+          <div class="col-md-12 text-center">
+            <h3>Title Sponsor</h3>
+            <div class="spacer-single"></div>
             <div class="row">
-              <div class="col-md-12 text-center">
-                <h2><span class="id-color">Registrations </span>Are Now<span class="id-color"> Closed</span></h2>
-                <p class="lead">Participants will be contacted via Email </p>
-                <div class="spacer-single"></div>
+              <div class="col-md-12 mb30">
+
+                <img src="images/logo/logores.png" alt="" class="grey-hover img-fluid"
+                  style="height: auto ; width : 80% ; max-width : 400px ">
+              </div>
+            </div>
+            <!-- <img src="images/logo/2.png" alt="" class="grey-hover">
+                <img src="images/logo/3.png" alt="" class="grey-hover"> -->
+
+            <div class="spacer-double"></div>
+
+            <h3>Platinum Sponsor</h3>
+            <div class="spacer-single"></div>
+            <div class="row">
+              <div class="col-md-12 mb30">
+
+                <img src="images/logo/logotata.jpg" alt="" class="grey-hover img-fluid"
+                  style="height: auto ; width : 80% ; max-width : 400px ">
+              </div>
+            </div>
+
+            <div class="spacer-double"></div>
+
+            <h3>Gold Sponsor</h3>
+            <div class="spacer-single"></div>
+            <div class="row">
+              <div class="col-md-12 mb30">
+
+                <img src="images/logo/mit_logo_big.png" alt="" class="grey-hover img-fluid"
+                  style="height: 40% ; width : auto ; max-width : 300px ; max-height : 300px ">
+              </div>
+            </div>
+            <!-- <img src="images/logo/2.png" alt="" class="grey-hover">
+                <img src="images/logo/3.png" alt="" class="grey-hover"> -->
+
+            <div class="spacer-double"></div>
+
+            <h3>Other Sponsors</h3>
+            <div class="spacer-single"></div>
+            <div class="row">
+              <div class="col-md-4 mb30">
+                <img src="images/logo/logointel.jpg" alt="" class="grey-hover">
+              </div>
+              <div class="col-md-4 mb30">
+
+                <img src="images/logo/logocs.png" alt="" class="grey-hover">
+
               </div>
 
+              <div class="col-md-4 mb30">
+                <img src="images/logo/logoiem.png" alt="" class="grey-hover">
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-md-4 mb30">
+
+                <img src="images/logo/Zulip.png" style="max-height : 150px" alt="" class="grey-hover">
+                <p class="lead">Zulip</p>
+
+              </div>
+              <div class="col-md-4 mb30">
+                <img src="images/logo/kriyayogafoundation.jpg" style="max-height : 150px" alt="" class="grey-hover">
+                <p class="lead">Kriya Yoga Foundation</p>
+
+              </div>
+              <div class="col-md-4 mb30">
+                <img src="images/logo/ieeekolkata.jpg" style="max-height : 120px ; margin-top : 15px" alt=""
+                  class="grey-hover">
+              </div>
+              <!--<img src="images/logo/a4.png" alt="" class="grey-hover">
+                <img src="images/logo/a5.png" alt="" class="grey-hover"> -->
+            </div>
+            <div class="row">
+              <div class="col-md-4 mb30">
+
+                <img src="images/logo/logogeomeo.png" style="max-height : 150px" alt="" class="grey-hover">
+
+              </div>
+              <div class="col-md-4 mb30">
+
+                <img src="images/logo/KolkataVentures.jpeg" style="max-height : 150px" alt="" class="grey-hover">
+
+              </div>
+              <div class="col-md-4 mb30">
+
+                <img src="images/logo/Unimity.jpg" style="max-height : 150px;" alt="" class="grey-hover">
+
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-md-4 mb30 cen-img">
+                <img src="images/logo/logosac.png" alt="" class="grey-hover">
+              </div>
+
+
+            </div>
+            <div class="spacer-double"></div>
+
+            <h3>Community Partner</h3>
+            <div class="spacer-single"></div>
+            <div class="row">
+              <div class="col-md-12 mb30">
+
+                <img src="images/logo/anithalogo.jpg" alt="" class="grey-hover img-fluid"
+                  style="height: auto ; width : 80% ; max-width : 400px ">
+              </div>
+            </div>
+
+
+          </div>
         </div>
-      </section>
-    </div>
-    <!-- content close -->
-    <!--schedule comment starts here
+        <style>
+
+
+        </style>
+
+
+
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <a class="btn btn-custom" id="hoverbut"
+              href="https://drive.google.com/open?id=1_u9uMjGbzmR3obfWG6E0ZZPnvj6jTs1H"
+              style="margin-top : 80px">Download Sponsorship Brochure</a>
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <!-- Sponsor Section close -->
+
+
+    <section id="section-tickets" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
+      <div class="overlay-bg pt80 pb80" id="registration">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2><span class="id-color">Registrations </span>Are Now<span class="id-color"> Closed</span></h2>
+              <p class="lead">Participants will be contacted via Email </p>
+              <div class="spacer-single"></div>
+            </div>
+
+          </div>
+    </section>
+  </div>
+  <!-- content close -->
+  <!--schedule comment starts here
         <section id="section-schedules" aria-label="section-services-tab" data-bgcolor="#f5f5f5">
             <div class="container" id="schedule">
                 <div class="row">
@@ -1556,7 +1365,7 @@ More than 50 papers has been published in these conferences by IEM students.
         </section>
 -->
 
-    <!-- Grey Bar Div
+  <!-- Grey Bar Div
 
         <div class="container text-center text-light">
             <div class="row" style="height : 10px ; width: 100%">
@@ -1565,410 +1374,439 @@ More than 50 papers has been published in these conferences by IEM students.
             </div>
         </div>
     -->
-    <section id="section-speakers">
-      <div class="container relative">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2><span class="id-color">Our Amazing</span> Team</h2>
-            <p class="lead">Meet Our Team</p>
-            <div class="spacer-single"></div>
-          </div>
-
-          <div class="col-md-4 ">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Shivam.jpg">
-                                </a>
-                <img src="images/team/Shivam.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Shivam <br> ( IEEE CS R-10 Student Ambassador )
-                                </h3>
-              <span class="subtitle">Event Coordinator <br> +917905083422
-                                </span>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/srishti.jpg">
-                               </a>
-                <img src="images/team/srishti.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Srishti <br> ( CSSR, IEEE Kolkata Section )
-                                </h3>
-              <span class="subtitle">Event Coordinator <br> +918210402086
-                                </span>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/nitish.jpg">
-                                 </a>
-                <img src="images/team/nitish.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Nitish Singh <br>( Chairperson, IEEE Student Branch IEM Kolkata)
-                                </h3>
-              <span class="subtitle">Event Coordinator <br> +918709055152
-
-                            </span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Afnan.jpg">
-                               </a>
-                <img src="images/team/Afnan.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Afnan Nazer
-                                </h3>
-              <span class="subtitle">Design Lead
-                                </span>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Vignesh.jpg">
-                               </a>
-                <img src="images/team/Vignesh.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Vignesh Hari
-                                </h3>
-              <span class="subtitle">Web Lead
-                                </span>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Pratik.jpg">
-                                </a>
-                <img src="images/team/Pratik.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Pratik Mangalore
-                                </h3>
-              <span class="subtitle">Sponsorship Lead
-                                </span>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/aanandita.jpg">
-                               </a>
-                <img src="images/team/aanandita.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Aanandita Dhawan
-                                </h3>
-              <span class="subtitle">Editor-In-Chief | Documentation
-                                </span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Saurabh.jpg">
-                                   </a>
-                <img src="images/team/Saurabh.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Saurabh Tibrewal
-                                    </h3>
-              <span class="subtitle">Finance Lead
-                                    </span>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Sailakshmi.jpg">
-                                    </a>
-                <img src="images/team/Sailakshmi.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Sailakshmi PV
-                                    </h3>
-              <span class="subtitle">WIC Lead
-                                    </span>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Zameel.jpg">
-                                       </a>
-                <img src="images/team/Zameel.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Zameel Ihsan
-                                    </h3>
-              <span class="subtitle">Publicity Lead
-                                    </span>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Mohit.jpg">
-                                      </a>
-                <img src="images/team/Mohit.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Mohit Dokania
-                                                                        </h3>
-              <span class="subtitle">Registration Lead, IEEE Kolkata Section
-                                    </span>
-            </div>
-          </div>
-        </div>
-        <div class="row" style="     text-align: center;
-                    ">
-          <div class=" col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Anamitra.jpg">
-                                         </a>
-                <img src="images/team/Anamitra.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Anamitra Sarma
-
-                                    </h3>
-              <span class="subtitle">Documentation Lead
-                                    </span>
-            </div>
-          </div>
-          <div class=" col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Jyotirmaya.jpg">
-                                             </a>
-                <img src="images/team/Jyotirmaya.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Jyotirmaya Jyoti
-
-                                        </h3>
-              <span class="subtitle">Logistics Lead
-                                        </span>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Aastha.jpg">
-                                             </a>
-                <img src="images/team/Aastha.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Aastha Vardhan
-                                        </h3>
-              <span class="subtitle">Summer School Lead
-                                        </span>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb30">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Shrutina.jpg">
-                                              </a>
-                <img src="images/team/Shrutina.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Shrutina Agarwal
-                                        </h3>
-              <span class="subtitle">Committee Supervisor
-                                        </span>
-            </div>
-          </div>
-	</div>
-
-       <div class="row" style="     text-align: center;
-                    ">
-		<div class="col-md-3 mb30 col-md-offset-3">
-            <div class="profile_pic text-center">
-              <figure class="picframe mb30">
-                <a class="image-popup" href="images/team/Kavin.jpg">
-                                              </a>
-                <img src="images/team/Kavin.jpg" class="img-responsive" alt="">
-              </figure>
-
-              <h3>Kavin Dhans
-                                        </h3>
-              <span class="subtitle">Registration Lead
-                                        </span>
-            </div>
-          </div>
-          <div class="col-md-3 mb30 ">
-              <div class="profile_pic text-center">
-                <figure class="picframe mb30">
-                  <a class="image-popup" href="images/team/Soumya.jpg">
-                                                </a>
-                  <img src="images/team/Soumya.jpg" class="img-responsive" alt="">
-                </figure>
-  
-                <h3>Soumya Kashyap
-                                          </h3>
-                <span class="subtitle">TISP Lead
-                                          </span>
-              </div>
-            </div>
-
-
+  <section id="section-speakers">
+    <div class="container relative">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2><span class="id-color">Our Amazing</span> Team</h2>
+          <p class="lead">Meet Our Team</p>
+          <div class="spacer-single"></div>
         </div>
 
+        <div class="col-md-4 ">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Shivam.jpg">
+              </a>
+              <img src="images/team/Shivam.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Shivam <br> ( IEEE CS R-10 Student Ambassador )
+            </h3>
+            <span class="subtitle">Event Coordinator <br> +917905083422
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/srishti.jpg">
+              </a>
+              <img src="images/team/srishti.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Srishti <br> ( CSSR, IEEE Kolkata Section )
+            </h3>
+            <span class="subtitle">Event Coordinator <br> +918210402086
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/nitish.jpg">
+              </a>
+              <img src="images/team/nitish.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Nitish Singh <br>( Chairperson, IEEE Student Branch IEM Kolkata)
+            </h3>
+            <span class="subtitle">Event Coordinator <br> +918709055152
+
+            </span>
+          </div>
         </div>
       </div>
-    </section>
+      <div class="row">
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Afnan.jpg">
+              </a>
+              <img src="images/team/Afnan.jpg" class="img-responsive" alt="">
+            </figure>
 
-    <div class="container text-center text-light">
-      <div class="row" style="height : 10px ; width: 100%">
-        <div class="col-md-12">
+            <h3>Afnan Nazer
+            </h3>
+            <span class="subtitle">Design Lead
+            </span>
+          </div>
         </div>
+
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Vignesh.jpg">
+              </a>
+              <img src="images/team/Vignesh.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Vignesh Hari
+            </h3>
+            <span class="subtitle">Web Lead
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Pratik.jpg">
+              </a>
+              <img src="images/team/Pratik.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Pratik Mangalore
+            </h3>
+            <span class="subtitle">Sponsorship Lead
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/aanandita.jpg">
+              </a>
+              <img src="images/team/aanandita.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Aanandita Dhawan
+            </h3>
+            <span class="subtitle">Editor-In-Chief | Documentation
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Saurabh.jpg">
+              </a>
+              <img src="images/team/Saurabh.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Saurabh Tibrewal
+            </h3>
+            <span class="subtitle">Finance Lead
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Sailakshmi.jpg">
+              </a>
+              <img src="images/team/Sailakshmi.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Sailakshmi PV
+            </h3>
+            <span class="subtitle">WIC Lead
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Zameel.jpg">
+              </a>
+              <img src="images/team/Zameel.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Zameel Ihsan
+            </h3>
+            <span class="subtitle">Publicity Lead
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Mohit.jpg">
+              </a>
+              <img src="images/team/Mohit.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Mohit Dokania
+            </h3>
+            <span class="subtitle">Registration Lead, IEEE Kolkata Section
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="     text-align: center;
+                    ">
+        <div class=" col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Anamitra.jpg">
+              </a>
+              <img src="images/team/Anamitra.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Anamitra Sarma
+
+            </h3>
+            <span class="subtitle">Documentation Lead
+            </span>
+          </div>
+        </div>
+        <div class=" col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Jyotirmaya.jpg">
+              </a>
+              <img src="images/team/Jyotirmaya.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Jyotirmaya Jyoti
+
+            </h3>
+            <span class="subtitle">Logistics Lead
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Aastha.jpg">
+              </a>
+              <img src="images/team/Aastha.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Aastha Vardhan
+            </h3>
+            <span class="subtitle">Summer School Lead
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb30">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Shrutina.jpg">
+              </a>
+              <img src="images/team/Shrutina.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Shrutina Agarwal
+            </h3>
+            <span class="subtitle">Committee Supervisor
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="     text-align: center;
+                    ">
+        <div class="col-md-3 mb30 col-md-offset-3">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Kavin.jpg">
+              </a>
+              <img src="images/team/Kavin.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Kavin Dhans
+            </h3>
+            <span class="subtitle">Registration Lead
+            </span>
+          </div>
+        </div>
+        <div class="col-md-3 mb30 ">
+          <div class="profile_pic text-center">
+            <figure class="picframe mb30">
+              <a class="image-popup" href="images/team/Soumya.jpg">
+              </a>
+              <img src="images/team/Soumya.jpg" class="img-responsive" alt="">
+            </figure>
+
+            <h3>Soumya Kashyap
+            </h3>
+            <span class="subtitle">TISP Lead
+            </span>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <div class="container text-center text-light">
+    <div class="row" style="height : 10px ; width: 100%">
+      <div class="col-md-12">
       </div>
     </div>
+  </div>
 
-    <section id="section-info">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2><span class="id-color">Venue</span> Information</h2>
-            <p class="lead">How to Reach Sambodhi</p>
-            <div class="spacer-single"></div>
-          </div>
-
-          <div class="col-md-6 text-center">
-            <i class="fa fa-subway id-color fa-3x"></i>
-
-            <h3>Train</h3>
-            <p>There are direct trains that are available from the major cities i.e Delhi, Hyderabad, Bangalore, Chennai, Kolkata, Pune, Kochi, Mumbai etc.. which the delegates can board to reach Bodh Gaya.
-                    <br>There are also connecting trains available which hault mostly at Varanasi, Kolkata, Patna etc.. to reach BodhGaya.
-                    <br>From Kolkata, it is an 8 hour journey via road to reach BodhGaya apart from which there are multiple trains available for every 2 hours.
-                    <br>There are bus and train services available from Patna which take about 3 hours to reach BodhGaya.
-                    <br>There are frequent buses available from Varanasi that take around 4 hours to reach BodhGaya.
-
-            </p>
-          </div>
-
-          <div class="col-md-6 text-center">
-            <i class=" id-color fa  fa-fighter-jet fa-3x   "></i>
-            <h3>Flight</h3>
-            <p>There are a number of direct Air India, GoAir, Spice Jet flights to Bodh Gaya  which the delegates can take as their mode of transportation to CSIS’18. The delegates can also take indirect flights to reach Bodh Gaya, i.e., Air India, GoAir flights to Howrah, Kolkata, Patna, etc.
-                    <br>From Patna, it takes 1 hour to reach by flight or train (2 hours), there is also bus service available which takes about 3 hours.
-                    <br>One can take a flight from Varanasi or bus (5 hours journey) or train (4hours) to reach Bodh Gaya.
-                    <br>From Howrah also, one can take flight or bus (8 hours) and there is frequent train service (6 hours) available the whole day.</p>
-          </div>
-
-
-
+  <section id="section-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2><span class="id-color">Venue</span> Information</h2>
+          <p class="lead">How to Reach Sambodhi</p>
+          <div class="spacer-single"></div>
         </div>
-      </div>
-    </section>
-    <!-- section close -->
-	<!-- section begin -->
-    <section id="section-map" class="no-top no-bottom" aria-label="map-container">
-      <div id="map"></div>
-    </section>
-    <!-- section close -->
-	<section id="section-info">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h1><span class="id-color">Innovation</span> Group</h1>
-            
-            <div class="spacer-single"></div>
-          </div>
-		  
-		  <div class="col-md-12 text-center">
 
-          
-              <h2>About Dejawoo School</h2>
-              <p class="lead">An engineer from Manipal Institute of Technology, and an MBA graduate from IIM Lucknow, Ms. Garima Vishal hails from the town of Selra in 
-			  Bihar and she realised her true calling while she was working for ZS Associates in Gurgaon. 
-			  She broke all stereotypes by putting an effort to help the children in her community to learn and started evening classes in Mathematics, Hindi and English.
-			  Eventually, she founded the Dejawoo School of Innovation, a school aimed not only to impart education but also to develop personalities and culture of innovation and freedom of thought following an education system different from the one currently followed in the country.
-			  The school has impacted lives of many people, including those of a large number of underprivileged children and their parents. Ms. Garima Vishal and her Team, through the foundation of the Dejawoo School of Innovation, has inspired many parents belonging to the rural areas
-			  to send their children to school and has instilled the will in those set of children to pursue a career in technology and science in future. The school is currently operating in Muzaffarpur, Bihar and has plans to expand all over India.
+        <div class="col-md-6 text-center">
+          <i class="fa fa-subway id-color fa-3x"></i>
 
-       </p>
-	   </div>
-	     <div class="spacer-single"></div>
-            </div>
-			<div class="spacer-single"></div>
-          </div>
-		  <div class="col-md-12 text-center">
+          <h3>Train</h3>
+          <p>There are direct trains that are available from the major cities i.e Delhi, Hyderabad, Bangalore, Chennai,
+            Kolkata, Pune, Kochi, Mumbai etc.. which the delegates can board to reach Bodh Gaya.
+            <br>There are also connecting trains available which hault mostly at Varanasi, Kolkata, Patna etc.. to reach
+            BodhGaya.
+            <br>From Kolkata, it is an 8 hour journey via road to reach BodhGaya apart from which there are multiple
+            trains available for every 2 hours.
+            <br>There are bus and train services available from Patna which take about 3 hours to reach BodhGaya.
+            <br>There are frequent buses available from Varanasi that take around 4 hours to reach BodhGaya.
 
-          
-              <h2>About Sadguru Foundation</h2>
-              <p class="lead">Sadguru Mangeshda Kriya Yoga Foundation is a registered charitable Trust established by His Holiness Sadguru Yogiraj Sri Sri Mangeshda to carry out charitable work and imbibe in His disciples a habit of doing selfless work in their daily lives. The foundation's main goal is to encourage people to lead a healthy, balanced
-			  and peaceful life through Kriya Yoga. As one cannot be peaceful and happy without living in harmony with society, Sadguru Mangeshda Kriya Yoga Foundation encourages its members to carry out numerous charitable activities and to render selfless service to society.
-
-               </p>
-       
-	  
-	             
-
-
-	   </div>
-	     <div class="spacer-single"></div>
-            </div>
-			</div>
-			<h3><center>The Foundation has championed many initiatives and social campaigns, some of which are mentioned below:</center></h3>
-			<ul class="text-center">
-					<p align="center">The "Eye Pledge-We Pledge" mega campaign.</p>
-					<p align="center">Regular tree plantation drives to bring harmony in Nature. </p>
-					<p align="center">Regular Cleanliness Awareness Drives in various parts of the city. </p>
-					<p align="center">Kriya Yoga initiations and spiritual discourses by Sri Sri Mangeshda.</p>
-					<p align="center">Holistic Alternative Healing Techniques taught by well trained teachers.</p>
-					<p align="center">Regular sessions of Stress Management, Self Recognition and Development (SRD), Yoga and Meditation,</p>
-					<p align="center">Free distribution of saplings of the Tulsi plant under the Tulsi Abhiyan (campaign) for purifying the environment. </p>
-					<p align="center">Discourse and meditation sessions for the prisoners and inmates of Arthur Road Jail, Mumbai, by Sri Sri Mangeshda.</p>
-					<p align="center">Kriya Yoga mega Shibirs (camps) by Sri Sri Mangeshda and regular yoga and meditation sessions by trained teachers.</p>
-					<p align="center">A Spiritual Village, "Sadguru Mangeshda Kriya Villa" at Raigad district, a center for rejuvenating body, mind, and soul is coming up very fast.</p>
-					<p align="center">Instituted the Kriyasheel Global Awards, which are bestowed on distinguished personalities from different fields for their outstanding contribution to society.</p>
-					
-				</ul>
-			
-			</div>
-			</div>
-			</div>
-			
-			</section>
-
-	
-	
-	<div class="container text-center text-light">
-      <div class="row" style="height : 10px ; width: 100%">
-        <div class="col-md-12">
+          </p>
         </div>
+
+        <div class="col-md-6 text-center">
+          <i class=" id-color fa  fa-fighter-jet fa-3x   "></i>
+          <h3>Flight</h3>
+          <p>There are a number of direct Air India, GoAir, Spice Jet flights to Bodh Gaya which the delegates can take
+            as their mode of transportation to CSIS’18. The delegates can also take indirect flights to reach Bodh Gaya,
+            i.e., Air India, GoAir flights to Howrah, Kolkata, Patna, etc.
+            <br>From Patna, it takes 1 hour to reach by flight or train (2 hours), there is also bus service available
+            which takes about 3 hours.
+            <br>One can take a flight from Varanasi or bus (5 hours journey) or train (4hours) to reach Bodh Gaya.
+            <br>From Howrah also, one can take flight or bus (8 hours) and there is frequent train service (6 hours)
+            available the whole day.</p>
+        </div>
+
+
+
       </div>
     </div>
+  </section>
+  <!-- section close -->
+  <!-- section begin -->
+  <section id="section-map" class="no-top no-bottom" aria-label="map-container">
+    <div id="map"></div>
+  </section>
+  <!-- section close -->
+  <section id="section-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1><span class="id-color">Innovation</span> Group</h1>
 
-    
-<!--
+          <div class="spacer-single"></div>
+        </div>
+
+        <div class="col-md-12 text-center">
+
+
+          <h2>About Dejawoo School</h2>
+          <p class="lead">An engineer from Manipal Institute of Technology, and an MBA graduate from IIM Lucknow, Ms.
+            Garima Vishal hails from the town of Selra in
+            Bihar and she realised her true calling while she was working for ZS Associates in Gurgaon.
+            She broke all stereotypes by putting an effort to help the children in her community to learn and started
+            evening classes in Mathematics, Hindi and English.
+            Eventually, she founded the Dejawoo School of Innovation, a school aimed not only to impart education but
+            also to develop personalities and culture of innovation and freedom of thought following an education system
+            different from the one currently followed in the country.
+            The school has impacted lives of many people, including those of a large number of underprivileged children
+            and their parents. Ms. Garima Vishal and her Team, through the foundation of the Dejawoo School of
+            Innovation, has inspired many parents belonging to the rural areas
+            to send their children to school and has instilled the will in those set of children to pursue a career in
+            technology and science in future. The school is currently operating in Muzaffarpur, Bihar and has plans to
+            expand all over India.
+
+          </p>
+        </div>
+        <div class="spacer-single"></div>
+      </div>
+      <div class="spacer-single"></div>
+    </div>
+    <div class="col-md-12 text-center">
+
+
+      <h2>About Sadguru Foundation</h2>
+      <p class="lead">Sadguru Mangeshda Kriya Yoga Foundation is a registered charitable Trust established by His
+        Holiness Sadguru Yogiraj Sri Sri Mangeshda to carry out charitable work and imbibe in His disciples a habit of
+        doing selfless work in their daily lives. The foundation's main goal is to encourage people to lead a healthy,
+        balanced
+        and peaceful life through Kriya Yoga. As one cannot be peaceful and happy without living in harmony with
+        society, Sadguru Mangeshda Kriya Yoga Foundation encourages its members to carry out numerous charitable
+        activities and to render selfless service to society.
+
+      </p>
+
+
+
+
+
+    </div>
+    <div class="spacer-single"></div>
+    </div>
+    </div>
+    <h3>
+      <center>The Foundation has championed many initiatives and social campaigns, some of which are mentioned below:
+      </center>
+    </h3>
+    <ul class="text-center">
+      <p align="center">The "Eye Pledge-We Pledge" mega campaign.</p>
+      <p align="center">Regular tree plantation drives to bring harmony in Nature. </p>
+      <p align="center">Regular Cleanliness Awareness Drives in various parts of the city. </p>
+      <p align="center">Kriya Yoga initiations and spiritual discourses by Sri Sri Mangeshda.</p>
+      <p align="center">Holistic Alternative Healing Techniques taught by well trained teachers.</p>
+      <p align="center">Regular sessions of Stress Management, Self Recognition and Development (SRD), Yoga and
+        Meditation,</p>
+      <p align="center">Free distribution of saplings of the Tulsi plant under the Tulsi Abhiyan (campaign) for
+        purifying the environment. </p>
+      <p align="center">Discourse and meditation sessions for the prisoners and inmates of Arthur Road Jail, Mumbai, by
+        Sri Sri Mangeshda.</p>
+      <p align="center">Kriya Yoga mega Shibirs (camps) by Sri Sri Mangeshda and regular yoga and meditation sessions by
+        trained teachers.</p>
+      <p align="center">A Spiritual Village, "Sadguru Mangeshda Kriya Villa" at Raigad district, a center for
+        rejuvenating body, mind, and soul is coming up very fast.</p>
+      <p align="center">Instituted the Kriyasheel Global Awards, which are bestowed on distinguished personalities from
+        different fields for their outstanding contribution to society.</p>
+
+    </ul>
+
+    </div>
+    </div>
+    </div>
+
+  </section>
+
+
+
+  <div class="container text-center text-light">
+    <div class="row" style="height : 10px ; width: 100%">
+      <div class="col-md-12">
+      </div>
+    </div>
+  </div>
+
+
+  <!--
     <section id="section-quick-contact" class="bordertop">
       <div class="container">
         <div class="row text-center">
@@ -2006,139 +1844,151 @@ More than 50 papers has been published in these conferences by IEM students.
 -->
 
 
-    <!--contact form -->
-<!-- FAQ Section -->
-<section class="cd-faq" style="margin: 0 auto ; text-align: center">
-        <h2><span class="id-color">FA</span>Q</h2>
-        <p class="lead">Click on the question to expand it</p>
+  <!--contact form -->
+  <!-- FAQ Section -->
+  <section class="cd-faq" style="margin: 0 auto ; text-align: center">
+    <h2><span class="id-color">FA</span>Q</h2>
+    <p class="lead">Click on the question to expand it</p>
     <div class="col-md-offset-2 col-md-8 text-center">
 
-    <dl style="margin-top : 20px">
-                <dt>When and where will CSIS 2018 be held?
-                </dt>
-                <dd>The IEEE Computer Society India Symposium 2018 will be held at Sambodhi Retreat Resort in Bodh Gaya, Bihar from 16-18 March, 2018.
-                </dd>
-                <dt>Who should attend CSIS 2018?
+      <dl style="margin-top : 20px">
+        <dt>When and where will CSIS 2018 be held?
+        </dt>
+        <dd>The IEEE Computer Society India Symposium 2018 will be held at Sambodhi Retreat Resort in Bodh Gaya, Bihar
+          from 16-18 March, 2018.
+        </dd>
+        <dt>Who should attend CSIS 2018?
 
-                </dt>
-                <dd>Students across India who are passionate about the present-day technological advancements across the globe are welcome to attend the 3-day extravaganza. It can be a life changing experience for passionate volunteers from all streams of engineering to widen their networks and grow efficient in their work with IEEE and IEEE Computer Society.
-                </dd>
-                <dt>What is the theme of CSIS 2018?
-                </dt>
-                <dd>The theme of the Symposium for 2018 is “Converge to Emerge”.</dd>
-                <dt>Is it possible to have an extended accommodation (before or after the event)?
-                </dt>
-                <dd> Yes, it is possible provided the request for accommodation is made in time. Also, the charges of the extended accommodation will not be accommodated in the registration fee.
-                </dd>
-                <dt>Does the registration fees include food and accommodation facilities?
+        </dt>
+        <dd>Students across India who are passionate about the present-day technological advancements across the globe
+          are welcome to attend the 3-day extravaganza. It can be a life changing experience for passionate volunteers
+          from all streams of engineering to widen their networks and grow efficient in their work with IEEE and IEEE
+          Computer Society.
+        </dd>
+        <dt>What is the theme of CSIS 2018?
+        </dt>
+        <dd>The theme of the Symposium for 2018 is “Converge to Emerge”.</dd>
+        <dt>Is it possible to have an extended accommodation (before or after the event)?
+        </dt>
+        <dd> Yes, it is possible provided the request for accommodation is made in time. Also, the charges of the
+          extended accommodation will not be accommodated in the registration fee.
+        </dd>
+        <dt>Does the registration fees include food and accommodation facilities?
 
-                </dt>
-                <dd>Yes, the registration fees is inclusive of food and accommodation charges.
-                </dd>
-                <dt>What are the tracks at IEEE CSIS 2018?
+        </dt>
+        <dd>Yes, the registration fees is inclusive of food and accommodation charges.
+        </dd>
+        <dt>What are the tracks at IEEE CSIS 2018?
 
-                </dt>
-                <dd>The tracks at IEEE CSIS 2018 are categorized into six tracks: Technical, Robotics, Industrial, Management, Teacher In Service Program (TISP), Women In Computing (WIC).
-                </dd>
-                <dt>When should I pay for the event?
+        </dt>
+        <dd>The tracks at IEEE CSIS 2018 are categorized into six tracks: Technical, Robotics, Industrial, Management,
+          Teacher In Service Program (TISP), Women In Computing (WIC).
+        </dd>
+        <dt>When should I pay for the event?
 
-                </dt>
-                <dd>Payment should be done during the second phase of registration. The first phase of registration is open to all and is free of cost.
-                </dd>
-                <dt>When will the registration for the Symposium begin?
+        </dt>
+        <dd>Payment should be done during the second phase of registration. The first phase of registration is open to
+          all and is free of cost.
+        </dd>
+        <dt>When will the registration for the Symposium begin?
 
-                </dt>
-                <dd>The early bird registration will be open from 19th December, 2017.</dd>
-                <dt>Are there any prerequisites related to IEEE for attending the event?
+        </dt>
+        <dd>The early bird registration will be open from 19th December, 2017.</dd>
+        <dt>Are there any prerequisites related to IEEE for attending the event?
 
-                </dt>
-                <dd>The event is also open to non-IEEE members. CSIS is a prestigious event attended by many eminent professionals and speakers all around the globe, so the Symposium is open to all the innovative minds out there.
-                </dd>
-                <dt>Do I need to reserve rooms for accommodation?
+        </dt>
+        <dd>The event is also open to non-IEEE members. CSIS is a prestigious event attended by many eminent
+          professionals and speakers all around the globe, so the Symposium is open to all the innovative minds out
+          there.
+        </dd>
+        <dt>Do I need to reserve rooms for accommodation?
 
-                </dt>
-                <dd> Reservation of rooms for accommodation is not required as the registration fee includes accommodation and it will be taken care of.
-                </dd>
-                <dt>Is it possible to send a substitute delegate in case of my unavailability to attend the event?
+        </dt>
+        <dd> Reservation of rooms for accommodation is not required as the registration fee includes accommodation and
+          it will be taken care of.
+        </dd>
+        <dt>Is it possible to send a substitute delegate in case of my unavailability to attend the event?
 
-                </dt>
-                <dd>No, it is not possible. Once you register yourself as a confirmed participant during Phase 2, your registration cannot be cancelled. However a request for the same can be made if the case is genuine.</dd>
-                <dt>How can I cancel the registration I made?
+        </dt>
+        <dd>No, it is not possible. Once you register yourself as a confirmed participant during Phase 2, your
+          registration cannot be cancelled. However a request for the same can be made if the case is genuine.</dd>
+        <dt>How can I cancel the registration I made?
 
-                </dt>
-                <dd>Registrations once made, cannot be cancelled.
-                </dd>
-                <dt>Are there any offers or discounts available on registration?
+        </dt>
+        <dd>Registrations once made, cannot be cancelled.
+        </dd>
+        <dt>Are there any offers or discounts available on registration?
 
-                </dt>
-                <dd>Offers and discounts are available for the student members of IEEE and the IEEE Computer Society.
-                    </dd>
+        </dt>
+        <dd>Offers and discounts are available for the student members of IEEE and the IEEE Computer Society.
+        </dd>
 
-              </dl>
-              </div>
-            </section> <!-- cd-faq -->
-<!-- FAQ Section -->
-<div class="container text-center text-light">
-        <div class="row" style="height : 10px ; width: 100%">
-          <div class="col-md-12">
+      </dl>
+    </div>
+  </section> <!-- cd-faq -->
+  <!-- FAQ Section -->
+  <div class="container text-center text-light">
+    <div class="row" style="height : 10px ; width: 100%">
+      <div class="col-md-12">
+      </div>
+    </div>
+  </div>
+
+  <section id="section-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2><span class="id-color">Contact</span> Us</h2>
+          <p class="lead">Any Questions? Drop us a note and We'll Get Back to you</p>
+          <div class="spacer-single"></div>
+        </div>
+        <!-- change form action to relative url when hosting -->
+        <form id="ajax-contact" method="post" action="http://ieeecsis.org/scripts/mailer.php"
+          class="col-md-6 col-md-offset-3">
+          <div class="form-group">
+
+            <input type="text" class="form-control" id="name" placeholder="Name" name="name" required></div>
+          <div class="form-group">
+
+            <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-default orange_btn">Submit</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+  <!-- contact form end -->
+
+  <!-- footer begin -->
+  <footer>
+    <div class="container text-center text-light">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="social-icons big">
+            <a href="https://www.facebook.com/ieeecsis/"><i class="fa fa-facebook fa-lg"></i></a>
+            <a href="https://twitter.com/ieeecsis?s=09"><i class="fa fa-twitter fa-lg"></i></a>
+            <a href="https://www.instagram.com/ieeecsis18/"><i class="fa fa-instagram fa-lg"></i></a>
           </div>
         </div>
       </div>
+    </div>
 
-    <section id="section-info">
-      <div class="container">
+    <div class="subfooter">
+      <div class="container text-center">
         <div class="row">
-          <div class="col-md-12 text-center">
-            <h2><span class="id-color">Contact</span> Us</h2>
-            <p class="lead">Any Questions? Drop us a note and We'll Get Back to you</p>
-            <div class="spacer-single"></div>
-          </div>
-<!-- change form action to relative url when hosting -->
-          <form id="ajax-contact" method="post" action="http://ieeecsis.org/scripts/mailer.php" class="col-md-6 col-md-offset-3">
-            <div class="form-group">
-
-              <input type="text" class="form-control" id="name" placeholder="Name" name="name" required></div>
-            <div class="form-group">
-
-              <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-default orange_btn">Submit</button>
-          </form>
-
-        </div>
-      </div>
-    </section>
-    <!-- contact form end -->
-
-    <!-- footer begin -->
-    <footer>
-      <div class="container text-center text-light">
-        <div class="row">
           <div class="col-md-12">
-            <div class="social-icons big">
-              <a href="https://www.facebook.com/ieeecsis/"><i class="fa fa-facebook fa-lg"></i></a>
-              <a href="https://twitter.com/ieeecsis?s=09"><i class="fa fa-twitter fa-lg"></i></a>
-              <a href="https://www.instagram.com/ieeecsis18/"><i class="fa fa-instagram fa-lg"></i></a>
-            </div>
+            &copy; Copyright 2017-18 - Designed and Maintained by IEEE CSIS Web Team
           </div>
         </div>
       </div>
-
-      <div class="subfooter">
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-md-12">
-              &copy; Copyright 2017-18 - Designed and Maintained by IEEE CSIS Web Team
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- footer close -->
+    </div>
+  </footer>
+  <!-- footer close -->
 
 
 
@@ -2158,72 +2008,73 @@ More than 50 papers has been published in these conferences by IEM students.
   <script src="js/jquery.plugin.js"></script>
   <script src="js/jquery.countdown.js"></script>
   <script src="js/countdown-custom.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA550w0A8Wl9AW3zk1NkzfRD5zsFPZsfVI&callback=initMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA550w0A8Wl9AW3zk1NkzfRD5zsFPZsfVI&callback=initMap">
+  </script>
   <script src="js/map.js"></script>
   <script src="js/designesia.js"></script>
 
   <script>
+    $(document).ready(function (e) {
+      $('#hoverbut').hover(function () {
+        $main_text = $(this).text();
+        $(this).text("Support Us and Be Our Sponsor!").fadeIn();
+      }, function () {
+        $(this).text($main_text);
+      });
+      $('#app1').hover(function () {
+        $main_text = $(this).text();
+        $(this).text("You Are Going to Love This").fadeIn();
+      }, function () {
+        $(this).text($main_text);
+      });
+    });
 
-    	$(document).ready(function(e) {
-            $('#hoverbut').hover(function(){
-                    $main_text=$(this).text();
-                    $(this).text("Support Us and Be Our Sponsor!").fadeIn();
-                },function(){
-                    $(this).text($main_text);
-                    });
-            $('#app1').hover(function(){
-                      $main_text=$(this).text();
-                      $(this).text("You Are Going to Love This").fadeIn();
-                  },function(){
-                      $(this).text($main_text);
-                      });
-        });
+    $(function () {
+      var form = $('#ajax-contact');
 
-        $(function() {
-            var form = $('#ajax-contact');
-
-            var formMessages = $('#form-messages');
-
-
-            $(form).submit(function(event) {
-            event.preventDefault();
-            var formData = $(form).serialize();
-            $.ajax({
-                type: 'POST',
-                url: $(form).attr('action'),
-                data: formData
-            }).done(function(response) {
-                    $("#message").val("Message Sucessfully sent");
-            })
-            $("#message").val("Message Sucessfully sent");
-            $("#email").val("");
-            $("#name").val("");
-
-            });
-        });
-
-        (function () {
-
-            $('dd').filter(':nth-child(n+4)').hide(); //select every dd after the 4th child of dl
-
-            $('dl').on("click", "dt", function () { //prvents a listener from being attached to multiple dd elements, which would hinder performance
-                $(this).next()
-                    .slideDown()
-                    .siblings('dd')
-                        .slideUp(200)
-                        .removeClass("bold")
-
-                $(this)
-                  .switchClass(" ", "faqa", 300, "fold")
-                  .siblings('dt').removeClass('faqa')
-
-            });
-        })();
+      var formMessages = $('#form-messages');
 
 
-    $(function() {
+      $(form).submit(function (event) {
+        event.preventDefault();
+        var formData = $(form).serialize();
+        $.ajax({
+          type: 'POST',
+          url: $(form).attr('action'),
+          data: formData
+        }).done(function (response) {
+          $("#message").val("Message Sucessfully sent");
+        })
+        $("#message").val("Message Sucessfully sent");
+        $("#email").val("");
+        $("#name").val("");
+
+      });
+    });
+
+    (function () {
+
+      $('dd').filter(':nth-child(n+4)').hide(); //select every dd after the 4th child of dl
+
+      $('dl').on("click", "dt",
+    function () { //prvents a listener from being attached to multiple dd elements, which would hinder performance
+        $(this).next()
+          .slideDown()
+          .siblings('dd')
+          .slideUp(200)
+          .removeClass("bold")
+
+        $(this)
+          .switchClass(" ", "faqa", 300, "fold")
+          .siblings('dt').removeClass('faqa')
+
+      });
+    })();
+
+
+    $(function () {
       var INDEX = 0;
-      $("#chat-submit").click(function(e) {
+      $("#chat-submit").click(function (e) {
         e.preventDefault();
         var msg = $("#chat-input").val();
         if (msg.trim() == '') {
@@ -2239,7 +2090,7 @@ More than 50 papers has been published in these conferences by IEM students.
             value: 'new'
           }
         ];
-        setTimeout(function() {
+        setTimeout(function () {
           generate_message(msg, 'user');
         }, 1000)
 
@@ -2281,7 +2132,7 @@ More than 50 papers has been published in these conferences by IEM students.
               lang: "en",
               sessionId: "somerandomthing"
             }),
-            success: function(data) {
+            success: function (data) {
               //console.log(JSON.stringify(data.result.fulfillment.speech, undefined, 2));
               var output = JSON.stringify(data.result.fulfillment.speech, undefined, 2);
               var str = "";
@@ -2320,13 +2171,15 @@ More than 50 papers has been published in these conferences by IEM students.
           ]
         */
         INDEX++;
-        var btn_obj = buttons.map(function(button) {
-          return "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\"" + button.value + "\">" + button.name + "<\/a><\/li>";
+        var btn_obj = buttons.map(function (button) {
+          return "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\"" +
+            button.value + "\">" + button.name + "<\/a><\/li>";
         }).join('');
         var str = "";
         str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg user\">";
         str += "          <span class=\"msg-avatar\">";
-        str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+        str +=
+          "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
         str += "          <\/span>";
         str += "          <div class=\"cm-msg-text\">";
         str += msg;
@@ -2345,55 +2198,51 @@ More than 50 papers has been published in these conferences by IEM students.
         $("#chat-input").attr("disabled", true);
       }
 
-      $(document).delegate(".chat-btn", "click", function() {
+      $(document).delegate(".chat-btn", "click", function () {
         var value = $(this).attr("chat-value");
         var name = $(this).html();
         $("#chat-input").attr("disabled", false);
         generate_message(name, 'self');
       })
 
-      $("#chat-circle").click(function() {
+      $("#chat-circle").click(function () {
         $("#chat-circle").toggle('scale');
         $(".chat-box").toggle('scale');
       })
 
-      $(".chat-box-toggle").click(function() {
+      $(".chat-box-toggle").click(function () {
         $("#chat-circle").toggle('scale');
         $(".chat-box").toggle('scale');
       })
 
-      $(document).delegate("#music", "click", function() {
+      $(document).delegate("#music", "click", function () {
 
-        var myAudio = document.getElementById("myAudio"); 
+        var myAudio = document.getElementById("myAudio");
 
-        if( $("#music").text() == "Music OFF"){
-          $("#music").text("Music ON") ;
-          if (typeof myAudio.loop == 'boolean')
-          {
-              myAudio.loop = true;
-          }
-          else
-          {
-              myAudio.addEventListener('ended', function() {
-                  this.currentTime = 0;
-                  this.play();
-              }, false);
+        if ($("#music").text() == "Music OFF") {
+          $("#music").text("Music ON");
+          if (typeof myAudio.loop == 'boolean') {
+            myAudio.loop = true;
+          } else {
+            myAudio.addEventListener('ended', function () {
+              this.currentTime = 0;
+              this.play();
+            }, false);
           }
           myAudio.play();
-                }
-        else{
-          $("#music").text("Music OFF") ;
-          myAudio.pause(); 
+        } else {
+          $("#music").text("Music OFF");
+          myAudio.pause();
         }
-        });
+      });
     })
   </script>
 
   <audio id="myAudio" style="visibility: hidden">
-      <source src="bgm.ogg" type="audio/ogg">
-      <source src="http://ieeecsis.org/bgm.mpeg" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <source src="bgm.ogg" type="audio/ogg">
+    <source src="http://ieeecsis.org/bgm.mpeg" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
 </body>
 
