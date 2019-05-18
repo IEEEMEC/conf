@@ -10513,9 +10513,8 @@ dt::last-of-type {
 	background: #F9A42A;
 }
 
-.faq
-	font-weight: bold;
-	padding: 2em;
+.faq font-weight: bold;
+padding: 2em;
 }
 
 .form-control {
@@ -10532,6 +10531,58 @@ dt::last-of-type {
 .orange_btn:hover {
 	background-color: #f5bd09;
 	color: white;
+}
+
+/** Code Of Conduct **/
+/* Variables */
+/* Mixins */
+.container1 {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 3em;
+	height: 10em;
+}
+
+.container1 .box {
+	width: 10em;
+	height: 10em;
+	background-color: white;
+	margin: 3em;
+	transition: 0.3s all ease-in-out;
+	position: relative;
+	box-shadow: -2px 2px 50px rgba(0, 0, 0, 0.3);
+}
+
+.container1 .box .boxContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 15px;
+}
+
+.container1 .box .boxContent .title {
+	font-size: 15px;
+	color: #000;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.container1 .box:hover {
+	border-style: solid;
+	border-color: black;
+	border-width: .1em;
+	box-shadow: none;
+	background: #000;
+	transform: scale(1.09);
+}
+
+.container1 .box:hover .title{
+	color: #fff;
+	transition: 0.3s all ease-in-out;
 }
 
 #section-side-1 {
