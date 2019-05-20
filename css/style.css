@@ -10405,6 +10405,10 @@ img {
 	/* -------------------------------------------------- */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  h1.ultra-big {
+    font-size: 75px;
+  }
+
 	.container {
 		padding-left: 30px;
 		padding-right: 30px;
@@ -10426,6 +10430,10 @@ img {
 	/* -------------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
+  h1.ultra-big {
+    font-size: 50px;
+  }
+
 	.pf_full_width .item {
 		float: left;
 		width: 100% !important;

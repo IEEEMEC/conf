@@ -29,7 +29,11 @@ background-size: 100% !important;
 #section-intro-6 {background:url(../images/background/9.jpg) fixed;}
 #section-intro-7 {background:url(../images/background/10.jpg) fixed;}
 #section-intro-8 {background:url(../images/background/11.jpg) fixed;}
-#section-intro-9 {background:url(../images/background/kochi_bg.jpg) fixed;}
+#section-intro-9 {
+  background-image:url(../images/background/kochi_bg.jpg);
+  background-position: fixed;
+  background-size: cover;
+}
 
 #subheader {background:url(../images/background/kochi_bg.jpg) fixed;}
 
