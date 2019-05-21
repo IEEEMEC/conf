@@ -10405,9 +10405,9 @@ img {
 	/* -------------------------------------------------- */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  h1.ultra-big {
-    font-size: 75px;
-  }
+	h1.ultra-big {
+		font-size: 75px;
+	}
 
 	.container {
 		padding-left: 30px;
@@ -10430,9 +10430,9 @@ img {
 	/* -------------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
-  h1.ultra-big {
-    font-size: 50px;
-  }
+	h1.ultra-big {
+		font-size: 50px;
+	}
 
 	.pf_full_width .item {
 		float: left;
@@ -10548,15 +10548,13 @@ padding: 2em;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	margin: 3em;
-	height: 10em;
+	height: 20em;
 }
 
 .container1 .box {
-	width: 10em;
-	height: 10em;
+	height: 15em;
 	background-color: white;
-	margin: 3em;
+	margin: 1.5em;
 	transition: 0.3s all ease-in-out;
 	position: relative;
 	box-shadow: -2px 2px 50px rgba(0, 0, 0, 0.3);
@@ -10568,33 +10566,26 @@ padding: 2em;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 15px;
 }
 
-.container1 .box .boxContent .title {
-	font-size: 15px;
-	color: #000;
+.container1 .box .boxContent .lead {
+	font-size: 1em;
+	color: #f0ad4e;
 	letter-spacing: 2px;
 	font-weight: bold;
-	padding: 10px;
+	padding: 1em;
 }
 
 .container1 .box:hover {
 	border-style: solid;
-	border-color: black;
+	border-color: #f0ad4e;
 	border-width: .1em;
 	box-shadow: none;
-	background: #000;
 	transform: scale(1.09);
 }
 
-.container1 .box:hover .title{
-	color: #fff;
+.container1 .box:hover .title {
 	transition: 0.3s all ease-in-out;
-}
-
-#section-side-1 {
-	background-image: linear-gradient(-60deg, rgb(77, 242, 213), rgb(11, 168, 250));
 }
 
 #section-side-2 {
