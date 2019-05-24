@@ -7644,34 +7644,6 @@ blockquote {
 }
 
 
-/** Code Of Conduct **/
-.coc .row .col-md-2, .coc .row .col-md-3 {
-    background-color: white;
-	margin: 2em;
-	position: relative;
-	box-shadow: -2px 2px 50px rgba(0, 0, 0, 0.3);
-    display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-    font-size: 0.7em;
-	color: #f0ad4e;
-	letter-spacing: 1.5px;
-	font-weight: bold;
-	padding: 1em;
-}
-
-
-.coc .row :hover {
-  box-shadow: none;
-  background-color : orange;
-  color: white;
-  transform: scale(1.05);
-  transition: 0.3s all ease-in-out;
-  border-radius:0.5em;
-}
-
-
 /* ======================================== */
 
 
@@ -10275,7 +10247,7 @@ img {
 	}
 
 	.picframe {
-		width: 50%;
+		width: 10em;
 		margin: 0 auto;
 		margin-bottom: 30px;
 	}
@@ -10492,31 +10464,6 @@ img {
 		padding: 0;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-dl {}
 
 dd {
 	margin: 0;
@@ -14245,62 +14192,108 @@ blockquote {
 /*
 
 /* general settings for section & subheader */
-section,#subheader{
--webkit-background-size: 100% !important;
--moz-background-size: 100% !important;
--o-background-size: 100% !important;
-background-size: 100% !important;
+section,
+#subheader {
+	-webkit-background-size: 100% !important;
+	-moz-background-size: 100% !important;
+	-o-background-size: 100% !important;
+	background-size: 100% !important;
 }
 
 /* background settings for section */
-#section-fun-facts {background:url(../images/background/1.jpg) fixed;}
-#section-testimonial {background:url(../images/background/2.jpg) fixed;}
-#section-fun-facts-2 {background:url(../images/background/8.jpg) fixed;}
-#section-intro-1 {background:url(../images/background/3.jpg) fixed;}
-#section-intro-2 {background:url(../images/background/4.jpg) fixed;}
-#section-intro-3 {background:url(../images/background/5.jpg) fixed;}
-#section-intro-4 {background:url(../images/background/6.jpg) fixed;}
-#section-intro-5 {background:url(../images/background/7.jpg) fixed;}
-#section-tickets {background:url(../images/background/8.jpg) fixed;}
-#section-intro-6 {background:url(../images/background/9.jpg) fixed;}
-#section-intro-7 {background:url(../images/background/10.jpg) fixed;}
-#section-intro-8 {background:url(../images/background/11.jpg) fixed;}
-#section-intro-9 {
-  background-image:url(../images/background/kochi_bg.jpg);
-  background-position: fixed;
-  background-size: cover;
+#section-fun-facts {
+	background: url(../images/background/1.jpg) fixed;
 }
 
-#subheader {background:url(../images/background/kochi_bg.jpg) fixed;}
+#section-testimonial {
+	background: url(../images/background/2.jpg) fixed;
+}
 
-#section-side-1.side-bg .background-image{background:url(../images/background/bg-side-1.jpg);}
-#section-side-2.side-bg .background-image{background:url(../images/background/bg-side-2.jpg);}
+#section-fun-facts-2 {
+	background: url(../images/background/8.jpg) fixed;
+}
+
+#section-intro-1 {
+	background: url(../images/background/3.jpg) fixed;
+}
+
+#section-intro-2 {
+	background: url(../images/background/4.jpg) fixed;
+}
+
+#section-intro-3 {
+	background: url(../images/background/5.jpg) fixed;
+}
+
+#section-intro-4 {
+	background: url(../images/background/6.jpg) fixed;
+}
+
+#section-intro-5 {
+	background: url(../images/background/7.jpg) fixed;
+}
+
+#section-tickets {
+	background: url(../images/background/8.jpg) fixed;
+}
+
+#section-intro-6 {
+	background: url(../images/background/9.jpg) fixed;
+}
+
+#section-intro-7 {
+	background: url(../images/background/10.jpg) fixed;
+}
+
+#section-intro-8 {
+	background: url(../images/background/11.jpg) fixed;
+}
+
+#section-intro-9 {
+	background-image: url(../images/background/kochi_bg.jpg);
+	background-position: fixed;
+	background-size: cover;
+}
+
+#subheader {
+	background: url(../images/background/kochi_bg.jpg) fixed;
+}
+
+#section-side-1.side-bg .background-image {
+	background: url(../images/background/bg-side-1.jpg);
+}
+
+#section-side-2.side-bg .background-image {
+	background: url(../images/background/bg-side-2.jpg);
+}
 
 /* media query */
-@media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait){
-	section{
-	-webkit-background-size: cover !important;
-	-moz-background-size: cover !important;
-	-o-background-size: cover !important;
-	background-size: cover !important;
-	background-attachment:scroll !important;
+@media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait) {
+	section {
+		-webkit-background-size: cover !important;
+		-moz-background-size: cover !important;
+		-o-background-size: cover !important;
+		background-size: cover !important;
+		background-attachment: scroll !important;
 	}
 }
+
 @media only screen and (max-width: 992px) {
-	#subheader{
-	-webkit-background-size: cover !important;
-	-moz-background-size: cover !important;
-	-o-background-size: cover !important;
-	background-size: cover !important;
-	background-attachment:scroll !important;
+	#subheader {
+		-webkit-background-size: cover !important;
+		-moz-background-size: cover !important;
+		-o-background-size: cover !important;
+		background-size: cover !important;
+		background-attachment: scroll !important;
 	}
 }
+
 @media only screen and (max-width: 992px) {
-	section{
-	-webkit-background-size: auto 100% !important;
-	-moz-background-size: auto 100% !important;
-	-o-background-size: auto 100% !important;
-	background-size: auto 100% !important;
-	background-attachment:scroll !important;
+	section {
+		-webkit-background-size: auto 100% !important;
+		-moz-background-size: auto 100% !important;
+		-o-background-size: auto 100% !important;
+		background-size: auto 100% !important;
+		background-attachment: scroll !important;
 	}
 }
