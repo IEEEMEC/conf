@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* ================================================== */
 
 
@@ -44,10 +46,6 @@
 * plugin
 * media query
 */
-
-
-@charset "utf-8";
-
 /* ================================================== */
 
 
@@ -6602,7 +6600,7 @@ section.no-padding {
 .owl-arrow .next:before {
 	font-family: "FontAwesome";
 	content: '\f177';
-	color: #2;
+	color: #222;
 	padding: 20px;
 	font-size: 32px;
 	display: block;
@@ -6654,7 +6652,6 @@ section.no-padding {
 	background: none;
 }
 
-.text-light .owl-theme .owl-
 /* ================================================== */
 
 
@@ -6701,8 +6698,6 @@ section.no-padding {
 * plugin
 * media query
 */
-
-@charset "utf-8";
 
 /* ================================================== */
 
@@ -10497,8 +10492,9 @@ dt::last-of-type {
 	background: #F9A42A;
 }
 
-.faq font-weight: bold;
-padding: 2em;
+.faq {
+	font-weight: bold;
+	padding: 2em;
 }
 
 .form-control {
@@ -10707,8 +10703,6 @@ blockquote {
 }
 
 /* Animate.css */
-@charset "UTF-8";
-
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
