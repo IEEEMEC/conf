@@ -9814,6 +9814,7 @@ img {
 	}
 
 	header.autoshow {
+		position: fixed;
 		height: auto !important;
 		top: 0 !important;
 	}
@@ -9822,8 +9823,10 @@ img {
 		background: none !important;
 	}
 
-	header.header-mobile-sticky {
+	header.header-mobile {
 		position: fixed;
+		top:0;
+		height: 5em;
 	}
 
 	#subheader {
