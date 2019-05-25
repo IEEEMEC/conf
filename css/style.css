@@ -5681,6 +5681,8 @@ a:hover,
 }
 
 .picframe {
+	height: 23em;
+	width: 23em;
 	position: relative;
 	overflow: hidden;
 }
@@ -10243,6 +10245,7 @@ img {
 
 	.picframe {
 		width: 10em;
+		height: 10em;
 		margin: 0 auto;
 		margin-bottom: 30px;
 	}
@@ -10274,7 +10277,8 @@ img {
 	}
 
 	.picframe {
-		width: 80%;
+		width: 80vw;
+		height: 80vw;
 	}
 
 	.picframe img {
