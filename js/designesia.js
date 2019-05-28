@@ -10,7 +10,7 @@
 	var de_header_style = 2; // 1 - solid, 2 - transparent
 	var de_header_color = 1; // 1 - dark, - 2 light
 	var de_header_color_scroll = 2; // 1 - dark, - 2 light
-	var de_menu_separator = 0; // 1 - dotted, 2 - border, 3 - circle, 4 - square, 5 - plus, 6 - strip, 7 - heart, 0 - none
+	var de_menu_separator = 2; // 1 - dotted, 2 - border, 3 - circle, 4 - square, 5 - plus, 6 - strip, 7 - heart, 0 - none
 	
 	/* --------------------------------------------------
 	 * predefined vars

@@ -7988,14 +7988,17 @@ img {
 
 	nav {
 		width: 100%;
+		background: #fff;
+		overflow: hidden;
 	}
 
 	#mainmenu {
 		display: none;
 		float: none;
-		z-index: 200;
+		z-index: 2000;
+		height: 100%;
 		width: 100%;
-		margin: 0;
+		margin: 1em !important;
 		padding: 0;
 	}
 
