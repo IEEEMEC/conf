@@ -10524,6 +10524,10 @@ dt::last-of-type {
 	background-image: linear-gradient(-60deg, #ff2233, #ff5555);
 }
 
+#section-side-1 {
+	background-image: linear-gradient(60deg, #aaaaaa, #797979);
+}
+
 /* Coloring.css  */
 .bg-color,
 section.bg-color,
@@ -10589,7 +10593,7 @@ span.overlay,
 .de_tab.tab_style_4 .de_nav li.active,
 a.btn-fullwidth,
 .de_testi.opt-3 blockquote:before {
-	background-color: #ff3c00;
+	background-color: #bb8484;
 }
 
 .feature-box i,
