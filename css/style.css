@@ -10524,10 +10524,6 @@ dt::last-of-type {
 	background-image: linear-gradient(-60deg, #ff2233, #ff5555);
 }
 
-#section-side-1 {
-	background-image: linear-gradient(60deg, #aaaaaa, #797979);
-}
-
 /* Coloring.css  */
 .bg-color,
 section.bg-color,
