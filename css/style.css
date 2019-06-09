@@ -9828,7 +9828,7 @@ img {
 
 	header.header-mobile {
 		position: fixed;
-		top:0;
+		top: 0;
 		height: 5em;
 	}
 
@@ -14304,115 +14304,123 @@ section,
 
 /* Speaker */
 .lgx-single-speaker {
-    background: #fff;
-    padding: 1.6rem;
-    border-radius: 16px;
-    margin-bottom: 2.6rem;
-    -moz-transition-duration: .3s;
-    -webkit-transition-duration: .3s;
-    -o-transition-duration: .3s;
-    transition-duration: .3s;
-    position: relative;
-    box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .1)
+	background: #fff;
+	padding: 1.6rem;
+	border-radius: 16px;
+	margin-bottom: 2.6rem;
+	-moz-transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	transition-duration: .3s;
+	position: relative;
+	box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .1)
 }
 
 .lgx-single-speaker figure a.profile-img img {
 	max-width: 100%;
-    -moz-transition-duration: .3s;
-    -webkit-transition-duration: .3s;
-	-o-transition-duration: .3s
-	transition-duration: .3s
+	-moz-transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	-o-transition-duration: .3s transition-duration: .3s
 }
 
 .lgx-single-speaker figure {
-    position: relative
+	position: relative
 }
 
 .lgx-single-speaker figure figcaption {
-    background: rgba(255, 60, 0, 0.5);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 90%;
-    height: 90%;
-    text-align: center;
-    border-radius: 8px;
-    opacity: 0;
-    padding: .8rem 0;
-    -webkit-transition: all .3s ease-in-out .3s;
-    -moz-transition: all .3s ease-in-out .3s;
-    -o-transition: all .3s ease-in-out .3s;
-    transition: all .3s ease-in-out .3s;
-    z-index: 3
+	background: rgba(255, 60, 0, 0.5);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 90%;
+	height: 90%;
+	text-align: center;
+	border-radius: 8px;
+	opacity: 0;
+	padding: .8rem 0;
+	-webkit-transition: all .3s ease-in-out .3s;
+	-moz-transition: all .3s ease-in-out .3s;
+	-o-transition: all .3s ease-in-out .3s;
+	transition: all .3s ease-in-out .3s;
+	z-index: 3
 }
 
 .lgx-single-speaker figure figcaption a {
-    font-size: 2.6rem;
-    line-height: 3.9000000000000004rem;
-    color: #554bb9;
-    padding: 0 .3rem
+	font-size: 2.6rem;
+	line-height: 3.9000000000000004rem;
+	color: #554bb9;
+	padding: 0 .3rem
 }
 
 .lgx-single-speaker .social-group {
-    text-align: right;
-    padding: 1rem 2rem
+	text-align: right;
+	padding: 1rem 2rem
 }
 
 .lgx-single-speaker .social-group a {
-    color: #fff
+	color: #fff
 }
 
 .lgx-single-speaker .speaker-info {
-    position: absolute;
-    bottom: 5px;
-    z-index: 99;
-    width: 100%;
-    text-align: left;
-    padding: 1.5rem 2rem
+	position: absolute;
+	bottom: 5px;
+	z-index: 99;
+	width: 100%;
+	text-align: left;
+	padding: 1.5rem 2rem
 }
 
 .lgx-single-speaker .speaker-info .title {
-    font-size: 2.6rem;
-    line-height: 3.9000000000000004rem;
-    font-weight: 700;
-    margin: 0;
-    color: #202020
+	font-size: 2.6rem;
+	line-height: 3.9000000000000004rem;
+	font-weight: 700;
+	margin: 0;
+	color: #202020
 }
 
 .lgx-single-speaker .speaker-info .title a {
-    font-size: inherit;
-    color: inherit
+	font-size: inherit;
+	color: inherit
 }
 
 .lgx-single-speaker .speaker-info .subtitle {
-    font-size: 1.4rem;
-    line-height: 2.0999999999999996rem;
-    font-weight: 400;
-    margin: 0;
-    color: #fff;
-    opacity: .7
+	font-size: 1.4rem;
+	line-height: 2.0999999999999996rem;
+	font-weight: 400;
+	margin: 0;
+	color: #fff;
+	opacity: .7
 }
 
 .lgx-single-speaker:hover {
-    background: #202020;
-    overflow: hidden
+	background: #202020;
+	overflow: hidden
 }
 
 .lgx-single-speaker:hover:after {
-    left: 42%;
-    opacity: .7
+	left: 42%;
+	opacity: .7
 }
 
 .lgx-single-speaker:hover figure a.profile-img img {
-    -ms-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2)
+	-ms-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2)
 }
 
 .lgx-single-speaker:hover figure figcaption {
-    opacity: 1;
-    width: 100%;
-    height: 100%
+	opacity: 1;
+	width: 100%;
+	height: 100%
+}
+
+.telegramim_button {
+	font-size: 26px;
+	width: 200px;
+	background: rgb(255, 60, 0);
+	box-shadow: 1px 1px 5px rgb(255, 60, 0);
+	color: #FFFFFF;
+	border-radius: 50px;
 }
