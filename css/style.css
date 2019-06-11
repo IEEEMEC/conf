@@ -14306,7 +14306,6 @@ section,
 .lgx-single-speaker {
 	background: #fff;
 	margin: 1rem;
-	max-width: 25em;
 	padding: 1rem;
 	-moz-transition-duration: .3s;
 	-webkit-transition-duration: .3s;
@@ -14314,10 +14313,14 @@ section,
 	transition-duration: .3s;
 	position: relative;
 	overflow: hidden;
+	width: 22.5em;
+	height: 22.5em;
 	box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .1)
 }
 
 .lgx-single-speaker figure a.profile-img img {
+	width: 21em;
+	height: 21em;
 	-moz-transition-duration: .3s;
 	-webkit-transition-duration: .3s;
 	-o-transition-duration: .3s transition-duration: .3s
@@ -14417,7 +14420,6 @@ section,
 @media only screen and (max-width: 992px) {
 	.lgx-single-speaker {
 		margin: 0 1rem;
-		max-width: 25em;
 	}
 }
 
