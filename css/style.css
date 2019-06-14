@@ -14305,19 +14305,22 @@ section,
 /* Speaker */
 .lgx-single-speaker {
 	background: #fff;
-	padding: 1.6rem;
-	border-radius: 16px;
-	margin-bottom: 2.6rem;
+	margin: 1rem;
+	padding: 1rem;
 	-moz-transition-duration: .3s;
 	-webkit-transition-duration: .3s;
 	-o-transition-duration: .3s;
 	transition-duration: .3s;
 	position: relative;
+	overflow: hidden;
+	width: 22.5em;
+	height: 22.5em;
 	box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .1)
 }
 
 .lgx-single-speaker figure a.profile-img img {
-	max-width: 100%;
+	width: 21em;
+	height: 21em;
 	-moz-transition-duration: .3s;
 	-webkit-transition-duration: .3s;
 	-o-transition-duration: .3s transition-duration: .3s
@@ -14394,11 +14397,9 @@ section,
 
 .lgx-single-speaker:hover {
 	background: #202020;
-	overflow: hidden
 }
 
 .lgx-single-speaker:hover:after {
-	left: 42%;
 	opacity: .7
 }
 
@@ -14414,6 +14415,12 @@ section,
 	opacity: 1;
 	width: 100%;
 	height: 100%
+}
+
+@media only screen and (max-width: 992px) {
+	.lgx-single-speaker {
+		margin: 0 1rem;
+	}
 }
 
 .telegramim_button {
