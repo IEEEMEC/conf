@@ -14417,9 +14417,21 @@ section,
 	height: 100%
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 420px) {
 	.lgx-single-speaker {
-		margin: 0 1rem;
+		padding: 0;
+		width: 15em;
+		height: 15em;
+	}
+
+	#speakers {
+		text-align: center;
+	}
+
+	.lgx-single-speaker figure a.profile-img img {
+		margin: 0 auto;
+		width: 15em;
+		height: 15em;
 	}
 }
 
