@@ -14443,3 +14443,57 @@ section,
 	color: #FFFFFF;
 	border-radius: 50px;
 }
+
+
+
+
+/* =======  Image Carousel   ========= */
+.slider{
+margin: 0px;
+background-size: cover;
+background: url('C:/Users/admin/Desktop/MEC.conf-master/images/background/kochi_bg.jpg') no-repeat center center fixed; 
+padding: 0px;
+height: 100%;
+width: 100%;
+animation:slide 25s infinite;
+animation-timing-function: ease-in-out;
+}
+
+
+
+@keyframes slide
+{
+
+0%{
+background-size: cover;
+background: url('../images/background/kochi_bg.jpeg') no-repeat center center fixed; 
+}
+
+
+25%{
+background-size: cover;
+background: url('../images/background/bk3.jpg') no-repeat center center fixed; 
+}
+
+
+50%
+{  
+background-size: cover;
+background: url('../images/background/bk2.jpg') no-repeat center center fixed; 
+}
+
+
+75%
+{
+background-size: cover;
+background: url('../images/background/bk4.jpg') no-repeat center center fixed; 
+}
+
+
+100%{
+background-size: cover;
+background: url('../images/background/bk3.jpg') no-repeat center center fixed; 
+}
+
+
+}
