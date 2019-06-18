@@ -9445,7 +9445,7 @@ a.btn-slider:hover {
 }
 
 .logo-carousel .flex-direction-nav,
-.project-carousel .flex-control-nav,
+.project- .flex-control-nav,
 .project-carousel .flex-direction-nav,
 .project-carousel-3-col .flex-control-nav,
 .project-carousel-3-col .flex-direction-nav {
@@ -14205,70 +14205,8 @@ section,
 }
 
 /* background settings for section */
-#section-fun-facts {
-	background: url(../images/background/1.jpg) fixed;
-}
-
-#section-testimonial {
-	background: url(../images/background/2.jpg) fixed;
-}
-
-#section-fun-facts-2 {
-	background: url(../images/background/8.jpg) fixed;
-}
-
-#section-intro-1 {
-	background: url(../images/background/3.jpg) fixed;
-}
-
-#section-intro-2 {
-	background: url(../images/background/4.jpg) fixed;
-}
-
-#section-intro-3 {
-	background: url(../images/background/5.jpg) fixed;
-}
-
-#section-intro-4 {
-	background: url(../images/background/6.jpg) fixed;
-}
-
-#section-intro-5 {
-	background: url(../images/background/7.jpg) fixed;
-}
-
-#section-tickets {
-	background: url(../images/background/8.jpg) fixed;
-}
-
-#section-intro-6 {
-	background: url(../images/background/9.jpg) fixed;
-}
-
-#section-intro-7 {
-	background: url(../images/background/10.jpg) fixed;
-}
-
-#section-intro-8 {
-	background: url(../images/background/11.jpg) fixed;
-}
-
-#section-intro-9 {
-	background-image: url(../images/background/kochi_bg.jpg);
-	background-position: fixed;
-	background-size: cover;
-}
-
 #subheader {
 	background: url(../images/background/kochi_bg.jpg) fixed;
-}
-
-#section-side-1.side-bg .background-image {
-	background: url(../images/background/bg-side-1.jpg);
-}
-
-#section-side-2.side-bg .background-image {
-	background: url(../images/background/bg-side-2.jpg);
 }
 
 /* media query */
@@ -14448,52 +14386,69 @@ section,
 
 
 /* =======  Image Carousel   ========= */
-.slider{
-margin: 0px;
-background-size: cover;
-background: url('C:/Users/admin/Desktop/MEC.conf-master/images/background/kochi_bg.jpg') no-repeat center center fixed; 
-padding: 0px;
-height: 100%;
-width: 100%;
-animation:slide 25s infinite;
-animation-timing-function: ease-in-out;
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+	position: absolute;
+	height: 100vh;
+    width: 100vw;
+
+}
+
+.slider {
+	z-index: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	animation: slide 20s infinite;
+	animation-timing-function: steps(1, jump-start);
+}
+
+#section-intro-9 {
+	background-image: url('/images/background/kochi_bg.jpg');
+	background-position: fixed;
+	background-size: cover;
 }
 
 
 
-@keyframes slide
-{
+@keyframes slide {
+	0% {
+		background: url('/images/background/kochi_bg.jpg') no-repeat center center fixed;
+		background-size: cover;
+	}
 
-0%{
-background-size: cover;
-background: url('../images/background/kochi_bg.jpeg') no-repeat center center fixed; 
-}
-
-
-25%{
-background-size: cover;
-background: url('../images/background/bk3.jpg') no-repeat center center fixed; 
-}
+	10% {
+		background: url('../images/background/hardware.jpg') no-repeat center center fixed;
+		background-size: cover;
+	}
 
 
-50%
-{  
-background-size: cover;
-background: url('../images/background/bk2.jpg') no-repeat center center fixed; 
-}
+	30% {
+		background: url('../images/background/kochi-1.jpg') no-repeat center center fixed;
+		background-size: cover;
+	}
 
 
-75%
-{
-background-size: cover;
-background: url('../images/background/bk4.jpg') no-repeat center center fixed; 
-}
+	50% {
+		background: url('../images/background/kochi-2.jpg') no-repeat center center fixed;
+		background-size: cover;
+	}
 
 
-100%{
-background-size: cover;
-background: url('../images/background/bk3.jpg') no-repeat center center fixed; 
-}
+	70% {
+		background: url('../images/background/developer.jpg') no-repeat center center fixed;
+		background-size: cover;
+	}
 
 
+	90% {
+		background: url('../images/background/development.jpg') no-repeat center center fixed;
+		background-size: cover;
+	}
+
+	100% {
+		background: url('/images/background/kochi_bg.jpg') no-repeat center center fixed;
+		background-size: cover;
+	}
 }
