@@ -14386,14 +14386,6 @@ section,
 
 
 /* =======  Image Carousel   ========= */
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 10;
-	position: absolute;
-	height: 100vh;
-    width: 100vw;
-
-}
 
 .slider {
 	z-index: 0;
@@ -14410,6 +14402,9 @@ section,
 	background-size: cover;
 }
 
+.btn-register {
+	background: #ff3c00;
+}
 
 
 @keyframes slide {
