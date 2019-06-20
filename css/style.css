@@ -14447,3 +14447,113 @@ section,
 		background-size: cover;
 	}
 }
+
+/*======= Rotating logo ======*/
+.no-js #loader {
+	display: none;
+}
+
+.stat {
+	position: absolute;
+	top: 30%;
+	width: 100vw;
+	text-align: center;
+}
+
+.js #loader {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+
+#loader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	background: #eee;
+	z-index: 9999;
+}
+
+#loader.se-pre-con {
+	display: none;
+	height: 100vh;
+}
+
+.animate {
+	-webkit-animation-name: spin;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: spin;
+	-moz-animation-duration: 3s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-ms-animation-name: spin;
+	-ms-animation-duration: 3s;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-timing-function: linear;
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@-ms-keyframes spin {
+	from {
+		-ms-transform: rotate(0deg);
+	}
+
+	35% {
+		-ms-transform: rotate(180deg);
+	}
+
+	to {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes spin {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+
+	35% {
+		-moz-transform: rotate(180deg);
+	}
+
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+
+	35% {
+		-webkit-transform: rotate(180deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	35% {
+		transform: rotate(180deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
