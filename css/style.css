@@ -724,9 +724,9 @@ header.de_header_2.smaller .info {
 
 #menu-btn {
 	display: none;
-	float: right;
+	float: left;
 	margin-top: 5px;
-	width: 36px;
+	width: 206px;
 	height: 36px;
 	padding: 6px;
 	text-align: center;
