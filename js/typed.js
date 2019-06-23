@@ -44,11 +44,3 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 window.onload = function () {
   document.getElementById("loader").classList.add("se-pre-con");
 }
-
-
-/* Menu bar */
-$('.hamburger').on('click', function () {
-  $('.menu').toggleClass('open');});
-
-$( '.menu a' ).on("click", function(){
-   $('.menu').toggleClass('open');});
