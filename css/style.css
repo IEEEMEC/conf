@@ -724,14 +724,13 @@ header.de_header_2.smaller .info {
 
 #menu-btn {
 	display: none;
-	float: left;
+	float: right;
 	margin-top: 5px;
-	width: 206px;
+	width: 36px;
 	height: 36px;
 	padding: 6px;
 	text-align: center;
 	cursor: pointer;
-	margin-right: 0.4%;
 }
 
 #menu-btn:before {
@@ -756,10 +755,6 @@ header.header-mobile.header-light #menu-btn:hover {
 
 header.header-mobile.header-light #menu-btn {
 	color: #222;
-}
-
-#hamburger{
-	width:200px;
 }
 
 /* ================================================== */
