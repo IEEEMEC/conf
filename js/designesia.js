@@ -28,21 +28,6 @@
 		if (de_header_style == 2) {
 			$('header').addClass('transparent')
 		}
-		if (de_menu_separator == 2) {
-			$('#mainmenu').addClass('line-separator');
-		} else if (de_menu_separator == 3) {
-			$('#mainmenu').addClass('circle-separator');
-		} else if (de_menu_separator == 4) {
-			$('#mainmenu').addClass('square-separator');
-		} else if (de_menu_separator == 5) {
-			$('#mainmenu').addClass('plus-separator');
-		} else if (de_menu_separator == 6) {
-			$('#mainmenu').addClass('strip-separator');
-		} else if (de_menu_separator == 7) {
-			$('#mainmenu').addClass('heart-separator');
-		} else if (de_menu_separator == 0) {
-			$('#mainmenu').addClass('no-separator');
-		}
 		if (de_header_color == 2) {
 			$('header').addClass('header-light');
 		}
