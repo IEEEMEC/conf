@@ -3,15 +3,14 @@
 Make sure the team has an equitable representation from all the organisation under the Developer Community. 
 
 The Model Engineering College Developer Conference Committee consists of the following positions:
-- Mentor
-- Event Coordinators
-- Community Lead and Committee Supervisor
-- Speaker Team
-- Finance Team
-- Promotion Team
-- Hospitality & Event Management
-
-
+- [Building a Team](#Building-a-Team)
+      - [Mentor](#Mentor)
+      - [Event Coordinators](#Event-Coordinators)
+      - [Community Lead and Committee Supervisor](#Community-Lead-and-Committee-Supervisor)
+      - [Speaker Team](#Speaker-Team)
+      - [Finance Team](#Finance-Team)
+      - [Promotions Team](#Promotions-Team)
+      - [Hospitality and Event Management](#Hospitality-and-Event-Management)
 #### Mentor
 A position held by a student who is about to graduate or has graduated having held a prominent role in the community, can be held by an active staff member as well. The role of the mentor is to provide guidance on how to make the event a success on the basis of how to plan and take quick decisions.
 
@@ -27,6 +26,7 @@ Positions held by prominent members of the community who need not be representin
 
 #### Speaker Team
 Consists of members who have contacts within the technical circles and those who are able to provide speaker support as well as setup a CFP.
+
 **NOTE** A special group of speaker team members will work in relation to the running of workshop and devsprints.
 
 #### Finance Team
@@ -34,6 +34,7 @@ Consists of members who are financially knowledgable and have the ability to con
 
 #### Promotions Team
 Consists of members who are dedicated to the task of promoting the conference on different platforms and through various menthods. 
+
 **NOTE** A special group of finance + promotions looks after the Sponsorship and marketing work. Also consist of other special groups given the task of maintaining the Website, Designing posters and Writing content.
 
 #### Hospitality and Event Management
