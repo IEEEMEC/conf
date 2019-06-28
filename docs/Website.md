@@ -1,0 +1,3 @@
+# Building the Conference Website
+
+The website must be setup a minimum 6 months in advance to the conference, this can be handled by the general website team of the developer community. The website must focus on providing a clear picture of what the conference contains. A front page to the conference, the content should be thoroughly checked and made precise as possible. The content of the website should also contain the exact details without fail at all times and wherever found necessary. Use of an issue tracker to get suggestions is necessary and must be a practice that is prevalent throughout the community.
