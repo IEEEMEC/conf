@@ -14414,41 +14414,24 @@ section,
 
 @keyframes slide {
 	0% {
-		background: url('/images/background/kochi_bg.jpg') no-repeat center center fixed;
-		background-size: cover;
-	}
-
-	10% {
-		background: url('../images/background/hardware.jpg') no-repeat center center fixed;
-		background-size: cover;
-	}
-
-
-	30% {
-		background: url('../images/background/kochi-1.jpg') no-repeat center center fixed;
-		background-size: cover;
-	}
-
-
-	50% {
 		background: url('../images/background/kochi-2.jpg') no-repeat center center fixed;
 		background-size: cover;
 	}
 
 
-	70% {
+	33% {
 		background: url('../images/background/developer.jpg') no-repeat center center fixed;
 		background-size: cover;
 	}
 
 
-	90% {
+	66% {
 		background: url('../images/background/development.jpg') no-repeat center center fixed;
 		background-size: cover;
 	}
 
 	100% {
-		background: url('/images/background/kochi_bg.jpg') no-repeat center center fixed;
+		background: url('/images/background/kochi-2.jpg') no-repeat center center fixed;
 		background-size: cover;
 	}
 }
