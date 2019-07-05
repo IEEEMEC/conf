@@ -9,6 +9,25 @@
   <meta name="keywords" content="MEC.conf, conference, event, IEEE, CS, MEC, FOSS, open source">
   <meta name="author" content="">
 
+  <script type="text/javascript">
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) {
+          return pair[1];
+        }
+      }
+      return (false);
+    }
+
+    const promo = getQueryVariable("promo");
+    if (promo != "") {
+      window.location = "https://www.yepdesk.com/buy-tickets/5cf54360e4b02098c0ab6d34/default-promo/" + promo;
+    }
+  </script>
+
   <link rel="icon" type="image/png" sizes="48x48" href="/images/logo/favicon_48x48.png">
   <!--[if lt IE 9]>
 	<script src="/js/html5shiv.js"></script>
