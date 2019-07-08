@@ -45,11 +45,23 @@ window.onload = function () {
   document.getElementById("loader").classList.add("se-pre-con");
 }
 
-/* Menu bar */
+/* Menu bar :Begin */
 $('.hamburger').on('click', function () {
   $('.menu').toggleClass('open');
 });
 
 $('.menu a').on("click", function () {
   $('.menu').toggleClass('open');
+});
+
+
+
+/* -------------------------------------------------------------------------------- */
+
+
+/* FAQ Page */
+$(document).ready(function(){
+  $('.questions').on('click', function() {     $(this).closest('.col-md-8 ').find('.answers').slideToggle();
+ $(this).closest('.col-md-8').find('.plus').css( {"transform": "rotate(45deg)"});
+  });
 });
