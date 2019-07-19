@@ -1,0 +1,116 @@
+/* Import */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+  box-sizing: border-box;
+}
+p {
+  line-height: 1.5;
+}
+body > .title {
+  font-family: "Lato", "Open Sans", "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+  display: block;
+  margin: 1em auto;
+}
+.timeline {
+  padding: 0;
+  border-left: dashed 2px #aaa;
+  padding-left: 3em;
+  margin-left: 2em;
+}
+.day {
+  margin: 5em auto;
+}
+.day > .title {
+  font-family: "Lato", "Open Sans", "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.event {
+  display: grid;
+  grid-template-areas: "time title" "time speaker" "time venue" "time description";
+  grid-template-columns: 7em auto;
+  grid-column-gap: 1em;
+  grid-row-gap: 0.5em;
+  margin: 3em auto;
+}
+.event label {
+  width: 6em;
+  display: inline-block;
+}
+.event .time {
+  grid-area: time;
+  display: block;
+  padding-left: 0.1em;
+  font-size: 2em;
+  margin-right: 0.2em;
+  font-family: "Lato", "Impact", "Roboto", sans-serif;
+  font-weight: 900;
+  color: #aaa;
+}
+.event .title {
+  font-size: 1.4em;
+  grid-area: title;
+  margin: 0;
+  margin-bottom: 1em;
+  align-self: center;
+}
+.event .speaker {
+  font-size: 0.9em;
+  grid-area: speaker;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.event .venue {
+  font-size: 0.9em;
+  grid-area: venue;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.event .description {
+  grid-area: description;
+  text-align: justify;
+}
+@media (max-width: 600px) {
+  padding: 1em;
+}
+@media (max-width: 700px) {
+  body > .title {
+    text-align: center;
+  }
+  .day > .title {
+    display: block;
+    width: 3em;
+    margin: 0 auto;
+  }
+  .timeline {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .event {
+    grid-template-areas: "time venue" "title title" "speaker speaker" "description description";
+    grid-template-columns: 5em auto;
+  }
+  .event .speaker > label,
+  .event .venue > label {
+    display: none;
+  }
+  .event .time {
+    font-size: 1em;
+    font-family: "Lato", "Impact", "Roboto", sans-serif;
+    font-weight: 900;
+    color: #aaa;
+    align-self: center;
+  }
+  .event .title {
+    margin: 0;
+  }
+  .event .speaker {
+    font-size: 1.2em;
+    color: #999;
+  }
+}
