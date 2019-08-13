@@ -22,9 +22,9 @@
       return (false);
     }
 
-    const promo = getQueryVariable("promo");
-    if (promo != "") {
-      window.location = "https://www.yepdesk.com/buy-tickets/5cf54360e4b02098c0ab6d34/default-promo/" + promo;
+    const promo = getQueryVariable("form");
+    if (promo == "") {
+      window.location = "https://docs.google.com/forms/d/e/1FAIpQLSdKrFi0sbX3w8dxrKsLgwmmT-Ea6WXCB7fatAEOLayY4aZyBA/viewform";
     }
   </script>
 
